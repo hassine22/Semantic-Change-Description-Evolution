@@ -77,6 +77,28 @@ was selected because:
 Therefore, the evolution of change descriptions can be operationalized as the evolution of commit messages across patchsets.
 
 ---
+## Endpoint Selection and Validation
+
+Several Gerrit REST API endpoints were investigated to identify a reliable source of change descriptions across patchsets.
+
+The endpoint
+
+/changes/{change-id}/revisions/{revision-id}/commit
+
+was selected because it directly returns the commit information associated with a specific patchset, including:
+
+- subject
+- commit message
+
+The endpoint was experimentally validated on the three Gerrit ecosystems considered in this study:
+
+- LibreOffice
+- Wikimedia
+- ONAP
+
+For each project, commit messages were successfully retrieved for individual patchsets, demonstrating that the endpoint consistently provides access to patchset-level change descriptions.
+
+Consequently, change-description evolution is operationalized as the evolution of commit messages across successive patchsets.
 
 ## Extraction Procedure
 
