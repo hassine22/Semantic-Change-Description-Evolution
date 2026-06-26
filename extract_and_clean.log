@@ -1,0 +1,403 @@
+2026-06-26 15:24:49  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 15:24:49  INFO      ║  Gerrit Semantic Change Description Evolution — Extraction Module ║
+2026-06-26 15:24:49  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 15:24:49  INFO      Run mode         : test
+2026-06-26 15:24:49  INFO      Enabled projects : wikimedia, libreoffice, onap
+2026-06-26 15:24:49  INFO      Output file      : output\verified_pairs.csv
+2026-06-26 15:24:49  INFO      
+2026-06-26 15:24:49  INFO      ========================================================================
+2026-06-26 15:24:49  INFO      Processing project: WIKIMEDIA
+2026-06-26 15:24:49  INFO        Base URL   : https://gerrit.wikimedia.org/r
+2026-06-26 15:24:49  INFO        Run mode   : test
+2026-06-26 15:24:49  INFO        Limit      : 50
+2026-06-26 15:24:49  INFO      ========================================================================
+2026-06-26 15:25:22  INFO      
+2026-06-26 15:25:22  INFO      ── WIKIMEDIA — Final Summary ──
+2026-06-26 15:25:22  INFO        Total changes seen     : 50
+2026-06-26 15:25:22  INFO        Changes processed      : 50
+2026-06-26 15:25:22  INFO        Pairs extracted        : 35
+2026-06-26 15:25:22  INFO        Verified pairs written : 35
+2026-06-26 15:25:22  INFO      
+2026-06-26 15:25:22  INFO      ========================================================================
+2026-06-26 15:25:22  INFO      Processing project: LIBREOFFICE
+2026-06-26 15:25:22  INFO        Base URL   : https://gerrit.libreoffice.org/r
+2026-06-26 15:25:22  INFO        Run mode   : test
+2026-06-26 15:25:22  INFO        Limit      : 50
+2026-06-26 15:25:22  INFO      ========================================================================
+2026-06-26 15:25:23  ERROR     Fatal error processing project libreoffice: Expecting value: line 1 column 1 (char 0)
+2026-06-26 15:25:23  INFO      ========================================================================
+2026-06-26 15:25:23  INFO      Processing project: ONAP
+2026-06-26 15:25:23  INFO        Base URL   : https://gerrit.onap.org/r
+2026-06-26 15:25:23  INFO        Run mode   : test
+2026-06-26 15:25:23  INFO        Limit      : 50
+2026-06-26 15:25:23  INFO      ========================================================================
+2026-06-26 15:25:39  INFO      
+2026-06-26 15:25:39  INFO      ── ONAP — Final Summary ──
+2026-06-26 15:25:39  INFO        Total changes seen     : 50
+2026-06-26 15:25:39  INFO        Changes processed      : 50
+2026-06-26 15:25:39  INFO        Pairs extracted        : 28
+2026-06-26 15:25:39  INFO        Verified pairs written : 28
+2026-06-26 15:25:39  INFO      
+2026-06-26 15:25:39  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 15:25:39  INFO      ║                     GLOBAL PIPELINE SUMMARY                      ║
+2026-06-26 15:25:39  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 15:25:39  INFO        WIKIMEDIA        changes=50  pairs_extracted=35  verified=35
+2026-06-26 15:25:39  INFO        LIBREOFFICE      ERROR: Expecting value: line 1 column 1 (char 0)
+2026-06-26 15:25:39  INFO        ONAP             changes=50  pairs_extracted=28  verified=28
+2026-06-26 15:25:39  INFO      
+2026-06-26 15:25:39  INFO        Total verified pairs written : 63
+2026-06-26 15:25:39  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-26 15:25:39  INFO      
+2026-06-26 15:25:39  INFO      Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-26 15:44:57  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 15:44:57  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-26 15:44:57  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 15:44:57  INFO        Run mode         : test
+2026-06-26 15:44:57  INFO        Test limit       : 100 changes/project
+2026-06-26 15:44:57  INFO        Progress every   : every 1 change(s)
+2026-06-26 15:44:57  INFO        Enabled projects : wikimedia, libreoffice, onap
+2026-06-26 15:44:57  INFO        Output file      : output\verified_pairs.csv
+2026-06-26 15:44:57  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-26 15:44:57  INFO      
+2026-06-26 15:44:57  INFO      
+2026-06-26 15:44:57  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-26 15:44:57  INFO      │  Processing project : WIKIMEDIA                                  │
+2026-06-26 15:44:57  INFO      │  Base URL           : https://gerrit.wikimedia.org/r             │
+2026-06-26 15:44:57  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-26 15:44:57  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-26 15:44:58  INFO        [WIKIMEDIA] #1       change=mediawiki%2Fskins%2FVector~1305925        ps=1  → SKIP (single patchset)  │ total=1  verified=0
+2026-06-26 15:44:58  INFO        [WIKIMEDIA] #2       change=pywikibot%2Fcore~1305952                  ps=1  → SKIP (single patchset)  │ total=2  verified=0
+2026-06-26 15:44:58  INFO        [WIKIMEDIA] #3       change=testing-access-wrapper~1305961            ps=1  → SKIP (single patchset)  │ total=3  verified=0
+2026-06-26 15:45:00  INFO        [WIKIMEDIA] #4       change=mediawiki%2Fskins%2FVector~1302809        ps=8    pairs=7    identical_dropped=6    │ cumul → extracted=7       verified=1     
+2026-06-26 15:45:00  INFO        [WIKIMEDIA] #5       change=mediawiki%2Fextensions%2FReadingLists~13  ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=10      verified=1     
+2026-06-26 15:45:00  INFO        [WIKIMEDIA] #6       change=mediawiki%2Fskins%2FVector~1305928        ps=1  → SKIP (single patchset)  │ total=6  verified=1
+2026-06-26 15:45:01  INFO        [WIKIMEDIA] #7       change=mediawiki%2Fextensions%2FTestKitchen~130  ps=8    pairs=7    identical_dropped=5    │ cumul → extracted=17      verified=3     
+2026-06-26 15:45:02  INFO        [WIKIMEDIA] #8       change=mediawiki%2Fskins%2FVector~1305934        ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=21      verified=3     
+2026-06-26 15:45:03  INFO        [WIKIMEDIA] #9       change=mediawiki%2Fskins%2FVector~1305950        ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=25      verified=3     
+2026-06-26 15:45:05  INFO        [WIKIMEDIA] #10      change=mediawiki%2Fskins%2FVector~1297789        ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=36      verified=4     
+2026-06-26 15:45:05  INFO        [WIKIMEDIA] #11      change=mediawiki%2Fextensions%2FMultimediaViewe  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=37      verified=5     
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #12      change=mediawiki%2Fcore~1303511                  ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=39      verified=6     
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #13      change=mediawiki%2Fextensions%2FCheckUser~13059  ps=1  → SKIP (single patchset)  │ total=13  verified=6
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #14      change=mediawiki%2Fservices%2Fcitoid~1305958     ps=1  → SKIP (single patchset)  │ total=14  verified=6
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #15      change=mediawiki%2Fcore~1305929                  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=41      verified=6     
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #16      change=mediawiki%2Fservices%2Fparsoid~1305953    ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=43      verified=7     
+2026-06-26 15:45:06  INFO        [WIKIMEDIA] #17      change=RelPath~1305959                           ps=1  → SKIP (single patchset)  │ total=17  verified=7
+2026-06-26 15:45:10  INFO        [WIKIMEDIA] #18      change=mediawiki%2Fcore~1301465                  ps=19   pairs=18   identical_dropped=16   │ cumul → extracted=61      verified=9     
+2026-06-26 15:45:10  INFO        [WIKIMEDIA] #19      change=mediawiki%2Fcore~1305497                  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=65      verified=10    
+2026-06-26 15:45:11  INFO        [WIKIMEDIA] #20      change=mediawiki%2Fcore~1304621                  ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=67      verified=11    
+2026-06-26 15:45:11  INFO        [WIKIMEDIA] #21      change=mediawiki%2Fcore~1305689                  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=69      verified=11    
+2026-06-26 15:45:12  INFO        [WIKIMEDIA] #22      change=mediawiki%2Fextensions%2FOATHAuth~130527  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=73      verified=12    
+2026-06-26 15:45:12  INFO        [WIKIMEDIA] #23      change=mediawiki%2Fcore~1305757                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=74      verified=12    
+2026-06-26 15:45:14  INFO        [WIKIMEDIA] #24      change=mediawiki%2Fextensions%2FWanda~1305853    ps=10   pairs=9    identical_dropped=0    │ cumul → extracted=83      verified=21    
+2026-06-26 15:45:14  INFO        [WIKIMEDIA] #25      change=wikipeg~1305956                           ps=1  → SKIP (single patchset)  │ total=25  verified=21
+2026-06-26 15:45:17  INFO        [WIKIMEDIA] #26      change=mediawiki%2Fcore~1285871                  ps=19   pairs=18   identical_dropped=14   │ cumul → extracted=101     verified=25    
+2026-06-26 15:45:17  INFO        [WIKIMEDIA] #27      change=oojs%2Fui~1305955                         ps=1  → SKIP (single patchset)  │ total=27  verified=25
+2026-06-26 15:45:17  INFO        [WIKIMEDIA] #28      change=wikipeg~1305954                           ps=1  → SKIP (single patchset)  │ total=28  verified=25
+2026-06-26 15:45:17  INFO        [WIKIMEDIA] #29      change=wikipeg~1305944                           ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=103     verified=25    
+2026-06-26 15:45:18  INFO        [WIKIMEDIA] #30      change=mediawiki%2Fservices%2Fparsoid~1305809    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=104     verified=25    
+2026-06-26 15:45:18  INFO        [WIKIMEDIA] #31      change=operations%2Fpuppet~1305951               ps=1  → SKIP (single patchset)  │ total=31  verified=25
+2026-06-26 15:45:19  INFO        [WIKIMEDIA] #32      change=mediawiki%2Fcore~1302938                  ps=6    pairs=5    identical_dropped=3    │ cumul → extracted=109     verified=27    
+2026-06-26 15:45:19  INFO        [WIKIMEDIA] #33      change=wikimedia%2Ffundraising%2FSmashPig~13013  ps=1  → SKIP (single patchset)  │ total=33  verified=27
+2026-06-26 15:45:19  INFO        [WIKIMEDIA] #34      change=mediawiki%2Fextensions%2FDonationInterfa  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=113     verified=28    
+2026-06-26 15:45:22  INFO        [WIKIMEDIA] #35      change=mediawiki%2Fcore~1300571                  ps=18   pairs=17   identical_dropped=15   │ cumul → extracted=130     verified=30    
+2026-06-26 15:45:24  INFO        [WIKIMEDIA] #36      change=mediawiki%2Fextensions%2FProdunto~130187  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=136     verified=30    
+2026-06-26 15:45:24  INFO        [WIKIMEDIA] #37      change=mediawiki%2Fextensions%2FApiFeatureUsage  ps=1  → SKIP (single patchset)  │ total=37  verified=30
+2026-06-26 15:45:24  INFO        [WIKIMEDIA] #38      change=operations%2Fdebs%2Fgrafana-plugins~1303  ps=1  → SKIP (single patchset)  │ total=38  verified=30
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #39      change=mediawiki%2Fextensions%2FWikiLambda~1302  ps=13   pairs=12   identical_dropped=10   │ cumul → extracted=148     verified=32    
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #40      change=mediawiki%2Fextensions%2FAbuseFilter~130  ps=1  → SKIP (single patchset)  │ total=40  verified=32
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #41      change=mediawiki%2Fcore~1305949                  ps=1  → SKIP (single patchset)  │ total=41  verified=32
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #42      change=mediawiki%2Fservices%2Fcitoid~1305893     ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=149     verified=32    
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #43      change=pywikibot%2Fcore~1305947                  ps=1  → SKIP (single patchset)  │ total=43  verified=32
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #44      change=design%2Fcodex~1293134                    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=150     verified=32    
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #45      change=design%2Fcodex~1281480                    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=151     verified=32    
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #46      change=mediawiki%2Fextensions%2FAdiutor~1305839  ps=1  → SKIP (single patchset)  │ total=46  verified=32
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #47      change=pywikibot%2Fcore~1305945                  ps=1  → SKIP (single patchset)  │ total=47  verified=32
+2026-06-26 15:45:26  INFO        [WIKIMEDIA] #48      change=mediawiki%2Fextensions%2FAdManager~13058  ps=1  → SKIP (single patchset)  │ total=48  verified=32
+2026-06-26 15:45:27  INFO        [WIKIMEDIA] #49      change=operations%2Fpuppet~1305937               ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=154     verified=33    
+2026-06-26 15:45:27  INFO        [WIKIMEDIA] #50      change=mediawiki%2Fextensions%2FAchievementBadg  ps=1  → SKIP (single patchset)  │ total=50  verified=33
+2026-06-26 15:45:29  INFO        [WIKIMEDIA] #51      change=operations%2Fpuppet~1302978               ps=14   pairs=13   identical_dropped=8    │ cumul → extracted=167     verified=38    
+2026-06-26 15:45:30  INFO        [WIKIMEDIA] #52      change=mediawiki%2Fcore~1305252                  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=171     verified=39    
+2026-06-26 15:45:30  INFO        [WIKIMEDIA] #53      change=pywikibot%2Fcore~1305948                  ps=1  → SKIP (single patchset)  │ total=53  verified=39
+2026-06-26 15:45:30  INFO        [WIKIMEDIA] #54      change=operations%2Fpuppet~1305946               ps=1  → SKIP (single patchset)  │ total=54  verified=39
+2026-06-26 15:45:31  INFO        [WIKIMEDIA] #55      change=operations%2Fpuppet~1305939               ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=174     verified=39    
+2026-06-26 15:45:31  INFO        [WIKIMEDIA] #56      change=operations%2Fpuppet~1305938               ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=177     verified=39    
+2026-06-26 15:45:34  INFO        [WIKIMEDIA] #57      change=mediawiki%2Fextensions%2FProdunto~129754  ps=18   pairs=17   identical_dropped=17   │ cumul → extracted=194     verified=39    
+2026-06-26 15:45:34  INFO        [WIKIMEDIA] #58      change=operations%2Fdeployment-charts~1305890    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=195     verified=39    
+2026-06-26 15:45:35  INFO        [WIKIMEDIA] #59      change=design%2Fcodex~1305858                    ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=198     verified=39    
+2026-06-26 15:45:35  INFO        [WIKIMEDIA] #60      change=design%2Fcodex~1281954                    ps=1  → SKIP (single patchset)  │ total=60  verified=39
+2026-06-26 15:45:35  INFO        [WIKIMEDIA] #61      change=pywikibot%2Fcore~1305932                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=199     verified=39    
+2026-06-26 15:45:38  INFO        [WIKIMEDIA] #62      change=mediawiki%2Fextensions%2FCampaignEvents~  ps=16   pairs=15   identical_dropped=15   │ cumul → extracted=214     verified=39    
+2026-06-26 15:45:38  INFO        [WIKIMEDIA] #63      change=mediawiki%2Fextensions%2FVisualEditor~13  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=215     verified=40    
+2026-06-26 15:45:38  INFO        [WIKIMEDIA] #64      change=pywikibot%2Fcore~1305935                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=216     verified=40    
+2026-06-26 15:45:39  INFO        [WIKIMEDIA] #65      change=mediawiki%2Ftools%2Fphan~1304641          ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=220     verified=41    
+2026-06-26 15:45:39  INFO        [WIKIMEDIA] #66      change=VisualEditor%2FVisualEditor~1305915       ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=222     verified=42    
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #67      change=mediawiki%2Flibs%2FMinify~1305924         ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=224     verified=42    
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #68      change=mediawiki%2Fvendor~1305941                ps=1  → SKIP (single patchset)  │ total=68  verified=42
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #69      change=mediawiki%2Fextensions%2FCheckUser~13059  ps=1  → SKIP (single patchset)  │ total=69  verified=42
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #70      change=operations%2Fpuppet~1305943               ps=1  → SKIP (single patchset)  │ total=70  verified=42
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #71      change=operations%2Fpuppet~1305936               ps=1  → SKIP (single patchset)  │ total=71  verified=42
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #72      change=mediawiki%2Fextensions%2FCheckUser~12819  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=226     verified=42    
+2026-06-26 15:45:40  INFO        [WIKIMEDIA] #73      change=mediawiki%2Fextensions%2FChart~1305940    ps=1  → SKIP (single patchset)  │ total=73  verified=42
+2026-06-26 15:45:42  INFO        [WIKIMEDIA] #74      change=mediawiki%2Fcore~1303494                  ps=10   pairs=9    identical_dropped=8    │ cumul → extracted=235     verified=43    
+2026-06-26 15:45:42  INFO        [WIKIMEDIA] #75      change=operations%2Fpuppet~1080823               ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=237     verified=44    
+2026-06-26 15:45:43  INFO        [WIKIMEDIA] #76      change=mediawiki%2Flibs%2Fnode-cssjanus~1305222  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=240     verified=45    
+2026-06-26 15:45:43  INFO        [WIKIMEDIA] #77      change=mediawiki%2Fcore~1305750                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=241     verified=45    
+2026-06-26 15:45:44  INFO        [WIKIMEDIA] #78      change=operations%2Fsoftware%2Fspicerack~130355  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=244     verified=46    
+2026-06-26 15:45:44  INFO        [WIKIMEDIA] #79      change=operations%2Fpuppet~1305922               ps=1  → SKIP (single patchset)  │ total=79  verified=46
+2026-06-26 15:45:46  INFO        [WIKIMEDIA] #80      change=design%2Fcodex~1305238                    ps=11   pairs=10   identical_dropped=10   │ cumul → extracted=254     verified=46    
+2026-06-26 15:45:46  INFO        [WIKIMEDIA] #81      change=pywikibot%2Fcore~1305931                  ps=1  → SKIP (single patchset)  │ total=81  verified=46
+2026-06-26 15:45:47  INFO        [WIKIMEDIA] #82      change=oojs%2Fui~1305239                         ps=12   pairs=11   identical_dropped=11   │ cumul → extracted=265     verified=46    
+2026-06-26 15:45:48  INFO        [WIKIMEDIA] #83      change=pywikibot%2Fcore~1305872                  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=267     verified=46    
+2026-06-26 15:45:48  INFO        [WIKIMEDIA] #84      change=operations%2Fsoftware%2Fpywmflib~1304617  ps=1  → SKIP (single patchset)  │ total=84  verified=46
+2026-06-26 15:45:49  INFO        [WIKIMEDIA] #85      change=operations%2Fsoftware%2Fpywmflib~1304180  ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=272     verified=46    
+2026-06-26 15:45:49  INFO        [WIKIMEDIA] #86      change=mediawiki%2Flibs%2FMinify~1305926         ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=274     verified=46    
+2026-06-26 15:45:50  INFO        [WIKIMEDIA] #87      change=mediawiki%2Fcore~1304272                  ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=277     verified=46    
+2026-06-26 15:45:51  INFO        [WIKIMEDIA] #88      change=mediawiki%2Fcore~1303570                  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=285     verified=46    
+2026-06-26 15:45:52  INFO        [WIKIMEDIA] #89      change=mediawiki%2Fextensions%2FWanda~1305876    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=286     verified=46    
+2026-06-26 15:45:52  INFO        [WIKIMEDIA] #90      change=mediawiki%2Fextensions%2FWikimediaCustom  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=288     verified=46    
+2026-06-26 15:45:54  INFO        [WIKIMEDIA] #91      change=mediawiki%2Fcore~1303520                  ps=13   pairs=12   identical_dropped=10   │ cumul → extracted=300     verified=48    
+2026-06-26 15:45:54  INFO        [WIKIMEDIA] #92      change=pywikibot%2Fcore~1305916                  ps=1  → SKIP (single patchset)  │ total=92  verified=48
+2026-06-26 15:45:55  INFO        [WIKIMEDIA] #93      change=mediawiki%2Fextensions%2FWikibase~130511  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=309     verified=48    
+2026-06-26 15:45:56  INFO        [WIKIMEDIA] #94      change=mediawiki%2Flibs%2FMinify~1281630         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=314     verified=48    
+2026-06-26 15:45:57  INFO        [WIKIMEDIA] #95      change=operations%2Fpuppet~1304139               ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=318     verified=48    
+2026-06-26 15:45:58  INFO        [WIKIMEDIA] #96      change=operations%2Fdns~1305930                  ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=320     verified=49    
+2026-06-26 15:45:58  INFO        [WIKIMEDIA] #97      change=operations%2Fpuppet~1305661               ps=1  → SKIP (single patchset)  │ total=97  verified=49
+2026-06-26 15:45:58  INFO        [WIKIMEDIA] #98      change=mediawiki%2Fgadgets%2FProveIt~1222990     ps=6    pairs=5    identical_dropped=3    │ cumul → extracted=325     verified=51    
+2026-06-26 15:45:59  INFO        [WIKIMEDIA] #99      change=mediawiki%2Fskins%2FMinervaNeue~1305920   ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=327     verified=52    
+2026-06-26 15:45:59  INFO        [WIKIMEDIA] #100     change=mediawiki%2Fextensions%2FWikibase~130592  ps=1  → SKIP (single patchset)  │ total=100  verified=52
+2026-06-26 15:45:59  INFO      
+2026-06-26 15:45:59  INFO        ╔══ WIKIMEDIA — Results ══════════════════════════════════════════╗
+2026-06-26 15:45:59  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-26 15:45:59  INFO        ║  Skipped (single patchset)     : 35                            ║
+2026-06-26 15:45:59  INFO        ║  Changes processed             : 65                            ║
+2026-06-26 15:45:59  INFO        ║  Pairs extracted (potential)   : 327                           ║
+2026-06-26 15:45:59  INFO        ║  Dropped (identical after clean): 275                          ║
+2026-06-26 15:45:59  INFO        ║  Verified pairs written to CSV : 52                            ║
+2026-06-26 15:45:59  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-26 15:45:59  INFO      
+2026-06-26 15:45:59  INFO      
+2026-06-26 15:45:59  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-26 15:45:59  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-26 15:45:59  INFO      │  Base URL           : https://gerrit.libreoffice.org/r           │
+2026-06-26 15:45:59  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-26 15:45:59  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-26 15:46:00  ERROR       ✘ Failed to fetch change list at offset 0: Server returned HTML instead of JSON from https://gerrit.libreoffice.org/q/changes: '<!DOCTYPE html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="description" content="Gerrit Code Review">\n<meta nam'
+2026-06-26 15:46:00  INFO      
+2026-06-26 15:46:00  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-26 15:46:00  INFO        ║  Total changes fetched         : 0                             ║
+2026-06-26 15:46:00  INFO        ║  Skipped (single patchset)     : 0                             ║
+2026-06-26 15:46:00  INFO        ║  Changes processed             : 0                             ║
+2026-06-26 15:46:00  INFO        ║  Pairs extracted (potential)   : 0                             ║
+2026-06-26 15:46:00  INFO        ║  Dropped (identical after clean): 0                            ║
+2026-06-26 15:46:00  INFO        ║  Verified pairs written to CSV : 0                             ║
+2026-06-26 15:46:00  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-26 15:46:00  INFO      
+2026-06-26 15:46:00  INFO      
+2026-06-26 15:46:00  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-26 15:46:00  INFO      │  Processing project : ONAP                                       │
+2026-06-26 15:46:00  INFO      │  Base URL           : https://gerrit.onap.org/r                  │
+2026-06-26 15:46:00  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-26 15:46:00  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-26 15:46:01  INFO        [ONAP] #1       change=policy%2Fclamp~master~I0a09b473162e18ae6  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=9       verified=0     
+2026-06-26 15:46:02  INFO        [ONAP] #2       change=policy%2Fclamp~master~If55a08f8e993754d8  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=17      verified=0     
+2026-06-26 15:46:02  INFO        [ONAP] #3       change=sdnc%2Foam~master~Ib597dd2fecbb56f7f370b  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=18      verified=1     
+2026-06-26 15:46:04  INFO        [ONAP] #4       change=cps~master~I4527f28023fc3068b2a72c190a6e  ps=19   pairs=18   identical_dropped=7    │ cumul → extracted=36      verified=12    
+2026-06-26 15:46:05  INFO        [ONAP] #5       change=cps~master~I4458abc115d98cc623f06ebc2cbd  ps=8    pairs=7    identical_dropped=4    │ cumul → extracted=43      verified=15    
+2026-06-26 15:46:06  INFO        [ONAP] #6       change=policy%2Fclamp~master~I99e3b7b07c86a1965  ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=54      verified=16    
+2026-06-26 15:46:06  INFO        [ONAP] #7       change=policy%2Fclamp~master~I4ac747ff630bff4cb  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=60      verified=16    
+2026-06-26 15:46:07  INFO        [ONAP] #8       change=oom~master~I775fd0e7771b56549ba3c6cfe41c  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=64      verified=17    
+2026-06-26 15:46:09  INFO        [ONAP] #9       change=cps~master~Iff7fab66ddcc03703255123c6d5c  ps=24   pairs=23   identical_dropped=23   │ cumul → extracted=87      verified=17    
+2026-06-26 15:46:09  INFO        [ONAP] #10      change=cps~master~Ic38c211a783a945229cc296f527a  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=88      verified=17    
+2026-06-26 15:46:09  INFO        [ONAP] #11      change=cps~master~I40ec3c1f612beebc9694cc662970  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=89      verified=17    
+2026-06-26 15:46:09  INFO        [ONAP] #12      change=so~master~I48d944970f84b9c2d39bdcbd66905  ps=1  → SKIP (single patchset)  │ total=12  verified=17
+2026-06-26 15:46:10  INFO        [ONAP] #13      change=sdc~master~I5d7fcd889659d1907d179ecaf9ac  ps=7    pairs=6    identical_dropped=3    │ cumul → extracted=95      verified=20    
+2026-06-26 15:46:10  INFO        [ONAP] #14      change=cps~master~Iec2226b7aaec1ade88b2eda10e96  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=96      verified=20    
+2026-06-26 15:46:10  INFO        [ONAP] #15      change=cps~master~Icc64696d513c28106d334e7a75b2  ps=1  → SKIP (single patchset)  │ total=15  verified=20
+2026-06-26 15:46:11  INFO        [ONAP] #16      change=cps~master~Ia37204afdf2a3c91afe415f8ce76  ps=20   pairs=19   identical_dropped=15   │ cumul → extracted=115     verified=24    
+2026-06-26 15:46:11  INFO        [ONAP] #17      change=so~master~I72057b9f9309f3bf75de528c783b1  ps=1  → SKIP (single patchset)  │ total=17  verified=24
+2026-06-26 15:46:12  INFO        [ONAP] #18      change=ccsdk%2Fcds~master~I9fb38d2ec687eb3ffb21  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=116     verified=24    
+2026-06-26 15:46:12  INFO        [ONAP] #19      change=so~master~I3112a2dd2c681b533bde239310a28  ps=9    pairs=8    identical_dropped=7    │ cumul → extracted=124     verified=25    
+2026-06-26 15:46:13  INFO        [ONAP] #20      change=cps~master~I57814d1230469be5782187c6a6f5  ps=10   pairs=9    identical_dropped=6    │ cumul → extracted=133     verified=28    
+2026-06-26 15:46:13  INFO        [ONAP] #21      change=sdc%2Fonap-ui-common~master~I5767dad769e  ps=1  → SKIP (single patchset)  │ total=21  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #22      change=sdc%2Fonap-ui-common~master~Ia5a165f50fe  ps=1  → SKIP (single patchset)  │ total=22  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #23      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=23  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #24      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=24  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #25      change=ci-management~master~I9c2bfd3647734ffcba  ps=1  → SKIP (single patchset)  │ total=25  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #26      change=ci-management~master~Ia94381f26874b0f2c2  ps=1  → SKIP (single patchset)  │ total=26  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #27      change=ccsdk%2Fdistribution~master~Id2b6b190bb3  ps=1  → SKIP (single patchset)  │ total=27  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #28      change=ccsdk%2Fdistribution~master~Ic3661ea70f3  ps=1  → SKIP (single patchset)  │ total=28  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #29      change=ccsdk%2Fapps~master~Ib891bacd4d9ca8faa22  ps=1  → SKIP (single patchset)  │ total=29  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #30      change=ccsdk%2Fdistribution~master~I7ce34c434b8  ps=1  → SKIP (single patchset)  │ total=30  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #31      change=ccsdk%2Fapps~master~I03433ce12aaa550b765  ps=1  → SKIP (single patchset)  │ total=31  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #32      change=ccsdk%2Ffeatures~master~Ia71dd20779efed6  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=134     verified=28    
+2026-06-26 15:46:13  INFO        [ONAP] #33      change=ccsdk%2Fcds~quebec~I984574bad32221c30b15  ps=1  → SKIP (single patchset)  │ total=33  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #34      change=ccsdk%2Fapps~master~I7a44e05469f62dcdd60  ps=1  → SKIP (single patchset)  │ total=34  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #35      change=ccsdk%2Fdistribution~master~Id25f044eec5  ps=1  → SKIP (single patchset)  │ total=35  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #36      change=ccsdk%2Ffeatures~quebec~Ia71dd20779efed6  ps=1  → SKIP (single patchset)  │ total=36  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #37      change=ccsdk%2Fcds~master~I984574bad32221c30b15  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=135     verified=28    
+2026-06-26 15:46:13  INFO        [ONAP] #38      change=ccsdk%2Fapps~master~I16664b08323df84cfe2  ps=1  → SKIP (single patchset)  │ total=38  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #39      change=ccsdk%2Fapps~master~I32be1f63e149061fd55  ps=1  → SKIP (single patchset)  │ total=39  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #40      change=ccsdk%2Fparent~master~I1480f60f98b1c4a9b  ps=1  → SKIP (single patchset)  │ total=40  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #41      change=ccsdk%2Fparent~master~I060a5a44768557bfe  ps=1  → SKIP (single patchset)  │ total=41  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #42      change=ccsdk%2Fparent~master~I5be0539cca4fa24f5  ps=1  → SKIP (single patchset)  │ total=42  verified=28
+2026-06-26 15:46:13  INFO        [ONAP] #43      change=ccsdk%2Fparent~master~I62333a2f597d8040d  ps=1  → SKIP (single patchset)  │ total=43  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #44      change=policy%2Fclamp~master~Idcabe1d5903cfe661  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=141     verified=28    
+2026-06-26 15:46:14  INFO        [ONAP] #45      change=sdc%2Fonap-ui-common~master~Ibdc1177e645  ps=1  → SKIP (single patchset)  │ total=45  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #46      change=sdc%2Fonap-ui-common~master~I82943ee27cb  ps=1  → SKIP (single patchset)  │ total=46  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #47      change=sdc%2Fonap-ui-common~master~Ib411bdba392  ps=1  → SKIP (single patchset)  │ total=47  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #48      change=sdc%2Fonap-ui-common~master~I894b45487c8  ps=1  → SKIP (single patchset)  │ total=48  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #49      change=sdc%2Fonap-ui-common~master~I79ad2666178  ps=1  → SKIP (single patchset)  │ total=49  verified=28
+2026-06-26 15:46:14  INFO        [ONAP] #50      change=sdc%2Fonap-ui-common~master~Ieb71f78e86d  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=142     verified=28    
+2026-06-26 15:46:15  INFO        [ONAP] #51      change=policy%2Fclamp~master~Ia91ff5f0d49ca6f3e  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=150     verified=28    
+2026-06-26 15:46:15  INFO        [ONAP] #52      change=sdc%2Fonap-ui-common~master~I8ca9ae40930  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=151     verified=28    
+2026-06-26 15:46:16  INFO        [ONAP] #53      change=policy%2Fclamp~master~I7df80bfd2d747dbbe  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=159     verified=28    
+2026-06-26 15:46:16  INFO        [ONAP] #54      change=policy%2Fparent~master~I88bd916b4e94f543  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=160     verified=28    
+2026-06-26 15:46:16  INFO        [ONAP] #55      change=ccsdk%2Fcds~master~I76947a27eea14cad9335  ps=1  → SKIP (single patchset)  │ total=55  verified=28
+2026-06-26 15:46:16  INFO        [ONAP] #56      change=cps~master~I24b60cda2fa5e8ff47768cef3532  ps=1  → SKIP (single patchset)  │ total=56  verified=28
+2026-06-26 15:46:17  INFO        [ONAP] #57      change=sdnc%2Fnorthbound~master~I6fcace54aefd94  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=163     verified=29    
+2026-06-26 15:46:17  INFO        [ONAP] #58      change=policy%2Fparent~master~If81b524950f51b31  ps=1  → SKIP (single patchset)  │ total=58  verified=29
+2026-06-26 15:46:17  INFO        [ONAP] #59      change=policy%2Fapex-pdp~master~Ie9b4996992c563  ps=1  → SKIP (single patchset)  │ total=59  verified=29
+2026-06-26 15:46:18  INFO        [ONAP] #60      change=policy%2Fclamp~master~Ie7c17d9da8837085d  ps=12   pairs=11   identical_dropped=11   │ cumul → extracted=174     verified=29    
+2026-06-26 15:46:18  INFO        [ONAP] #61      change=policy%2Fparent~master~I3b0e64b314fe837f  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=178     verified=30    
+2026-06-26 15:46:18  INFO        [ONAP] #62      change=policy%2Fparent~master~Icedefeb43298cc08  ps=1  → SKIP (single patchset)  │ total=62  verified=30
+2026-06-26 15:46:18  INFO        [ONAP] #63      change=policy%2Fclamp~master~Ifc45739e563761f6b  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=180     verified=30    
+2026-06-26 15:46:19  INFO        [ONAP] #64      change=policy%2Fparent~master~Ic3914e93ea4d75aa  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=185     verified=31    
+2026-06-26 15:46:19  INFO        [ONAP] #65      change=cps~master~Ia6f94c2727294bfc5fc071130ac3  ps=1  → SKIP (single patchset)  │ total=65  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #66      change=policy%2Fclamp~master~Idac96c87951c41255  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=194     verified=31    
+2026-06-26 15:46:20  INFO        [ONAP] #67      change=policy%2Fapex-pdp~master~I75ed13ae94a581  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=195     verified=31    
+2026-06-26 15:46:20  INFO        [ONAP] #68      change=policy%2Fcommon~master~If168f8a74efaacb1  ps=1  → SKIP (single patchset)  │ total=68  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #69      change=policy%2Fparent~master~Ie02ca2f6dbecccbe  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=196     verified=31    
+2026-06-26 15:46:20  INFO        [ONAP] #70      change=policy%2Fdrools-pdp~master~I9292328d04bc  ps=1  → SKIP (single patchset)  │ total=70  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #71      change=policy%2Fparent~master~I8c0507eaa6e3bd0e  ps=1  → SKIP (single patchset)  │ total=71  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #72      change=policy%2Fdrools-applications~master~I718  ps=1  → SKIP (single patchset)  │ total=72  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #73      change=policy%2Fxacml-pdp~master~Ia4cef5d7821ef  ps=1  → SKIP (single patchset)  │ total=73  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #74      change=policy%2Fpap~master~I246a6adb473959086b7  ps=1  → SKIP (single patchset)  │ total=74  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #75      change=policy%2Fapi~master~If4c9d14fb8cfaf0cce1  ps=1  → SKIP (single patchset)  │ total=75  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #76      change=policy%2Fmodels~master~If466a0584ef9642e  ps=1  → SKIP (single patchset)  │ total=76  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #77      change=policy%2Fcommon~master~I2c755be0accd1abe  ps=1  → SKIP (single patchset)  │ total=77  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #78      change=policy%2Fparent~master~Ib51a7737d660e7c5  ps=1  → SKIP (single patchset)  │ total=78  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #79      change=policy%2Fdistribution~master~Ie2ac5cb7ca  ps=1  → SKIP (single patchset)  │ total=79  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #80      change=sdc%2Fonap-ui-common~master~I2bc9d109fe2  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=197     verified=31    
+2026-06-26 15:46:20  INFO        [ONAP] #81      change=ci-management~master~I232436da6882e16f26  ps=1  → SKIP (single patchset)  │ total=81  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #82      change=policy%2Fclamp~master~I66eff70b93e6d03d4  ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=201     verified=31    
+2026-06-26 15:46:20  INFO        [ONAP] #83      change=policy%2Fdistribution~master~I3bf648a98a  ps=1  → SKIP (single patchset)  │ total=83  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #84      change=policy%2Fdistribution~master~I43971d215c  ps=1  → SKIP (single patchset)  │ total=84  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #85      change=policy%2Fparent~master~I45a11346fa30a73c  ps=1  → SKIP (single patchset)  │ total=85  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #86      change=policy%2Fdistribution~master~I644f4eaeb1  ps=1  → SKIP (single patchset)  │ total=86  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #87      change=policy%2Fparent~master~Ib6976d2e7bc182ba  ps=1  → SKIP (single patchset)  │ total=87  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #88      change=policy%2Fdistribution~master~Iaadea9c7c4  ps=1  → SKIP (single patchset)  │ total=88  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #89      change=ci-management~master~Iec3998248dd2c315ea  ps=1  → SKIP (single patchset)  │ total=89  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #90      change=policy%2Fparent~master~Ic0a04830b6ae2fd8  ps=1  → SKIP (single patchset)  │ total=90  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #91      change=sdc%2Fonap-ui-common~master~I48d76f55ada  ps=1  → SKIP (single patchset)  │ total=91  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #92      change=sdc%2Fonap-ui-common~master~I13a3aca129b  ps=1  → SKIP (single patchset)  │ total=92  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #93      change=policy%2Fdistribution~master~Ia1bcd49b24  ps=1  → SKIP (single patchset)  │ total=93  verified=31
+2026-06-26 15:46:20  INFO        [ONAP] #94      change=policy%2Fparent~master~Ib3a9bf59acc74965  ps=1  → SKIP (single patchset)  │ total=94  verified=31
+2026-06-26 15:46:21  INFO        [ONAP] #95      change=oom~master~I7dc2f5f7209b386f16ac037062e7  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=203     verified=31    
+2026-06-26 15:46:21  INFO        [ONAP] #96      change=sdc~master~Ifbfa20581064152dd5c4cae6baed  ps=1  → SKIP (single patchset)  │ total=96  verified=31
+2026-06-26 15:46:21  INFO        [ONAP] #97      change=cps~master~I1cdf3cfc7ac19ef820633b21f975  ps=7    pairs=6    identical_dropped=5    │ cumul → extracted=209     verified=32    
+2026-06-26 15:46:21  INFO        [ONAP] #98      change=portal-ng%2Fpreferences~master~Ie6f32ec5  ps=1  → SKIP (single patchset)  │ total=98  verified=32
+2026-06-26 15:46:21  INFO        [ONAP] #99      change=portal-ng%2Fhistory~master~I0235aeb2e4d3  ps=1  → SKIP (single patchset)  │ total=99  verified=32
+2026-06-26 15:46:21  INFO        [ONAP] #100     change=sdnc%2Fnorthbound~master~Ie24a8319603485  ps=1  → SKIP (single patchset)  │ total=100  verified=32
+2026-06-26 15:46:21  INFO      
+2026-06-26 15:46:21  INFO        ╔══ ONAP — Results ══════════════════════════════════════════╗
+2026-06-26 15:46:21  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-26 15:46:21  INFO        ║  Skipped (single patchset)     : 63                            ║
+2026-06-26 15:46:21  INFO        ║  Changes processed             : 37                            ║
+2026-06-26 15:46:21  INFO        ║  Pairs extracted (potential)   : 209                           ║
+2026-06-26 15:46:21  INFO        ║  Dropped (identical after clean): 177                          ║
+2026-06-26 15:46:21  INFO        ║  Verified pairs written to CSV : 32                            ║
+2026-06-26 15:46:21  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-26 15:46:21  INFO      
+2026-06-26 15:46:21  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 15:46:21  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-26 15:46:21  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 15:46:21  INFO        WIKIMEDIA        ✔  changes=100       extracted=327       identical_dropped=275       verified=52      
+2026-06-26 15:46:21  INFO        LIBREOFFICE      ✔  changes=0         extracted=0         identical_dropped=0         verified=0       
+2026-06-26 15:46:21  INFO        ONAP             ✔  changes=100       extracted=209       identical_dropped=177       verified=32      
+2026-06-26 15:46:21  INFO      
+2026-06-26 15:46:21  INFO        Total verified pairs written : 84
+2026-06-26 15:46:21  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-26 15:46:21  INFO      
+2026-06-26 15:46:21  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-26 16:02:22  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 16:02:22  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-26 16:02:22  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 16:02:22  INFO        Run mode         : test
+2026-06-26 16:02:22  INFO        Test limit       : 100 changes/project
+2026-06-26 16:02:22  INFO        Progress every   : every 1 change(s)
+2026-06-26 16:02:22  INFO        Enabled projects : libreoffice
+2026-06-26 16:02:22  INFO        Output file      : output\verified_pairs.csv
+2026-06-26 16:02:22  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-26 16:02:22  INFO      
+2026-06-26 16:03:11  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 16:03:11  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-26 16:03:11  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 16:03:11  INFO        Run mode         : test
+2026-06-26 16:03:11  INFO        Test limit       : 100 changes/project
+2026-06-26 16:03:11  INFO        Progress every   : every 1 change(s)
+2026-06-26 16:03:11  INFO        Enabled projects : libreoffice
+2026-06-26 16:03:11  INFO        Output file      : output\verified_pairs.csv
+2026-06-26 16:03:11  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-26 16:03:11  INFO      
+2026-06-26 16:03:11  INFO      
+2026-06-26 16:03:11  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-26 16:03:11  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-26 16:03:11  INFO      │  Base URL           : https://gerrit.libreoffice.org/r           │
+2026-06-26 16:03:11  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-26 16:03:11  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-26 16:03:12  ERROR       ✘ Failed to fetch change list at offset 0: Server returned HTML instead of JSON from https://gerrit.libreoffice.org/q/changes: '<!DOCTYPE html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="description" content="Gerrit Code Review">\n<meta nam'
+2026-06-26 16:03:12  INFO      
+2026-06-26 16:03:12  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-26 16:03:12  INFO        ║  Total changes fetched         : 0                             ║
+2026-06-26 16:03:12  INFO        ║  Skipped (single patchset)     : 0                             ║
+2026-06-26 16:03:12  INFO        ║  Changes processed             : 0                             ║
+2026-06-26 16:03:12  INFO        ║  Pairs extracted (potential)   : 0                             ║
+2026-06-26 16:03:12  INFO        ║  Dropped (identical after clean): 0                            ║
+2026-06-26 16:03:12  INFO        ║  Verified pairs written to CSV : 0                             ║
+2026-06-26 16:03:12  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-26 16:03:12  INFO      
+2026-06-26 16:03:12  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 16:03:12  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-26 16:03:12  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 16:03:12  INFO        LIBREOFFICE      ✔  changes=0         extracted=0         identical_dropped=0         verified=0       
+2026-06-26 16:03:12  INFO      
+2026-06-26 16:03:12  INFO        Total verified pairs written : 0
+2026-06-26 16:03:12  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-26 16:03:12  INFO      
+2026-06-26 16:03:12  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-26 16:08:29  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 16:08:29  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-26 16:08:29  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 16:08:29  INFO        Run mode         : test
+2026-06-26 16:08:29  INFO        Test limit       : 100 changes/project
+2026-06-26 16:08:29  INFO        Progress every   : every 1 change(s)
+2026-06-26 16:08:29  INFO        Enabled projects : libreoffice
+2026-06-26 16:08:29  INFO        Output file      : output\verified_pairs.csv
+2026-06-26 16:08:29  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-26 16:08:29  INFO      
+2026-06-26 16:08:29  INFO      
+2026-06-26 16:08:29  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-26 16:08:29  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-26 16:08:29  INFO      │  Base URL           : https://gerrit.libreoffice.org/r/a         │
+2026-06-26 16:08:29  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-26 16:08:29  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-26 16:08:30  ERROR       ✘ Failed to fetch change list at offset 0: Server returned HTML instead of JSON from https://gerrit.libreoffice.org/q/a/changes: '<!DOCTYPE html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="description" content="Gerrit Code Review">\n<meta nam'
+2026-06-26 16:08:30  INFO      
+2026-06-26 16:08:30  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-26 16:08:30  INFO        ║  Total changes fetched         : 0                             ║
+2026-06-26 16:08:30  INFO        ║  Skipped (single patchset)     : 0                             ║
+2026-06-26 16:08:30  INFO        ║  Changes processed             : 0                             ║
+2026-06-26 16:08:30  INFO        ║  Pairs extracted (potential)   : 0                             ║
+2026-06-26 16:08:30  INFO        ║  Dropped (identical after clean): 0                            ║
+2026-06-26 16:08:30  INFO        ║  Verified pairs written to CSV : 0                             ║
+2026-06-26 16:08:30  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-26 16:08:30  INFO      
+2026-06-26 16:08:30  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-26 16:08:30  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-26 16:08:30  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-26 16:08:30  INFO        LIBREOFFICE      ✔  changes=0         extracted=0         identical_dropped=0         verified=0       
+2026-06-26 16:08:30  INFO      
+2026-06-26 16:08:30  INFO        Total verified pairs written : 0
+2026-06-26 16:08:30  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-26 16:08:30  INFO      
+2026-06-26 16:08:30  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
