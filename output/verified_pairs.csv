@@ -1,1 +1,4163 @@
 project,change_id,patchset_count,old_patchset,new_patchset,old_message_clean,new_message_clean
+wikimedia,mediawiki%2Fservices%2Fparsoid~1304892,5,1,2,"prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b","prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b
+* This fixes the command run for those of use who use relative
+urls for the vendor repo arg."
+wikimedia,mediawiki%2Fservices%2Fparsoid~1304892,5,2,3,"prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b
+* This fixes the command run for those of use who use relative
+urls for the vendor repo arg.","prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b
+* This fixes the command run for those of use who use relative
+urls for the vendor repo arg.
+* Also resolve relative paths for the future."
+wikimedia,mediawiki%2Fservices%2Fparsoid~1304892,5,3,4,"prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b
+* This fixes the command run for those of use who use relative
+urls for the vendor repo arg.
+* Also resolve relative paths for the future.","prepare_vendor_patch.sh: Fix composer update command
+
+* This is a follow up of Icbb4dfaa99ff2a9975fe1ad7028fc0cbbcbdc17b
+* This fixes the command run for those of use who use relative
+urls for the vendor repo arg.
+* Also resolve relative paths for the future.
+
+* [CSA] Also double-quoted several variable references for safety."
+wikimedia,mediawiki%2Fcore~1302938,6,2,3,"ApiUpload: Return file description text from stash responses
+
+Why:
+- SpecialUpload needs a new way to generate file page text as it's being
+changed to perform uploads in JS in order to support chunked uploads.
+
+What:
+- Add 'license', 'copystatus' and 'source' parameters to action=upload.
+- Return 'text' in stash responses returned by ApiUpload.
+- Passed as 'text' during finalization so the upload's wikitext
+matches what SpecialUpload POST does. This is also needed so
+extensions that rely on the getInitialPageText hook will continue to
+work.","ApiUpload: Return file description text from stash responses
+
+Why:
+- SpecialUpload needs a new way to generate file page text as it's being
+changed to perform uploads in JS in order to support chunked uploads.
+
+What:
+- Add 'license', 'copystatus' and 'source' parameters to action=upload.
+- Return 'text' in stash responses returned by ApiUpload.
+- Passed as 'text' during finalization so the upload's wikitext
+matches what SpecialUpload POST does. This is also needed so
+extensions that rely on the getInitialPageText hook will continue to
+work.
+- Set non-fatal 'upload-textwithstash' warning when 'text' is passed
+alongside 'stash'.
+- 'text' is ignored in this context and we should signal to API
+callers that this is improper usage of the API."
+wikimedia,mediawiki%2Fcore~1302938,6,3,4,"ApiUpload: Return file description text from stash responses
+
+Why:
+- SpecialUpload needs a new way to generate file page text as it's being
+changed to perform uploads in JS in order to support chunked uploads.
+
+What:
+- Add 'license', 'copystatus' and 'source' parameters to action=upload.
+- Return 'text' in stash responses returned by ApiUpload.
+- Passed as 'text' during finalization so the upload's wikitext
+matches what SpecialUpload POST does. This is also needed so
+extensions that rely on the getInitialPageText hook will continue to
+work.
+- Set non-fatal 'upload-textwithstash' warning when 'text' is passed
+alongside 'stash'.
+- 'text' is ignored in this context and we should signal to API
+callers that this is improper usage of the API.","ApiUpload: Generate 'text' when 'autotext' is true
+
+Why:
+- SpecialUpload needs a new way to generate file page text as it's being
+changed to perform uploads in JS in order to support chunked uploads.
+
+What:
+- Add new optional 'autotext', 'license', 'copystatus' and 'source'
+parameters to action=upload.
+- Set 'text' to a generated value when 'autotext' is true in ApiUpload.
+- This exists to allow the upload's wikitext to match what
+SpecialUpload POST creates. This is also needed so extensions that
+rely on the getInitialPageText hook will continue to work.
+- Set non-fatal 'upload-textwithstash' warning when 'text' is passed
+alongside 'stash'.
+- 'text' is ignored in this context and we should signal to API
+callers that this is improper usage of the API.
+- Set non-fatal 'upload-autotextwithstash' warning when 'autotext' is
+passed alongside 'stash'."
+wikimedia,mediawiki%2Fextensions%2FChart~1305917,3,1,2,"Fix representation of axis format
+
+axis format is an ENUM, with values 'none' or 'auto'","Fix representation of axis format in the Chart Wizard
+
+axis format is an ENUM, with values 'none' or 'auto'"
+wikimedia,mediawiki%2Fextensions%2FChart~1305917,3,2,3,"Fix representation of axis format in the Chart Wizard
+
+axis format is an ENUM, with values 'none' or 'auto'","Fix representation of axis format in Chart Wizard
+
+axis format is an ENUM, with values 'none' or 'auto'"
+wikimedia,mediawiki%2Fcore~1304143,4,2,3,"libs>ObjectCache: Improve BagOStuff constructor docs slightly
+
+- Re-arrange the constructor's docblock to match the flow of the
+code in its definition.
+- The `stats` option was still documented as IStatsdDataFactory but
+this has long changed since we moved to StatsFactory.","libs>ObjectCache: Improve BagOStuff constructor docs slightly
+
+- Re-arrange the constructor's docblock to match the flow of the
+code in its definition.
+- The `stats` option was still documented as IStatsdDataFactory but
+this changed a while ago and we moved to StatsFactory."
+wikimedia,mediawiki%2Fextensions%2FUniversalLanguageSelector~1302763,15,12,13,"ULS rewrite: add usePregressiveRender test spec
+
+initial limit, growth in chunks, cleanup on unmount","ULS rewrite: add useProgressiveRender test spec
+
+initial limit, growth in chunks, cleanup on unmount"
+wikimedia,mediawiki%2Fextensions%2FUniversalLanguageSelector~1302763,15,13,14,"ULS rewrite: add useProgressiveRender test spec
+
+initial limit, growth in chunks, cleanup on unmount","ULS rewrite: add useProgressiveRender test spec
+
+Amongst other things, verify:
+* initial limit,
+* growth in chunks,
+* cleanup on unmount"
+wikimedia,mediawiki%2Fextensions%2FUniversalLanguageSelector~1302261,15,2,3,"ULS rewrite: add test spec for useTypeahead
+
+Typeahead suggestion logic
+- scenario for label match, code match, search-hit match
+- no accepted suggestion found","ULS rewrite: add useTypeahead test spec
+
+Typeahead suggestion logic
+- scenario for label match, code match, search-hit match
+- no accepted suggestion found"
+wikimedia,mediawiki%2Fextensions%2FUniversalLanguageSelector~1305879,2,1,2,"ULS rewrite: Rename LanguageSettings to LanguageSettingsEntrypoint
+
+This module only registers the entrypoint. Another module will be
+added in subsequent patches that actually contains the language
+settings code.","ULS rewrite: Rename LanguageSettings to LanguageSettingsEntrypoint
+
+This module only registers the entrypoint. Another module will be
+added in subsequent patches that actually contains the language
+settings code.
+
+Rename the module so that we don't load a large number of language
+settings related code to display the basic language selector."
+wikimedia,mediawiki%2Fextensions%2FBlueSpiceWikiFarm~1304050,3,1,2,"Reuse DB connection
+
+To avoid `real_connect(): (HY000/1040): Too many connections`
+
+ERM48514
+[5.1.x]i","Reuse DB connection
+
+To avoid `real_connect(): (HY000/1040): Too many connections`
+
+ERM48514
+[5.1.x]"
+wikimedia,mediawiki%2Fextensions%2FBlueSpiceWikiFarm~1304050,3,2,3,"Reuse DB connection
+
+To avoid `real_connect(): (HY000/1040): Too many connections`
+
+ERM48514
+[5.1.x]","Reuse DB connection
+
+To avoid `real_connect(): (HY000/1040): Too many connections`
+
+ERM48514
+[5.1.x]i"
+wikimedia,mediawiki%2Fextensions~1305904,2,1,2,Remove ShortUrl,Remove PerformanceInspector
+wikimedia,mediawiki%2Fextensions%2FWanda~1306025,5,1,2,Rename 'Public knowledge' to 'LLM Knowledge' for accurate alignment,"Rename 'Public knowledge' to 'LLM Knowledge' for accurate alignment
+The label ""Public knowledge"" was misleading — it refers specifically to
+the LLM's built-in parametric knowledge, not publicly available
+information in general. Rename it to ""LLM Knowledge"" across all
+user-facing strings, i18n messages, and documentation.
+
+Internal API parameter names (usepublicknowledge, publicknowledge) are
+unchanged to avoid breaking API compatibility."
+wikimedia,mediawiki%2Fextensions%2FWanda~1306025,5,2,3,"Rename 'Public knowledge' to 'LLM Knowledge' for accurate alignment
+The label ""Public knowledge"" was misleading — it refers specifically to
+the LLM's built-in parametric knowledge, not publicly available
+information in general. Rename it to ""LLM Knowledge"" across all
+user-facing strings, i18n messages, and documentation.
+
+Internal API parameter names (usepublicknowledge, publicknowledge) are
+unchanged to avoid breaking API compatibility.","Rename 'Public knowledge' to 'LLM Knowledge'for accurate alignment
+
+The label ""Public knowledge"" was misleading — it refers specifically to
+the LLM's built-in parametric knowledge, not publicly available
+information in general. Rename it to ""LLM Knowledge"" across all
+user-facing strings, i18n messages, and documentation.
+
+Internal API parameter names (usepublicknowledge, publicknowledge) are
+unchanged to avoid breaking API compatibility."
+wikimedia,mediawiki%2Fextensions%2FWanda~1306025,5,3,4,"Rename 'Public knowledge' to 'LLM Knowledge'for accurate alignment
+
+The label ""Public knowledge"" was misleading — it refers specifically to
+the LLM's built-in parametric knowledge, not publicly available
+information in general. Rename it to ""LLM Knowledge"" across all
+user-facing strings, i18n messages, and documentation.
+
+Internal API parameter names (usepublicknowledge, publicknowledge) are
+unchanged to avoid breaking API compatibility.","Rename 'Public knowledge' to 'LLM Knowledge' for accurate alignment
+
+The label ""Public knowledge"" was misleading — it refers specifically to
+the LLM's built-in parametric knowledge, not publicly available
+information in general. Rename it to ""LLM Knowledge"" across all
+user-facing strings, i18n messages, and documentation.
+
+Internal API parameter names (usepublicknowledge, publicknowledge) are
+unchanged to avoid breaking API compatibility."
+wikimedia,operations%2Fpuppet~1305937,6,2,3,"cloud-vps backups: exclude a few more categories of servers
+
+These are all servers that exist in large sets, presumably generated
+procedurally so easy to replace.
+
+This change also removes reference to sge toolforge hosts because they
+don't exist anymore.","cloud-vps backups: exclude a few more categories of servers
+
+These are all servers that exist in large sets, presumably generated
+procedurally so easy to replace.
+
+This change also removes reference to sge toolforge hosts because they
+don't exist anymore.
+
+Also, include a few more deployment-prep VMs which I'm less sure we
+can easily recreate."
+wikimedia,operations%2Fpuppet~1305937,6,4,5,"cloud-vps backups: exclude a few more categories of servers
+
+These are all servers that exist in large sets, presumably generated
+procedurally so easy to replace.
+
+This change also removes reference to sge toolforge hosts because they
+don't exist anymore.
+
+Also, include a few more deployment-prep VMs which I'm less sure we
+can easily recreate.","cloud-vps backups: exclude CI runner nodes
+
+These servers are identical to each other and trivial to
+regenerate if one or all is/are lost."
+wikimedia,mediawiki%2Fextensions%2FCitoid~1304648,2,1,2,"Add duplicate reference validation
+
+*Added functions to validate if a new reference (DOI,URL or ISBN) is duplicated.
+*Normalize and identify reference identifiers and compare them with the new reference.
+*Includes duplicate message display in English and Portuguese and unit tests.","Add duplicate reference validation
+
+*Added functions to validate if a new reference (DOI,URL or ISBN) is duplicated.
+*Normalize and identify reference identifiers and compare them with the new reference.
+*Includes duplicate message display in English and Portuguese and unit tests.
+*Register message at extension.json
+*Nested unit tests in one module"
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,1,2,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running composer test."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,2,3,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running composer test.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,3,4,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,4,5,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,5,6,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,6,7,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,7,8,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,8,9,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,9,10,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,10,11,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!."
+wikimedia,mediawiki%2Fextensions%2FWanda~1305853,13,11,12,"ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki.
+
+Linting verified by running PHP 8.3.6 | 10 parallel jobs
+............ 12/12 (100%)
+
+Checked 12 files in 0 seconds
+No syntax error found
+............ 12 / 12 (100%)
+
+Time: 49ms; Memory: 8MB
+
+MinusX
+======
+Processing /home/neha/gssoc/Wanda...
+............................................................
+All good!.","ExternalWikiSearchHandler: Add support for wiki-specific search parameters
+
+The current handler does not allow filtering by specific wiki endpoints.
+This change adds a new parameter validation layer to ensure search
+requests are correctly routed to the appropriate external wiki."
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,3,4,Notify users of multi-revision undos and reverts,"Notify users of multi-revision undos and reverts, and EditResult-related cleanup
+
+It is possible to revert multiple users, but currently no user will be notified for that case. This commit notifies all users whose edits were reverted. It also cleans up Echo hooks, which can be simplified/changed as a result of EditResult being added to the core."
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,16,17,"Notify users of multi-revision undos and reverts, and EditResult-related cleanup
+
+It is possible to revert multiple users, but currently no user will be notified for that case. This commit notifies all users whose edits were reverted. It also cleans up Echo hooks, which can be simplified/changed as a result of EditResult being added to the core.","Notify users of multi-revision reverts; EditResult-related cleanup
+
+It is possible to revert multiple users, but currently no user will
+be notified for that case. This commit notifies all users whose edits
+were reverted. It also cleans up Echo hooks, which can be
+simplified/changed as a result of EditResult being added to the core.
+
+TODO: tests, both automated and manual"
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,19,20,"Notify users of multi-revision reverts; EditResult-related cleanup
+
+It is possible to revert multiple users, but currently no user will
+be notified for that case. This commit notifies all users whose edits
+were reverted. It also cleans up Echo hooks, which can be
+simplified/changed as a result of EditResult being added to the core.
+
+TODO: tests, both automated and manual","Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+TODO: tests, both automated and manual"
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,23,24,"Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+TODO: tests, both automated and manual","Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manully.
+Seems to work."
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,24,25,"Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manully.
+Seems to work.","Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manually.
+Seems to work."
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,30,31,"Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manually.
+Seems to work.","Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manually.
+Seems to work.
+
+Marked EchoTalkPageFunctionalTest as Broken, as I can't figure out
+how to fix it and what is really the issue. I've attempted to make
+it a little bit more tolerant of other events, but that still does
+not work. See T67336 and I7a79e0eaa1617e4d87a8d615a5391723c0e30b6a"
+wikimedia,mediawiki%2Fextensions%2FEcho~608884,47,41,42,"Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core. This also gets rid of a
+pesky static variable in EchoHooks.php.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manually.
+Seems to work.
+
+Marked EchoTalkPageFunctionalTest as Broken, as I can't figure out
+how to fix it and what is really the issue. I've attempted to make
+it a little bit more tolerant of other events, but that still does
+not work. See T67336 and I7a79e0eaa1617e4d87a8d615a5391723c0e30b6a","Notify users of multi-revision reverts; EditResult-related cleanup
+
+Goals:
+* Clean up two Echo hooks that can be simplified thanks to the
+introduction of EditResult in core.
+* Notify all reverted users in multi-edit reverts.
+* Correctly inform the user whether a single or multiple edits were
+reverted.
+* Notify users about manual reverts.
+
+Added a lot of tests, also tested the new functionality manually.
+Seems to work."
+wikimedia,mediawiki%2Fextensions%2FEcho~330587,11,2,3,"Notify users of multiple-revisions undos
+
+For multiple-revisions undos, this notifies each author
+of the reverted edits. This also provides a way to count
+the number of edits authored by each notified user.
+In addition, the rollback hook is removed since it can
+now be handled by the PageContentSaveComplete hook.","Notify users of multiple-revisions undos
+
+For multiple-revisions undos or manual restores, this
+notifies each author of the reverted edits. This also
+provides a way to count the number of edits authored
+by each notified user.
+In addition, the rollback hook is removed since it can
+now be handled by the PageContentSaveComplete hook."
+wikimedia,mediawiki%2Fextensions%2FEcho~330587,11,3,4,"Notify users of multiple-revisions undos
+
+For multiple-revisions undos or manual restores, this
+notifies each author of the reverted edits. This also
+provides a way to count the number of edits authored
+by each notified user.
+In addition, the rollback hook is removed since it can
+now be handled by the PageContentSaveComplete hook.","Notify users of multiple-revisions undos
+
+For multiple-revisions undos or manual restores, this
+notifies each author of the reverted edits. This also
+provides a way to count the number of edits authored
+by each notified user. Furthermore, this uses the new
+hook param 'autoSummHash' to check if the summary was
+an automatic one (so this now handles rollbacks)."
+wikimedia,mediawiki%2Fextensions%2FEcho~330587,11,4,5,"Notify users of multiple-revisions undos
+
+For multiple-revisions undos or manual restores, this
+notifies each author of the reverted edits. This also
+provides a way to count the number of edits authored
+by each notified user. Furthermore, this uses the new
+hook param 'autoSummHash' to check if the summary was
+an automatic one (so this now handles rollbacks).","Notify users of multiple-revisions undos and assorted fixes
+
+For multiple-revisions undos or manual restores, this
+notifies each author of the reverted edits. This also
+provides a way to count the number of edits authored by
+each notified user. Furthermore, this checks whether an
+autosummary was used using the new EditResult object (so
+this now handles rollbacks), and this avoids notifying
+users of a new page link in case of exact reverts."
+wikimedia,mediawiki%2Fextensions%2FEcho~700238,3,2,3,"Disable notifications when a created page is linked with a revert
+
+A change is revert if it's tagged using the dedicated change tags.
+Drop obsolete broken code (per its comment).","[WIP] Disable notifications when a created page is linked with a revert
+
+A change is revert if it's tagged using the dedicated change tags.
+Avoid global state."
+wikimedia,mediawiki%2Fcore~1301450,36,1,2,"Prompt for reauthentication after submitting a site JS edit, not before","[WIP] Prompt for reauthentication after submitting a site JS edit, not before"
+wikimedia,mediawiki%2Fcore~1301450,36,17,18,"[WIP] Prompt for reauthentication after submitting a site JS edit, not before","Prompt for reauthentication after submitting a site JS edit, not before
+
+This change set:
+
+* Integrates new core re-auth/priv-elevation functionality into
+EditPage, specifically for editing site/user js/css.
+
+* Adds a new data stashing trait. Since we want to re-auth after
+a form save attempt, we need to store any relevant user-submitted
+data in the session. We persist this data with a short TTL so it
+doesn't linger forever after bad re-auth attempts or page reloads.
+Ultimately, this code could probably live somewhere else in core,
+but it should be ok for now as a trait, for this use-case."
+wikimedia,mediawiki%2Fextensions%2FOATHAuth~1305277,6,1,2,"Reauthentication: Skip directly to second factor when available
+
+This is messy and needs cleanup, but it works (at least for users with
+passkeys):
+
+TODO:
+- Test for users without passkeys, with various combinations of 2FA
+methods
+- Add a button to switch back to passkey after switching away from it
+- Rename ""Use security key or passkey"" to ""Use security key"" in this
+context
+- When switching to security key, only offer security keys, not passkeys","Reauthentication: Skip directly to second factor when available
+
+Add a primary authentication provider that only handles
+reauthentication, and wraps SecondaryAuthenticationProvider to offer the
+2FA methods the user has available. Put passkey and security key
+authentication behind a button, so the user has a chance to read the
+reauthentication screen (and verify the requested action) before
+proceeding.
+
+Use the onAuthChangeFormFields hook handler to hide the password field
+and tweak the appearance of the buttons."
+wikimedia,mediawiki%2Fcore~1301465,20,1,2,"Reauth: Add personalized message
+
+Adds personalized message to reauth page
+to indiate what user is signed in","Reauth: Add banner and message
+
+Adds banner and description to reauth page
+for clarification"
+wikimedia,mediawiki%2Fcore~1301465,20,3,4,"Reauth: Add banner and message
+
+Adds banner and description to reauth page
+for clarification","Reauth: Update banner and add message
+
+Updates banner and adds a description
+to reauth page for clarification"
+wikimedia,mediawiki%2Fcore~1305723,9,8,9,"Tests: tweaks to budget tests
+
+* Allow extensions to declare modules in bundlesize for tracking
+purposes without permitting them on page load
+* Test on Minerva as well to protect mobile experience","Tests: tweaks to budget tests
+
+* Allow extensions to declare modules in bundlesize for tracking
+purposes without permitting them on page load
+* Allow extension to test on other skins"
+libreoffice,core~196196,15,1,2,"tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string. Calls to UnSelectFrame() and
+LeaveSelFrameMode() have been added to
+SwWrtShell::InsertGraphic, similar to the
+SwContentControlType::PICTURE case in the
+SwWrtShell::InsertContentControl method.","tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, similar to DnD behavior.
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string. Calls to UnSelectFrame() and
+LeaveSelFrameMode() have been added to
+SwWrtShell::InsertGraphic, similar to the
+SwContentControlType::PICTURE case in the
+SwWrtShell::InsertContentControl method."
+libreoffice,core~196196,15,2,3,"tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, similar to DnD behavior.
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string. Calls to UnSelectFrame() and
+LeaveSelFrameMode() have been added to
+SwWrtShell::InsertGraphic, similar to the
+SwContentControlType::PICTURE case in the
+SwWrtShell::InsertContentControl method.","tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, wich differs from the DnD behavior. When inserting
+multiple images, they are inserted with the select anchor
+""as character"" and displayed ""image under image"".
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string."
+libreoffice,core~196196,15,6,7,"tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, wich differs from the DnD behavior. When inserting
+multiple images, they are inserted with the select anchor
+""as character"" and displayed ""image under image"".
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string.","tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, which is similar to DnD. The anchor can be changed in the settings under Tools -> Options... -> LibreOffice Writer -> Formatting Aids -> Image -> Anchor:"".
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string."
+libreoffice,core~196196,15,9,10,"tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, which is similar to DnD. The anchor can be changed in the settings under Tools -> Options... -> LibreOffice Writer -> Formatting Aids -> Image -> Anchor:"".
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string.","tdf#41007 sw: Inserting multiple images via the insert dialog.
+
+Added the behavior of inserting multiple images through the insert
+dialog, which is similar to DnD. The anchor can be changed in the settings under
+Tools -> Options... -> LibreOffice Writer -> Formatting Aids -> Image -> Anchor:"".
+
+The MultiSelection flag has been added to FileDialogHelper to
+allow selecting multiple images. File selection is now handled as
+a list instead of a string.
+
+In addition, the behavior of replacing already inserted images has been adjusted.
+When inserting a single image on top of an existing one, it will be replaced (as is).
+When inserting multiple images in the area of an existing one, they will be inserted
+instead of replaced, as multiple images are not replaced by a single image, which is
+the more expected behavior (to be). This is based on the proposed commit
+in sc: https://gerrit.libreoffice.org/c/core/+/200891"
+libreoffice,core~200891,12,1,2,"tdf#165004 Insert multiple images in Calc via the insert dialog and DnD.
+
+Added support for selecting multiple images in the insert dialog. Fixed an issue with inserting multiple images via DnD.
+
+When inserting a single image into a shape with a background or onto another existing image - they are replaced. If insert multiple images into a shape or onto an existing image - they are inserted instead of being replaced. To achieve this, SetMultiInsertState(...) and isMultiInsert() methods have been added for DnD, and the boolean variable isMultiInsert is passed for insertion via lcl_InsertGraphic(...).","tdf#165004 sc: Insert multiple images via the insert dialog and DnD.
+
+Added support for selecting multiple images in the insert dialog. Fixed an issue with inserting multiple images via DnD.
+
+When inserting a single image into a shape with a background or onto another existing image - they are replaced.
+If insert multiple images into a shape or onto an existing image - they are inserted instead of being replaced.
+To achieve this, SetMultiInsertState(...) and isMultiInsert() methods have been added for DnD, and the boolean
+variable isMultiInsert is passed for insertion via lcl_InsertGraphic(...)."
+libreoffice,core~205979,12,6,7,"Implemented functions which rely on callables
+
+tdf#164508 Add BYCOL (ByCol) function to Calc for interoperability with MS Excel and Google Sheets
+tdf#164509 Add BYROW (ByRow) function to Calc for interoperability with MS Excel and Google Sheets
+tdf#164511 Add MAKEARRAY (MakeArray) function to Calc for interoperability with MS Excel and Google Sheets
+tdf#164512 Add MAP function to Calc for interoperability with MS Excel and Google Sheets
+tdf#164513 Add REDUCE function to Calc for interoperability with MS Excel and Google Sheets
+tdf#161428 Add SCAN function to Calc for interoperability with MS Excel","Implemented functions which rely on callables
+
+Add BYCOL(tdf#164508), BYROW(tdf#164509), MAKEARRAY(tdf#164511),
+MAP(tdf#164512), REDUCE(tdf#164513), SCAN(tdf#161428) formula
+functions, which are usually used together with LAMBDA and are
+important for interoperability with other Office suites."
+libreoffice,core~188311,2,1,2,"tdf#167632 Add additional columns when converting text2table
+
+Add a spin button in Convert To Table Dialog to let users select how
+many columns (0-20) to be added when converting text to table
+And attach the delimiter character after the text to create empty cells
+for each row","tdf#167632 Add additional columns when converting text2table
+
+Add an ""Add [n] Columns"" spin button to the Convert Text to Table
+dialog, letting users choose how many empty columns (0-20) to append
+when converting text to a table.
+
+Instead of inserting separator characters into the source text (which
+left those characters behind in the document when the conversion was
+reverted), pass the requested column count down to SwNodes::TextToTable
+and raise nMaxBoxes accordingly. lcl_BalanceTable() then creates the
+extra empty boxes via InsBoxen() without touching the text, and
+registers them with the undo object, so reverting the conversion
+restores exactly the originally selected text."
+libreoffice,core~207229,6,1,2,"Fix window sizing on macOS when using Qt6
+
+macOS has this goofy 2 tier system of logical pixels for windows and views.
+But they are backed by image buffers that are 2x2 physical pixels for each
+logical pixel.
+
+Qt6 apparently handles this differently than the default macOS vcl plugin
+so we need to have different code for window sizing when the Qt6 plugin is
+used on macOS.","Fix window sizing on macOS when using Qt6
+
+macOS has this goofy 2 tier system of logical pixels for windows and
+views. But they are backed by image buffers that are 2x2 physical
+pixels for each logical pixel.
+
+Qt6 apparently handles this differently than the default macOS vcl
+plugin so we need to have different code for window sizing when the
+Qt6 plugin is used on macOS."
+libreoffice,core~207229,6,2,3,"Fix window sizing on macOS when using Qt6
+
+macOS has this goofy 2 tier system of logical pixels for windows and
+views. But they are backed by image buffers that are 2x2 physical
+pixels for each logical pixel.
+
+Qt6 apparently handles this differently than the default macOS vcl
+plugin so we need to have different code for window sizing when the
+Qt6 plugin is used on macOS.","Fix window sizing on macOS when using Qt6
+
+macOS native code uses a 2 tier system of logical pixels for
+windows and views. But they are backed by image buffers that
+are 2x2 physical pixels for each logical pixel.
+
+In contrast, Qt6 on macOS uses logical pixels that scale like
+Linux and Windows so we need to have different code for window
+sizing when the Qt6 plugin is used on macOS."
+libreoffice,core~207229,6,3,4,"Fix window sizing on macOS when using Qt6
+
+macOS native code uses a 2 tier system of logical pixels for
+windows and views. But they are backed by image buffers that
+are 2x2 physical pixels for each logical pixel.
+
+In contrast, Qt6 on macOS uses logical pixels that scale like
+Linux and Windows so we need to have different code for window
+sizing when the Qt6 plugin is used on macOS.","Fix window sizing on macOS when using Qt6
+
+macOS native code uses a 2 tier system of logical pixels for
+windows and views. But they are backed by image buffers that
+are 2x2 physical pixels for each logical pixel.
+
+In contrast, Qt6 on macOS uses logical pixels that scale like
+Linux and Windows so we need to have different code for window
+and graphics instance sizing when the Qt6 plugin is used on macOS.
+
+TODO: Try the following ideas to handle moving windows between
+Retina and non-Retina monitors:
+- Scale Qt windows' get and set size calls to allow using Retina
+values in the LibreOffice window sizing code
+- Scale Qt graphics instances when moving a Qt window to a different
+monitor to allow using a fixed DPI across all monitors in the
+LibreOffice drawing code"
+libreoffice,core~207229,6,4,5,"Fix window sizing on macOS when using Qt6
+
+macOS native code uses a 2 tier system of logical pixels for
+windows and views. But they are backed by image buffers that
+are 2x2 physical pixels for each logical pixel.
+
+In contrast, Qt6 on macOS uses logical pixels that scale like
+Linux and Windows so we need to have different code for window
+and graphics instance sizing when the Qt6 plugin is used on macOS.
+
+TODO: Try the following ideas to handle moving windows between
+Retina and non-Retina monitors:
+- Scale Qt windows' get and set size calls to allow using Retina
+values in the LibreOffice window sizing code
+- Scale Qt graphics instances when moving a Qt window to a different
+monitor to allow using a fixed DPI across all monitors in the
+LibreOffice drawing code","Fix window sizing on macOS when using Qt6
+
+macOS native code uses a 2 tier system of logical pixels for
+windows and views. But they are backed by image buffers that
+are 2x2 physical pixels for each logical pixel.
+
+In contrast, Qt6 on macOS uses logical pixels that scale like
+Linux and Windows so we need to have different code for window
+and graphics instance sizing when the Qt6 plugin is used on macOS.
+
+TODO: Try the following ideas to handle moving windows between
+Retina and non-Retina monitors:
+- Scale Qt graphics instances when moving a Qt window to a different
+monitor to allow using a fixed DPI across all monitors in the
+LibreOffice drawing code"
+libreoffice,core~205036,3,1,2,"tdf#153109 Use std::any_of instead of std::find in SC data pivot code
+
+Replace std::find(...) != container.end() patterns with std::any_of
+to simplify code and improve readability following C++11 best practices.
+
+This refactoring applies to:
+- sc/source/core/data/dptabsrc.cxx: GetOrientation() method
+- sc/source/core/data/dpdimsave.cxx: HasInGroup() method
+- sc/source/core/data/dpfilteredcache.cxx: GroupFilter::match() method
+- sc/source/core/data/dociter.cxx: Query validation logic
+
+The behavior remains unchanged; only the implementation is simplified.","tdf#153109 Use std::ranges::any_of instead of std::find in SC data pivot code
+
+Replace std::find(...) != container.end() patterns with std::any_of
+to simplify code and improve readability following C++11 best practices.
+
+This refactoring applies to:
+- sc/source/core/data/dptabsrc.cxx: GetOrientation() method
+- sc/source/core/data/dpdimsave.cxx: HasInGroup() method
+- sc/source/core/data/dpfilteredcache.cxx: GroupFilter::match() method
+- sc/source/core/data/dociter.cxx: Query validation logic
+
+The behavior remains unchanged; only the implementation is simplified."
+libreoffice,core~205036,3,2,3,"tdf#153109 Use std::ranges::any_of instead of std::find in SC data pivot code
+
+Replace std::find(...) != container.end() patterns with std::any_of
+to simplify code and improve readability following C++11 best practices.
+
+This refactoring applies to:
+- sc/source/core/data/dptabsrc.cxx: GetOrientation() method
+- sc/source/core/data/dpdimsave.cxx: HasInGroup() method
+- sc/source/core/data/dpfilteredcache.cxx: GroupFilter::match() method
+- sc/source/core/data/dociter.cxx: Query validation logic
+
+The behavior remains unchanged; only the implementation is simplified.","tdf#170269 Use std::ranges::any_of instead of std::find in SC data pivot code
+
+Replace std::find(...) != container.end() patterns with std::any_of
+to simplify code and improve readability following C++11 best practices.
+
+This refactoring applies to:
+- sc/source/core/data/dptabsrc.cxx: GetOrientation() method
+- sc/source/core/data/dpdimsave.cxx: HasInGroup() method
+- sc/source/core/data/dpfilteredcache.cxx: GroupFilter::match() method
+- sc/source/core/data/dociter.cxx: Query validation logic
+
+The behavior remains unchanged; only the implementation is simplified."
+libreoffice,core~186660,7,3,4,"postgresql: upgrade to 16.9 (master only)
+
+Downloaded from https://ftp.postgresql.org/pub/source/v16.9/postgresql-16.9.tar.bz2","postgresql: upgrade to 16.10 (master only)
+
+Downloaded from https://ftp.postgresql.org/pub/source/v16.10/postgresql-16.10.tar.bz2"
+libreoffice,core~203273,6,1,2,add configure check to require newer dragonbox for gcc >= 16,"add configure check to require newer dragonbox for gcc >= 16
+
+Follow up to https://gerrit.libreoffice.org/c/core/+/202511"
+libreoffice,core~205852,5,1,2,"tdf#172113 sw line spacing: additional unit tests / cleanup
+
+Numbering is a common document property,
+so make sure I have a test targetting it.
+
+LineBreaks seems to be a possible edge case,
+especially on an empty line.
+
+isFieldMarkPortion:
+There are FieldMarkPortions, but a true is not passed
+from inside of one of those, but from a SwTextPortion.
+
+make CppunitTest_sw_ooxmlexport25
+CPPUNIT_TEST_NAME=testTdf172113_linespacingLineBreaks
+
+make CppunitTest_sw_ooxmlexport25
+CPPUNIT_TEST_NAME=testTdf172113_linespacingNumbering","tdf#172113 sw line spacing: additional unit test / cleanup
+
+LineBreaks seems to be a possible edge case,
+especially on an empty line.
+
+isFieldMarkPortion:
+There are FieldMarkPortions, but a true is not passed
+from inside of one of those, but from a SwTextPortion.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingLineBreaks"
+libreoffice,core~205316,16,1,2,"tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually doesn't.
+So, for the recent 25.2 case where we actually comes closer
+to being interoperable, calculate the last line in a way
+that improves inter-paragraph line spacing.
+
+The previous calculation was extremely simplistic.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight","tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+This passed a make sw.check
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually doesn't.
+So, for the recent 25.2 case where we actually comes closer
+to being interoperable, calculate the last line in a way
+that improves inter-paragraph line spacing.
+
+The previous calculation was extremely simplistic.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight"
+libreoffice,core~205316,16,5,6,"tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+This passed a make sw.check
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually doesn't.
+So, for the recent 25.2 case where we actually comes closer
+to being interoperable, calculate the last line in a way
+that improves inter-paragraph line spacing.
+
+The previous calculation was extremely simplistic.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight","tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+testing an sw.check against this - hopefully it passes.
+(test run also includes the next IsBidiPortion())
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually doesn't.
+So, for the recent 25.2 case where we actually comes closer
+to being interoperable, calculate the last line in a way
+that improves inter-paragraph line spacing.
+
+The previous calculation was extremely simplistic.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight"
+libreoffice,core~205316,16,6,7,"tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+testing an sw.check against this - hopefully it passes.
+(test run also includes the next IsBidiPortion())
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually doesn't.
+So, for the recent 25.2 case where we actually comes closer
+to being interoperable, calculate the last line in a way
+that improves inter-paragraph line spacing.
+
+The previous calculation was extremely simplistic.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight","tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+This passed a make sw.check
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually didn't.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight"
+libreoffice,core~205316,16,7,8,"tdf#172113 sw whitespace linespacing: CalcMSOHeightOfLastLine
+
+This passed a make sw.check
+
+Although various comments suggest that CalcHeightOfLastLine
+does things 'in a compatible MSO way', it actually didn't.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight","tdf#172113 sw ms import: consistent linespacing gap height
+
+I guess they probably used to be consistent before LO 7.1.
+After 7.1, only the last line still had a gap determined by
+the largest portion on the line.
+The other lines were determined primarily
+by the largest TextPortion.
+
+That was both inconsistent and not interoperable with MS formats.
+
+So change mnHeightOfLastLine to use 7.1's GetLineSpacingBaseHeight,
+now that IsUsedToCalcLineSpacingHeight
+produces a much more interoperable line spacing result.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight"
+libreoffice,core~205316,16,8,9,"tdf#172113 sw ms import: consistent linespacing gap height
+
+I guess they probably used to be consistent before LO 7.1.
+After 7.1, only the last line still had a gap determined by
+the largest portion on the line.
+The other lines were determined primarily
+by the largest TextPortion.
+
+That was both inconsistent and not interoperable with MS formats.
+
+So change mnHeightOfLastLine to use 7.1's GetLineSpacingBaseHeight,
+now that IsUsedToCalcLineSpacingHeight
+produces a much more interoperable line spacing result.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight","tdf#172113 sw ms import: consistent linespacing gap height
+
+I guess they probably used to be consistent before LO 7.1.
+After 7.1, only the last line still had a gap
+simply determined by the largest portion in the line.
+The other lines were determined primarily
+by the largest TextPortion in the line.
+
+That is inconsistent and rather confusing.
+
+The other lines get their gap height
+from GetLineSpacingBaseHeight.
+
+So change mnHeightOfLastLine
+to also use 7.1's GetLineSpacingBaseHeight
+which now results in high interoperability with MS formats.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf137335_whitespaceLineHeight2
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight"
+libreoffice,core~205316,16,12,13,"tdf#172113 sw ms import: consistent linespacing gap height
+
+I guess they probably used to be consistent before LO 7.1.
+After 7.1, only the last line still had a gap
+simply determined by the largest portion in the line.
+The other lines were determined primarily
+by the largest TextPortion in the line.
+
+That is inconsistent and rather confusing.
+
+The other lines get their gap height
+from GetLineSpacingBaseHeight.
+
+So change mnHeightOfLastLine
+to also use 7.1's GetLineSpacingBaseHeight
+which now results in high interoperability with MS formats.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf137335_whitespaceLineHeight2
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight","tdf#172113 sw ms import: consistent linespacing gap height
+
+I guess they probably used to be consistent before LO 7.1.
+After 7.1, only the last line still had a gap
+simply determined by the largest portion in the line.
+The other lines were determined primarily
+by the largest TextPortion in the line.
+
+That is inconsistent and rather confusing.
+
+The other lines get their gap height
+from GetLineSpacingBaseHeight.
+
+So change mnHeightOfLastLine
+to also use 7.1's GetLineSpacingBaseHeight
+which now results in high interoperability with MS formats.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf164835_nonDummyLineHeight
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf137335_whitespaceLineHeight2
+
+make CppunitTest_sw_layoutwriter2 \
+CPPUNIT_TEST_NAME=testHiddenParaLineHeight
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingNumbering"
+libreoffice,core~205815,11,1,2,"tdf#172233 sw: apply line spacing gap after the line, not before
+
+This changes the default behaviour of ODT documents,
+as well as fixing document layout for Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line.
+
+There were two problems with that:
+1.) The height of the first line was ignored.
+It has (always) used the mnHeightOfLastLine as its 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height didn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for clean single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+And of course, since it doesn't match Microsoft's layout,
+it neither displayed native DOC/X files correctly,
+nor did it nicely enable ODT -> DOCX conversions.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap","tdf#172233 sw: apply line spacing gap after the line, not before
+
+This improves document layout for Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line (for intra-paragraph line spacing).
+
+There are two problems with LO's way of placing the gap above:
+1.) The height of the first line is ignored.
+LO uses the mnHeightOfLastLine as the first line's 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height doesn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+And of course, since it doesn't match Microsoft's layout,
+it didn't display native DOC/X files correctly.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+Perhaps it should be made the default for new ODT documents too.
+
+SAFETY FACTOR: very safe
+It hides all the changes behind a compat flag.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap"
+libreoffice,core~205815,11,2,3,"tdf#172233 sw: apply line spacing gap after the line, not before
+
+This improves document layout for Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line (for intra-paragraph line spacing).
+
+There are two problems with LO's way of placing the gap above:
+1.) The height of the first line is ignored.
+LO uses the mnHeightOfLastLine as the first line's 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height doesn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+And of course, since it doesn't match Microsoft's layout,
+it didn't display native DOC/X files correctly.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+Perhaps it should be made the default for new ODT documents too.
+
+SAFETY FACTOR: very safe
+It hides all the changes behind a compat flag.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap","tdf#172233 sw: apply line spacing gap after the line, not before
+
+This improves document layout: both visually
+and for interoperability with Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line (for intra-paragraph line spacing).
+
+There are two problems with LO's way of placing the gap above:
+1.) The height of the first line is ignored.
+LO uses the mnHeightOfLastLine as the first line's 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height doesn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+And of course, since it doesn't match Microsoft's layout,
+it didn't display native DOC/X files correctly.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap"
+libreoffice,core~205815,11,9,10,"tdf#172233 sw: apply line spacing gap after the line, not before
+
+This improves document layout: both visually
+and for interoperability with Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line (for intra-paragraph line spacing).
+
+There are two problems with LO's way of placing the gap above:
+1.) The height of the first line is ignored.
+LO uses the mnHeightOfLastLine as the first line's 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height doesn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+And of course, since it doesn't match Microsoft's layout,
+it didn't display native DOC/X files correctly.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap","tdf#172233 sw: apply line spacing gap after the line, not before
+
+This improves document layout: both visually
+and for interoperability with Microsoft formats.
+
+Prior to this patch, the line's calculated line spacing gap
+was placed above the line (for intra-paragraph line spacing).
+
+There are four problems with LO's way of placing the gap above:
+1.) The height of the first line is ignored.
+LO uses the mnHeightOfLastLine as the first line's 'before gap'.
+This means that the last line's height determines two gaps,
+while the first line's height doesn't determine any gap size.
+
+2.) Font designers already build a gap
+appropriate for single line spacing into the font itself.
+By adding the (larger) gap above the (already large) font
+it didn't create a visually appealing paragraph.
+
+3.) And of course it is based on the tallest item,
+which means that the rest of the characters already
+have an enlarged gap above. Why make it even larger?
+
+4.) And of course, since it doesn't match Microsoft's layout,
+it didn't display native DOC/X files correctly.
+
+While not everything done 'the Microsoft way' is better,
+this aspect of their line-space handling certainly is superior.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172233_linespacingGap"
+libreoffice,core~205838,10,1,2,"tdf#172169 ms import: first portion should not define min linespacing
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that first portions (of anything) also do.
+
+This of course is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion","tdf#172169 sw ms import: 1st portion shouldn't define min linespace
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that the font of first portions (of anything) also do.
+
+Preventing this 'random' initial definition of line-spacing height
+certainly is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion"
+libreoffice,core~205838,10,4,5,"tdf#172169 sw ms import: 1st portion shouldn't define min linespace
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that the font of first portions (of anything) also do.
+
+Preventing this 'random' initial definition of line-spacing height
+certainly is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion","tdf#172169 sw ms import: 1st portion shouldn't define min linespace
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that the font of first portions (of anything) also do.
+
+Preventing this 'random' initial definition of line-spacing height
+certainly is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion
+
+This part is WRONG
+make CppunitTest_vcl_pdfexport CPPUNIT_TEST_NAME=testTdf142806
+bTmpDummy is true (generally wrong),
+mnLineLength is zero (b/c the field is 1 length, and that is on the previous line, so this field spill-over is zero width)"
+libreoffice,core~205838,10,6,7,"tdf#172169 sw ms import: 1st portion shouldn't define min linespace
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that the font of first portions (of anything) also do.
+
+Preventing this 'random' initial definition of line-spacing height
+certainly is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion
+
+This part is WRONG
+make CppunitTest_vcl_pdfexport CPPUNIT_TEST_NAME=testTdf142806
+bTmpDummy is true (generally wrong),
+mnLineLength is zero (b/c the field is 1 length, and that is on the previous line, so this field spill-over is zero width)","tdf#172169 sw ms import: 1st portion shouldn't define min linespace
+
+This fixes an oversight from the 7.1 change
+that only SwTextPortions should inform the line-spacing gap.
+They missed that the font of first portions (of anything) also do.
+
+Preventing this 'random' initial definition of line-spacing height
+certainly is needed for interoperability with MS formats,
+which of course have no such anomaly.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFirstPortion
+[Note: page 2 is basically just a sanity check for later.
+It is not changed by this unit test.]"
+libreoffice,core~205599,11,1,2,"tdf#172113 sw ms import: add IsBidiPortion in CalcMSOHeightOfLastLine
+
+Basically guessing here, but MultiPortion in general
+and specifically IsBidi seems to be basically a SwTextPortion,
+and so it should inform the line spacing height.","tdf#172113 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+That should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+The unit test didn't work.
+What I see as one page is considered two in the unit test,
+and even a Scheduler::ProcessEventsToIdle() didn't solve that.
+
+SAFETY FACTOR: very safe
+It only affects MS_WORD_LINE_SPACING"
+libreoffice,core~205599,11,2,3,"tdf#172113 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+That should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+The unit test didn't work.
+What I see as one page is considered two in the unit test,
+and even a Scheduler::ProcessEventsToIdle() didn't solve that.
+
+SAFETY FACTOR: very safe
+It only affects MS_WORD_LINE_SPACING","tdf#172169 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Those should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+ODT is rather dump here.
+It bases the line spacing on the first bidi portion only.
+
+SAFETY FACTOR: very safe
+It only affects MS_WORD_LINE_SPACING
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi"
+libreoffice,core~205599,11,3,4,"tdf#172169 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Those should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+ODT is rather dump here.
+It bases the line spacing on the first bidi portion only.
+
+SAFETY FACTOR: very safe
+It only affects MS_WORD_LINE_SPACING
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi","tdf#172169 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Those should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+Legacy ODT is rather dumb here.
+It bases the line spacing on the first bidi portion only.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi"
+libreoffice,core~205599,11,4,5,"tdf#172169 sw ms import: IsBidiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Those should be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+Legacy ODT is rather dumb here.
+It bases the line spacing on the first bidi portion only.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi","tdf#172169 sw ms import: IsMultiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Interestingly, rotated text should be treated the same as normal text
+in terms of determing the line-spacing gap (according to MS Word).
+It doesn't seem very smart to do so IMHO, but it is consistent at least.
+
+And it looks like MS Word probably does this with Combining characters
+and Rubys as well.
+
+So then these should all be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingDoubleLineText
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingVerticalText"
+libreoffice,core~205599,11,5,6,"tdf#172169 sw ms import: IsMultiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextFrame,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+
+Interestingly, rotated text should be treated the same as normal text
+in terms of determing the line-spacing gap (according to MS Word).
+It doesn't seem very smart to do so IMHO, but it is consistent at least.
+
+And it looks like MS Word probably does this with Combining characters
+and Rubys as well.
+
+So then these should all be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingDoubleLineText
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingVerticalText","tdf#172169 sw ms import: IsMultiPortion IsUsedToCalcLineSpacingHeight
+
+Pure RTL text is just an SwTextPortion,
+but I guess if there is anything 'different' in the paragraph
+then it becomes a multi-portion SwBidiPortion.
+So clearly SwBidiPortions ought to inform the line-specing gap.
+
+Interestingly, rotated text should be treated the same as normal text
+in terms of determining the line-spacing gap (according to MS Word).
+It seems a bit odd to do so IMHO, but it is consistent at least.
+
+Although our double-line Asian layout is not that closely aligned
+to how Microsoft implements it, MS Word clearly does define
+the line-spacing gap based on the height of double-lined text.
+
+I assume that this applies to Rubies as well
+(where again our implementation seems rather different from MS Word).
+
+So then these should all be treated the same as normal text
+in terms of determing the line-spacing gap.
+
+SAFETY FACTOR: very safe
+It fixes MS formats and only affects new documents.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingBidi
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingDoubleLineText
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingVerticalText"
+libreoffice,core~205568,13,4,5,"tdf#172113 sw import: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the CalcLine
+sitatuation wouldn't catch
+(and it is hard to identify since portions are
+just being built here).
+But for completeness and copy/pasta value,
+the same fix is applied here.","tdf#172169 sw import: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the CalcLine
+sitatuation wouldn't catch
+(and it is hard to identify since portions are
+just being built here).
+But for completeness and copy/pasta value,
+the same fix is applied here."
+libreoffice,core~205568,13,6,7,"tdf#172169 sw import: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the CalcLine
+sitatuation wouldn't catch
+(and it is hard to identify since portions are
+just being built here).
+But for completeness and copy/pasta value,
+the same fix is applied here.","tdf#172169 sw line spacing: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the CalcLine
+sitatuation wouldn't catch
+(and it is hard to identify since portions are
+just being built here).
+But for completeness and copy/pasta value,
+the same fix is applied here."
+libreoffice,core~205568,13,7,8,"tdf#172169 sw line spacing: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the CalcLine
+sitatuation wouldn't catch
+(and it is hard to identify since portions are
+just being built here).
+But for completeness and copy/pasta value,
+the same fix is applied here.","tdf#172169 sw line spacing: InsertPortion max for LineSpacingBaseHeight
+
+Follow-up from the similar previous patch.
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I'm not sure what situations the previous patch's
+CalcLine fix wouldn't catch
+(and it is hard to identify since portions are
+just being built here - so the entire line is not yet known).
+But for completeness and copy/pasta value,
+the same fix is applied here."
+libreoffice,core~205457,16,2,3,"tdf#172113 sw: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than the new
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.","tdf#172113 sw: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than the new
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+I assume this calcLine handles the vast majority
+of the issues. Some bTmpDummy stuff
+might require it in insertPortion
+for a few limited cases.
+In any case, it is good to copy/pasta this
+in all similar situations where there is a conditional set."
+libreoffice,core~205457,16,4,5,"tdf#172113 sw: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than the new
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+I assume this calcLine handles the vast majority
+of the issues. Some bTmpDummy stuff
+might require it in insertPortion
+for a few limited cases.
+In any case, it is good to copy/pasta this
+in all similar situations where there is a conditional set.","tdf#172113 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingSecondPortion"
+libreoffice,core~205457,16,6,7,"tdf#172113 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingSecondPortion","tdf#172113 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: safe - consider it a regression fix.
+It affects since 7.1 ODT documents, but it is a bug fix.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingSecondPortion"
+libreoffice,core~205457,16,7,8,"tdf#172113 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: safe - consider it a regression fix.
+It affects since 7.1 ODT documents, but it is a bug fix.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingSecondPortion","tdf#172169 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: unsafe, but necessary
+Consider it a regression fix. as it could affect since 7.1 ODT.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingSecondPortion"
+libreoffice,core~205457,16,8,9,"tdf#172169 sw import: calc max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: unsafe, but necessary
+Consider it a regression fix. as it could affect since 7.1 ODT.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingSecondPortion","tdf#172169 sw import: CalcLine max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: unsafe, but necessary
+Consider it a regression fix. as it could affect since 7.1 ODT.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingSecondPortion"
+libreoffice,core~205457,16,9,10,"tdf#172169 sw import: CalcLine max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: unsafe, but necessary
+Consider it a regression fix. as it could affect since 7.1 ODT.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingSecondPortion","tdf#172169 sw line spacing: CalcLine max for LineSpacingBaseHeight
+
+This fixes a 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+affecting both LO and MSO formats.
+
+The problem occurred when a non-LineSpacingBaseHeight
+was already as tall or taller than a following
+otherwise-tallest LineSpacingBaseHeight,
+resulting in inconsistent line spacing.
+
+I also took the opportunity to rename things.
+
+A similar situation exists in InsertPortion,
+but I'll handle that in a separate patch.
+I'm not certain it REALLY matters there,
+although it is always good to set a good coding pattern.
+
+SAFETY FACTOR: unsafe, but necessary
+Consider it a regression fix, as it could affect ODT since 7.1.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingSecondPortion"
+libreoffice,core~205456,15,2,3,"tdf#172169 sw: portion IsUsedToCalcLineSpacingHeight
+
+This fixes a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+I took some liberties to NOT revert everything that was 'broken',
+because some bits now match how Microsoft handles line spacing.
+So take the 5-year-old accidental win on those
+and turn the native LO implementation into an interoperable one.
+
+So the things I change are 'revert to previous behaviour'
+and the things I leave in are 'accept the current behaviour'.
+There is no 'correct behaviour' because there were no
+compatibility flags involved earlier.
+
+Things that LO 7.1 accidentally fixed in terms of Microsoft content
+were Tabstops, Hidden text, and Footnote/Endnote markers.","tdf#172169 sw: portion IsUsedToCalcLineSpacingHeight
+
+This fixes a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that LO 7.1 accidentally fixed in terms of Microsoft content
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingHeight"
+libreoffice,core~205456,15,3,4,"tdf#172169 sw: portion IsUsedToCalcLineSpacingHeight
+
+This fixes a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that LO 7.1 accidentally fixed in terms of Microsoft content
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingHeight","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+This fixes a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,5,6,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+This fixes a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for MS formats) a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+
+SAFETY FACTOR: Very safe
+It only affects MS formats (assuming replacement compat flag)
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,6,7,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for MS formats) a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to fix any ODT 'regressions'
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+
+SAFETY FACTOR: Very safe
+It only affects MS formats (assuming replacement compat flag)
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for MS formats) a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to revert anything ODT related
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+The new way is actually better (although still not consistent).
+
+SAFETY FACTOR: Very safe
+It only affects MS formats (assuming replacement compat flag)
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,7,8,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for MS formats) a LO 7.1 regression
+from commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+At this point I decided not to revert anything ODT related
+because some bits now match how Microsoft handles line spacing
+and there isn't a clean way to use compatibility settings.
+The new way is actually better (although still not consistent).
+
+SAFETY FACTOR: Very safe
+It only affects MS formats (assuming replacement compat flag)
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,8,9,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+Things that it accidentally fixed in terms of Microsoft interop
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,9,10,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+P.S. No attempt was made to 'fix' regressed ODT files.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing"
+libreoffice,core~205456,15,10,11,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+P.S. No attempt was made to 'fix' regressed ODT files.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+P.S. No attempt was made to 'fix' regressed ODT files.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing
+
+The VCL test is hit because the .fodt has no config:config-item,
+so it picks up the new default.
+This is a reference field with 1.15 line spacing and 96pt font.
+make CppunitTest_vcl_pdfexport \
+CPPUNIT_TEST_NAME=testTdf142806"
+libreoffice,core~205456,15,11,12,"tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+P.S. No attempt was made to 'fix' regressed ODT files.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing
+
+The VCL test is hit because the .fodt has no config:config-item,
+so it picks up the new default.
+This is a reference field with 1.15 line spacing and 96pt font.
+make CppunitTest_vcl_pdfexport \
+CPPUNIT_TEST_NAME=testTdf142806","tdf#172169 sw ms import: line portion IsUsedToCalcLineSpacingHeight
+
+Most of this patch is just No-Functional-Change cleanup/renaming.
+The only change is the new function IsUsedToCalcLineSpacingHeight.
+
+This fixes (only for non-ODF formats and new documents)
+a LO 7.1 regression from
+commit d336e6c26012255015d3fc0caf8e7fafe14bd8f2
+which caused intra-paragraph line-spacing calculations
+to ignore the size of most non-plain-text content.
+
+Specifically broken for both ODT and Microsoft formats
+were things like fields, content controls, and FieldMarkCheckboxes.
+
+But that 'regression' also had some 'good' results.
+Things that it accidentally fixed (in terms of Microsoft interop)
+were Tabstops, Hidden text, and Footnote/Endnote markers.
+
+P.S. No attempt was made to 'fix' regressed ODT files.
+
+SAFETY FACTOR: Very safe
+It fixes MS formats - and doesn't affect previous ODT files.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing
+
+The VCL test is hit because the .fodt has no config:config-item,
+so it picks up the new default.
+This is a reference field with 1.15 line spacing and 96pt font.
+make CppunitTest_vcl_pdfexport CPPUNIT_TEST_NAME=testTdf142806"
+libreoffice,core~205814,8,1,2,"introduce compat flag MS_WORD_LINE_SPACING
+
+To be squashed into some other commit
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_intraLinespacing","introduce compat flag MS_WORD_LINE_SPACING
+
+To be squashed into some other commit"
+libreoffice,core~205814,8,2,3,"introduce compat flag MS_WORD_LINE_SPACING
+
+To be squashed into some other commit","tdf#172113 sw line spacing: introduce LINE_SPACING_AS_GAP_BELOW
+
+Currently, line spacing is a totally inconsistent
+non-interoperable mess.
+
+LO 7.1 introduced radical changes
+without a compat flag, and without handling edge cases,
+so inconsistencies and unpredictabilities abound.
+
+The ODF (and DOCX) specifications say nothing
+about how line-spacing should be implemented.
+
+This LO 27.2 patch introduces a new compat flag
+which will be utilized by succeeding patches.
+
+Things which will be fixed:
+1.) Consistently place the gap below the line.
+Currently this is only done for the last line (by the first line).
+The other lines place their gap above the line.
+
+2.) Also use the first line to define a gap.
+Currently the last line defines two gaps (above and below),
+while the first line doesn't define any.
+
+3.) Consistently define the gap height for all lines.
+Currently the last line's gap depends on the tallest 'anything'
+while the other other gaps are (supposedly - since LO 7.1)
+determined only by TextPortions.
+
+4.) Predictably define the gap height.
+-don't give special advantage to the first portion
+-don't ignore text-like content (fields, bidi, etc.)
+-resolve various implementation errors
+
+5.) Be highly interoperable with MS formats
+Currently our line spacing doesn't look anything
+like how MS Word shows it."
+libreoffice,core~205814,8,3,4,"tdf#172113 sw line spacing: introduce LINE_SPACING_AS_GAP_BELOW
+
+Currently, line spacing is a totally inconsistent
+non-interoperable mess.
+
+LO 7.1 introduced radical changes
+without a compat flag, and without handling edge cases,
+so inconsistencies and unpredictabilities abound.
+
+The ODF (and DOCX) specifications say nothing
+about how line-spacing should be implemented.
+
+This LO 27.2 patch introduces a new compat flag
+which will be utilized by succeeding patches.
+
+Things which will be fixed:
+1.) Consistently place the gap below the line.
+Currently this is only done for the last line (by the first line).
+The other lines place their gap above the line.
+
+2.) Also use the first line to define a gap.
+Currently the last line defines two gaps (above and below),
+while the first line doesn't define any.
+
+3.) Consistently define the gap height for all lines.
+Currently the last line's gap depends on the tallest 'anything'
+while the other other gaps are (supposedly - since LO 7.1)
+determined only by TextPortions.
+
+4.) Predictably define the gap height.
+-don't give special advantage to the first portion
+-don't ignore text-like content (fields, bidi, etc.)
+-resolve various implementation errors
+
+5.) Be highly interoperable with MS formats
+Currently our line spacing doesn't look anything
+like how MS Word shows it.","tdf#172113 sw line spacing: introduce LINE_SPACING_AS_GAP_BELOW
+
+Currently, line spacing is a totally inconsistent and
+non-interoperable mess.
+
+LO 7.1 introduced radical changes
+without a compat flag, and without handling edge cases,
+so inconsistencies and unpredictabilities abound.
+
+The ODF (and DOCX) specifications say nothing
+about how line-spacing ought to be implemented.
+
+This LO 27.2 patch introduces a new compat flag
+which will be utilized by succeeding patches.
+
+Things which will be fixed:
+1.) Consistently place the gap below the line.
+Currently this is only done for the last line (by the first line).
+The other lines place their gap above the line.
+
+2.) Also use the first line to define a gap.
+Currently the last line defines two gaps (above and below),
+while the first line doesn't define any.
+
+3.) Consistently define the gap height for all lines.
+Currently the last line's gap depends on the tallest 'anything'
+while the other line's gaps are (supposedly - since LO 7.1)
+determined only by TextPortions.
+
+4.) Predictably define the gap height.
+-don't give special advantage to the first portion
+-don't ignore text-like content (fields, MultiPortions, etc.)
+-resolve various implementation errors
+
+5.) Be highly interoperable with MS formats
+Currently our line spacing doesn't look anything
+like how MS Word shows it."
+libreoffice,core~205814,8,4,5,"tdf#172113 sw line spacing: introduce LINE_SPACING_AS_GAP_BELOW
+
+Currently, line spacing is a totally inconsistent and
+non-interoperable mess.
+
+LO 7.1 introduced radical changes
+without a compat flag, and without handling edge cases,
+so inconsistencies and unpredictabilities abound.
+
+The ODF (and DOCX) specifications say nothing
+about how line-spacing ought to be implemented.
+
+This LO 27.2 patch introduces a new compat flag
+which will be utilized by succeeding patches.
+
+Things which will be fixed:
+1.) Consistently place the gap below the line.
+Currently this is only done for the last line (by the first line).
+The other lines place their gap above the line.
+
+2.) Also use the first line to define a gap.
+Currently the last line defines two gaps (above and below),
+while the first line doesn't define any.
+
+3.) Consistently define the gap height for all lines.
+Currently the last line's gap depends on the tallest 'anything'
+while the other line's gaps are (supposedly - since LO 7.1)
+determined only by TextPortions.
+
+4.) Predictably define the gap height.
+-don't give special advantage to the first portion
+-don't ignore text-like content (fields, MultiPortions, etc.)
+-resolve various implementation errors
+
+5.) Be highly interoperable with MS formats
+Currently our line spacing doesn't look anything
+like how MS Word shows it.","tdf#172113 sw line spacing: introduce LINE_SPACING_AS_GAP_BELOW
+
+Currently, line spacing is a totally inconsistent and
+non-interoperable mess.
+
+LO 7.1 introduced radical changes
+without a compat flag, and without handling edge cases,
+so inconsistencies and unpredictabilities abound.
+
+The ODF (and DOCX) specifications say nothing
+about how line-spacing ought to be implemented.
+
+This LO 27.2 patch introduces a new compat flag
+which will be utilized by succeeding patches.
+
+Things which will be fixed:
+1.) Consistently place the gap below the line.
+Currently this is only done for the last line (by the first line).
+The other lines place their gap above the line.
+
+2.) Also use the first line to define a gap.
+Currently the last line defines two gaps (above and below),
+while the first line doesn't define any.
+
+3a.) Consistently define the gap height for all lines.
+Currently the last line's gap depends on the tallest 'anything'
+while the other line's gaps are (supposedly - since LO 7.1)
+determined only by TextPortions.
+
+3b.) Predictably define the gap height.
+-don't give special advantage to the first portion
+-don't ignore text-like content (fields, MultiPortions, etc.)
+-resolve various implementation errors
+
+4.) Be highly interoperable with MS formats
+Currently our line spacing doesn't look anything
+like how MS Word shows it."
+libreoffice,core~205670,7,1,2,"tdf#172 sw line spacing: SwFootnotePortion != IsTextFrame
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set m_nLineSpacingBaseHeight.
+
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering","tdf#172169 sw line spacing: SwFootnotePortion != IsTextFrame
+
+This odd bug is even seen prior to the 7.1 changes.
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set m_nLineSpacingBaseHeight.
+
+I caught this when
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering
+did not match a debug that walked through the portions
+and found the highest value didn't match GetLineSpacingBaseHeight.
+
+SAFETY FACTOR: unsafe, but necessary/exotic
+This is a real edge case, and should generally
+have minimal effect in a typical, reasonable document.
+This fixes a bug, not a 'previous layout choice'.
+
+In the worst case, it could easily be put behind a compat flag.
+const IDocumentSettingAccess& rIDSA
+= m_pInf->GetTextFrame()->GetDoc().getIDocumentSettingAccess();
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFootnote"
+libreoffice,core~205670,7,2,3,"tdf#172169 sw line spacing: SwFootnotePortion != IsTextFrame
+
+This odd bug is even seen prior to the 7.1 changes.
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set m_nLineSpacingBaseHeight.
+
+I caught this when
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering
+did not match a debug that walked through the portions
+and found the highest value didn't match GetLineSpacingBaseHeight.
+
+SAFETY FACTOR: unsafe, but necessary/exotic
+This is a real edge case, and should generally
+have minimal effect in a typical, reasonable document.
+This fixes a bug, not a 'previous layout choice'.
+
+In the worst case, it could easily be put behind a compat flag.
+const IDocumentSettingAccess& rIDSA
+= m_pInf->GetTextFrame()->GetDoc().getIDocumentSettingAccess();
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFootnote","tdf#172169 sw line spacing: SwFootnotePortion != IsTextFrame
+
+This odd bug is even seen prior to the 7.1 changes.
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set m_nLineSpacingBaseHeight.
+[I'm using terminology from later patches here^^^]
+
+I caught this when
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering
+a debug/sanity check walked through the portions
+and found a highest value that didn't match GetLineSpacingBaseHeight.
+
+SAFETY FACTOR: unsafe, but necessary/exotic
+This is a real edge case, and should generally
+have minimal effect in a typical, reasonable document.
+This fixes a bug, not a 'previous layout choice'.
+
+In the worst case, it could easily be put behind a compat flag.
+const IDocumentSettingAccess& rIDSA
+= m_pInf->GetTextFrame()->GetDoc().getIDocumentSettingAccess();
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFootnote"
+libreoffice,core~205670,7,3,4,"tdf#172169 sw line spacing: SwFootnotePortion != IsTextFrame
+
+This odd bug is even seen prior to the 7.1 changes.
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set m_nLineSpacingBaseHeight.
+[I'm using terminology from later patches here^^^]
+
+I caught this when
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering
+a debug/sanity check walked through the portions
+and found a highest value that didn't match GetLineSpacingBaseHeight.
+
+SAFETY FACTOR: unsafe, but necessary/exotic
+This is a real edge case, and should generally
+have minimal effect in a typical, reasonable document.
+This fixes a bug, not a 'previous layout choice'.
+
+In the worst case, it could easily be put behind a compat flag.
+const IDocumentSettingAccess& rIDSA
+= m_pInf->GetTextFrame()->GetDoc().getIDocumentSettingAccess();
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFootnote","tdf#172169 sw line spacing: SwFootnotePortion != IsTextFrame
+
+This odd bug is even seen prior to the 7.1 changes,
+but it is clearly wrong given 7.1's TextPortions only...
+
+Since the footnote marker in the text run
+is not considered to be IsTextFrame or InTextGrp,
+it doesn't affect either LO or MSO line spacing
+and thus should not set LineSpacingBaseHeight.
+[I'm using terminology from later patches here^^^]
+
+I caught this when doing a
+make CppunitTest_sw_ooxmlexport16 \
+CPPUNIT_TEST_NAME=testTdf141231_arabicHebrewNumbering
+where a debug/sanity check walked through the portions
+and found a highest value that didn't match GetLineSpacingBaseHeight.
+
+IIUC, on a final run of the line
+(after a prior run had already determined the final line height)
+it was taking that finalized line height [rInf.GetTextHeight()]
+and applying it to LineSpacingBaseHeight.
+
+SAFETY FACTOR: unsafe, but necessary/exotic
+This is a real edge case, and should generally
+have minimal effect in a typical, reasonable document.
+This fixes a bug, not a 'previous layout choice'.
+
+In the worst case, it could easily be put behind a compat flag.
+const IDocumentSettingAccess& rIDSA
+= m_pInf->GetTextFrame()->GetDoc().getIDocumentSettingAccess();
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172169_linespacingFootnote"
+libreoffice,core~205234,12,1,2,"tdf# sw MaxAscentDescent: ignore PostItsPortion
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+passed a make sw.check.","tdf# sw MaxAscentDescent: ignore PostItsPortion
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment"
+libreoffice,core~205234,12,2,3,"tdf# sw MaxAscentDescent: ignore PostItsPortion
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment","tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment"
+libreoffice,core~205234,12,6,7,"tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment","tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+SAFETY FACTOR: irrelevant
+This will affect older ODT files,
+because it is a bug that is being fixed.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment"
+libreoffice,core~205234,12,7,8,"tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+SAFETY FACTOR: irrelevant
+This will affect older ODT files,
+because it is a bug that is being fixed.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment","tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+SAFETY FACTOR: unsafe, but necessary
+This could affect older ODT files,
+because it is a bug that is being fixed.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment"
+libreoffice,core~205234,12,8,9,"tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an Inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+SAFETY FACTOR: unsafe, but necessary
+This could affect older ODT files,
+because it is a bug that is being fixed.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment","tdf#172113 sw MaxAscentDescent: ignore PostItsPortion
+
+This fixes an inherited-from-OOo bug for ODT and DOC/X.
+
+If the only thing on a line is a comment,
+then don't set the MaxAscentDescent to 1.
+
+Instead, it should remain at zero
+so that things like CalcHeightOfLastLine
+use the font metrics to calculate a reasonable height.
+
+SAFETY FACTOR: unsafe, but necessary
+This could affect older ODT files,
+because it is a bug that is being fixed.
+
+make CppunitTest_sw_ooxmlexport25 \
+CPPUNIT_TEST_NAME=testTdf172113_linespacingComment"
+libreoffice,core~206947,9,1,2,"sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map override after cSld. PowerPoint writes an inherited master colour mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover this with the existing tdf131554 PPTX round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the unpatched export failed to open in Keynote, while the patched export opened successfully.","sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour mapping
+for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully."
+libreoffice,core~206947,9,2,3,"sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour mapping
+for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully.","sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour
+mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX (this is my pptx test file)
+round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully."
+libreoffice,core~206947,9,3,4,"sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour
+mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX (this is my pptx test file)
+round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully.","sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour
+mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX
+round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully."
+libreoffice,core~206947,9,4,5,"sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour
+mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX
+round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully.","sd: export notes slide colour mapping to PPTX
+
+Keynote rejects PPTX files where notesSlide parts omit the colour map
+override after cSld. PowerPoint writes an inherited master colour
+mapping for these parts.
+
+Emit p:clrMapOvr/a:masterClrMapping for exported notes slides and cover
+this with the existing tdf131554 PPTX round-trip test.
+
+Verified by exporting tdf131554.pptx before and after the change: the
+unpatched export failed to open in Keynote, while the patched export
+opened successfully."
+libreoffice,core~207157,2,1,2,"Fetch extension preview images in parallel
+
+The Extensions dialog was downloading preview images one at a time inside
+SearchAndParseThread, making the dialog populate slowly.
+
+Use ImageFetchTask and dispatch one task per extension to the shared thread pool.
+Search() now collects the extensions, waits for all downloads to complete,
+then updates the UI in a single serialized pass under SolarMutexGuard.
+
+I tried to follow the same pattern as GraphicFilter::ImportGraphics() in
+vcl/source/filter/graphicfilter.cxx.","Fetch extension preview images in parallel
+
+The Extensions dialog was downloading preview images one at a time
+inside SearchAndParseThread, making the dialog populate slowly.
+
+Use ImageFetchTask and dispatch one task per extension to the shared
+thread pool. Search() now collects the extensions, waits for all
+downloads to complete, then updates the UI in a single serialized pass
+under SolarMutexGuard.
+
+I tried to follow the same pattern as GraphicFilter::ImportGraphics() in
+vcl/source/filter/graphicfilter.cxx."
+libreoffice,core~207017,4,2,3,"tdf#172513 ko char conv: Preserve char represented by >1 UTF-16 code unit
+
+In order to represent the (codepoint of a) Unicode character
+in UTF-16, multiple UTF-16 code units may be needed.
+
+So far, the Korean Hangul/Hanja character conversion
+was assuming that each Unicode character was only
+cosnisting of a single UTF-16 code unit, and splitting
+into single sal_Unicode characters accordingly in
+TextConversion_ko::getCharConversions.
+
+This breaks for characters represented by multiple
+code units, like ""𡽜"" (CJK Unified Ideograph [1],
+unicode codepoint: 139100/U+21F5C) which is represented
+by 2 UTF-16 code units.
+
+As a consequence, an invalid OUString/UTF-16 string would
+be passed to HangulHanjaConversionDialog::SetCurrentString
+for some of the suggestions.
+
+Fix this by no longer splitting into single sal_Unicode,
+but use OUString::iterateCodePoints to split into actual
+code points.
+
+Example: When using ""Tools"" -> ""Language"" ->
+""Hangul/Hanja Conversion..."" for a Korean text of
+""한글맞춤법"", the string of all characters for potential
+conversions in TextConversion_ko::getCharConversions is:
+""韓漢寒限閑恨旱汗翰邯罕悍澣閒瀚桿捍閈暵鼾犴僩嫺熯嫻駻鷳扞狠僴覵瞷猂邗骭撊鷴垾憪橌㸁䛞䦘闲鹇娴汉焊闬韩仠佷傼兯哻娨嫨屽晘橺浫澖皔蓒蔊蛝螒豻貋釬銲雗鶾鷼麲㒏㛠㡾㢨㪋㯗㲦㵄䁂䂅䈨䉯䍐䍑䎯䏷䓍䓳䕿䗙䥜䦥䮧𡽜忓""
+
+Previously, the last 3 of them (""䮧𡽜忓"") would incorrectly be
+split into (stdout output, showing something is wrong):
+""䮧"", "" "" (something wrong, but a valid UTF-16 string), ""?"" (wrong, and invalid UTF-16 string), ""忓""
+
+With the fix in place, they remain intact:
+""䮧"", ""𡽜"", ""忓""
+
+Add a corresponding test case.
+While the fix is in i18npool, the new test is implemented
+in editeng, where the HangulHanjaConversion class uses
+the i18npool logic via a UNO service.
+The test is implemented there because the component context
+availabe in i18npool doesn't supply the required service.
+The same test implemented there would fail like this:
+
+An uncaught UNO exception
+- com.sun.star.uno.DeploymentException: {Message: ""component context fails to supply service com.sun.star.linguistic2.ConversionDictionaryList of type com.sun.star.linguistic2.XConversionDictionaryList at /home/michi/development/git/libreoffice/workdir/UnoApiHeadersTarget/offapi/normal/com/sun/star/linguistic2/ConversionDictionaryList.hpp:45"", Context: @0x7fff17acecf0}
+
+[1] https://codepoints.net/U+21F5C","tdf#172513 ko char conv: Preserve char represented by >1 UTF-16 code unit
+
+In order to represent the (codepoint of a) Unicode character
+in UTF-16, multiple UTF-16 code units may be needed.
+
+So far, the Korean Hangul/Hanja character conversion
+was assuming that each Unicode character was only
+consisting of a single UTF-16 code unit, and splitting
+into single sal_Unicode characters accordingly in
+TextConversion_ko::getCharConversions.
+
+This breaks for characters represented by multiple
+code units, like ""𡽜"" (CJK Unified Ideograph [1],
+unicode codepoint: 139100/U+21F5C) which is represented
+by 2 UTF-16 code units.
+
+As a consequence, an invalid OUString/UTF-16 string would
+be passed to HangulHanjaConversionDialog::SetCurrentString
+for some of the suggestions.
+
+Fix this by no longer splitting into single sal_Unicode,
+but use o3tl::iterateCodePoints to split into actual
+code points.
+
+Example: When using ""Tools"" -> ""Language"" ->
+""Hangul/Hanja Conversion..."" for a Korean text of
+""한글맞춤법"", the string of all characters for potential
+conversions in TextConversion_ko::getCharConversions is:
+""韓漢寒限閑恨旱汗翰邯罕悍澣閒瀚桿捍閈暵鼾犴僩嫺熯嫻駻鷳扞狠僴覵瞷猂邗骭撊鷴垾憪橌㸁䛞䦘闲鹇娴汉焊闬韩仠佷傼兯哻娨嫨屽晘橺浫澖皔蓒蔊蛝螒豻貋釬銲雗鶾鷼麲㒏㛠㡾㢨㪋㯗㲦㵄䁂䂅䈨䉯䍐䍑䎯䏷䓍䓳䕿䗙䥜䦥䮧𡽜忓""
+
+Previously, the last 3 of them (""䮧𡽜忓"") would incorrectly be
+split into (stdout output, showing something is wrong):
+""䮧"", "" "" (something wrong, but a valid UTF-16 string), ""?"" (wrong, and invalid UTF-16 string), ""忓""
+
+With the fix in place, they remain intact:
+""䮧"", ""𡽜"", ""忓""
+
+Also adjust HangulHanjaConversionDialog::OnSuggestionModified
+accordingly to compare the number of code points the
+string consists of, not the number of UTF-16 code units.
+Otherwise, the ""Replace""/""Always Replace"" buttons in the
+""Hangul/Hanja Conversion"" dialog would remain greyed
+out for the above example when selecting the ""𡽜"" character
+(that now correctly gets displayed with the fix in
+TextConversion_ko::getCharConversions in place).
+Thanks to Jonathan Clark for pointing out that additional
+aspect in review!
+
+Add a corresponding test case.
+While the fix is in i18npool, the new test is implemented
+in editeng, where the HangulHanjaConversion class uses
+the i18npool logic via a UNO service.
+The test is implemented there because the component context
+availabe in i18npool doesn't supply the required service.
+The same test implemented there would fail like this:
+
+An uncaught UNO exception
+- com.sun.star.uno.DeploymentException: {Message: ""component context fails to supply service com.sun.star.linguistic2.ConversionDictionaryList of type com.sun.star.linguistic2.XConversionDictionaryList at /home/michi/development/git/libreoffice/workdir/UnoApiHeadersTarget/offapi/normal/com/sun/star/linguistic2/ConversionDictionaryList.hpp:45"", Context: @0x7fff17acecf0}
+
+[1] https://codepoints.net/U+21F5C"
+libreoffice,core~206264,7,3,4,"Implemented callables as first-class objects in Calc formulas
+
+Three types of callables are available:
+* Built-in functions
+tdf#164507 Add ETA-LAMBDA (“eta reduced lambda”) function to Calc
+for interoperability with MS Excel
+* External functions
+* Macro functions","Implemented callables as first-class objects in Calc formulas
+
+Three types of callables are available:
+
+* Built-in functions
+Add ETA-LAMBDA (“eta reduced lambda”) function to Calc
+for interoperability with MS Excel (tdf#164507)
+
+* External functions
+
+* Macro functions"
+libreoffice,core~206264,7,5,6,"Implemented callables as first-class objects in Calc formulas
+
+Three types of callables are available:
+
+* Built-in functions
+Add ETA-LAMBDA (“eta reduced lambda”) function to Calc
+for interoperability with MS Excel (tdf#164507)
+
+* External functions
+
+* Macro functions","Implemented callables as first-class objects in Calc formulas
+
+Three types of callables are available:
+
+* Built-in functions (tdf#164507)
+
+* External functions
+
+* Macro functions"
+libreoffice,core~207370,2,1,2,cid#1695388: Inefficient vector resizing with reserve.,"cid#1695388: Inefficient vector resizing with reserve.
+
+Ignore warning in GCC13"
+libreoffice,core~206265,9,3,4,"Implemented LAMBDA and ISOMITTED for Calc
+
+tdf#138749 Add function LAMBDA for interoperability with MS Excel
+tdf#164510 Add ISOMITTED (IsOmitted) function to Calc for interoperability with MS Excel","Implemented LAMBDA and ISOMITTED for Calc
+
+Added LAMBDA (tdf#138749) function
+Added ISOMITTED (tdf#164510) function"
+libreoffice,core~206265,9,6,7,"Implemented LAMBDA and ISOMITTED for Calc
+
+Added LAMBDA (tdf#138749) function
+Added ISOMITTED (tdf#164510) function","Implemented LAMBDA and ISOMITTED for Calc
+
+Added LAMBDA (tdf#138749) function
+Added ISOMITTED (tdf#164510) function
+Rewrote LET to work with the new LAMBDA"
+libreoffice,core~207336,3,1,2,cid#1695404: Use after free,cid#1695399: Dereference null return value
+libreoffice,core~204381,8,1,2,"tdf#71261: Allow spaces in writer table names
+
+Drop the text filter that prevented typing spaces in the name
+entry of the Insert Table dialog, and drop the validation
+in the Table Properties dialog that rejected names containing
+spaces with an info message.
+
+Also remove the now unused STR_WRONG_TABLENAME string.","tdf#71261: Allow spaces in writer table names
+
+Drop the text filter that prevented typing spaces in the name
+entry of the Insert Table dialog, and drop the validation
+in the Table Properties dialog that rejected names containing
+spaces with an info message.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Fix found with the help of Claude Opus."
+libreoffice,core~204381,8,2,3,"tdf#71261: Allow spaces in writer table names
+
+Drop the text filter that prevented typing spaces in the name
+entry of the Insert Table dialog, and drop the validation
+in the Table Properties dialog that rejected names containing
+spaces with an info message.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Fix found with the help of Claude Opus.","tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Fix found with the help of Claude Opus."
+libreoffice,core~204381,8,3,4,"tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Fix found with the help of Claude Opus.","tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Added two regression tests:
+- verify that the Insert Table dialog accepts spaces in the
+table name
+- verify that a table name with a space can be set via UNO
+and is preserved
+
+Fix found with the help of Claude Opus."
+libreoffice,core~204381,8,5,6,"tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Added two regression tests:
+- verify that the Insert Table dialog accepts spaces in the
+table name
+- verify that a table name with a space can be set via UNO
+and is preserved
+
+Fix found with the help of Claude Opus.","tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Added three regression tests:
+- verify that the Insert Table dialog accepts spaces in the
+table name
+- verify that a table name with a space can be set via UNO
+and is preserved
+- verify that the Table Properties dialog accepts and saves
+a table name containing a space
+
+Fix found with the help of Claude Opus."
+libreoffice,core~204381,8,7,8,"tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Added three regression tests:
+- verify that the Insert Table dialog accepts spaces in the
+table name
+- verify that a table name with a space can be set via UNO
+and is preserved
+- verify that the Table Properties dialog accepts and saves
+a table name containing a space
+
+Fix found with the help of Claude Opus.","tdf#71261: Allow spaces in writer table names
+
+Drop the space character from the places that rejected it in
+table names:
+
+- Insert Table dialog: text filter on the name entry
+- Table Properties dialog: validation in DeactivatePage that
+showed an info dialog
+- Navigator rename: forbidden characters list
+- UNO SwXTextTable::setName: check that threw RuntimeException
+
+Other illegal characters ("".<>"") are still blocked, since they
+are incorrectly handled in formulas and chart data sources.
+
+Also remove the now unused STR_WRONG_TABLENAME string.
+
+Allowing spaces exposed that a chart linked to such a table lost
+its data connection after save/reload, so fix the table name
+(de)serialization on both sides of the link:
+
+- ODF export (xmltexte.cxx) wrote draw:notify-on-update-of-ranges
+wrapped in single quotes when the name contained a space; write
+it unmodified instead (the attribute also allows a plain string,
+not only a cellRangeAddressList).
+- ODF import (xmltexti.cxx) only unquotes the legacy single-quoted
+form when the value actually starts with a quote, so both old and
+new documents are read correctly.
+- SwChartDataProvider::convertRangeFromXML split the space separated
+range list with a naive tokenizer that broke inside a single-quoted
+table name; split it in a quote-aware way so the chart range still
+resolves to the table (instead of falling back to the chart's
+internal local-table).
+
+Added regression tests:
+- verify that the Insert Table dialog accepts spaces in the
+table name
+- verify that a table name with a space can be set via UNO
+and is preserved
+- verify that the Table Properties dialog accepts and saves
+a table name containing a space
+- verify that, after save/reload, the chart's
+notify-on-update-of-ranges keeps the unquoted table name
+- verify the convertRangeToXML/convertRangeFromXML round-trip for
+a table name containing a space
+
+Fix found with the help of Claude Opus."
+onap,sdc~master~I5d7fcd889659d1907d179ecaf9ac5e139aa45c4b,8,1,2,"Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace
+state, preserving all child tab routing via <ng-content> transclusion.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell — sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/save/archive/restore actions — is now Angular code while
+child states continue rendering unchanged via <div ui-view>.
+
+Issue-ID: SDC-4829","Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace
+state, preserving all child tab routing via <ng-content> transclusion.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell — sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/save/archive/restore actions — is now Angular code while
+child states continue rendering unchanged via <div ui-view>.
+
+Key implementation details:
+- WorkspaceTopProgressComponent replaces AngularJS top-progress directive
+- LayoutModule imported for TopNavComponent availability
+- CUSTOM_ELEMENTS_SCHEMA for remaining AngularJS directives in template
+- Lifecycle button entries cached to prevent infinite change detection
+- Angular DI providers registered for AngularJS services (MenuHandler,
+ChangeLifecycleStateHandler, ProgressService, sdcMenu, ComponentFactory)
+
+Issue-ID: SDC-4829"
+onap,sdc~master~I5d7fcd889659d1907d179ecaf9ac5e139aa45c4b,8,5,6,"Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace
+state, preserving all child tab routing via <ng-content> transclusion.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell — sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/save/archive/restore actions — is now Angular code while
+child states continue rendering unchanged via <div ui-view>.
+
+Key implementation details:
+- WorkspaceTopProgressComponent replaces AngularJS top-progress directive
+- LayoutModule imported for TopNavComponent availability
+- CUSTOM_ELEMENTS_SCHEMA for remaining AngularJS directives in template
+- Lifecycle button entries cached to prevent infinite change detection
+- Angular DI providers registered for AngularJS services (MenuHandler,
+ChangeLifecycleStateHandler, ProgressService, sdcMenu, ComponentFactory)
+
+Issue-ID: SDC-4829","Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace state.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell - sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/save/archive/restore actions - is now Angular code while
+child tab states continue rendering unchanged as AngularJS/ui-router.
+
+Key architecture (verified locally on the production Docker build via the
+webseal-simulator - the same environment as the CI Selenium UI tests - for
+VIEW/EDIT, CREATE and tab-switch flows, all settling per pageLoadWait):
+
+- The child <div ui-view> is a SIBLING of <workspace-container>, NOT projected
+through its <ng-content>. Projecting a ui-router ui-view through an Angular
+component's content slot relocates the view anchor and hangs the page in an
+infinite digest. CSS (.workspace-child-view in workspace.less) positions the
+sibling into the shell content region.
+- Component data flows via WorkspaceService.setComponent(), called in ALL
+branches of the workspace-state resolve (existing id, CSAR, and empty/create),
+not via @Input - downgradeComponent with propagateDigest:false does not
+deliver inputs.
+- ChangeDetectionStrategy.OnPush + propagateDigest:false + a single
+detectChanges() in ngOnInit render the shell without an infinite CD loop.
+- A thin AngularJS shim controller on the workspace state exposes the $scope
+properties (component, setValidState, etc.) that AngularJS child tabs still
+expect; removed in Phase 3/4.
+- AngularJS services resolved lazily via $injector.get() in ngOnInit (no eager
+constructor string-token injection). WorkspaceTopProgressComponent replaces
+the AngularJS top-progress directive. LayoutModule provides TopNavComponent.
+CUSTOM_ELEMENTS_SCHEMA for remaining AngularJS directives in the template.
+
+Also adds local UI dev/verification tooling: webpack-dev-server now defaults to
+a local backend with a built-in login page (catalog-ui/webpack.server.js,
+start:local script), a workspace-shell Playwright spec, and Docker-backend
+prerequisites in the playwright-tests README.
+
+Issue-ID: SDC-4829"
+onap,sdc~master~I5d7fcd889659d1907d179ecaf9ac5e139aa45c4b,8,6,7,"Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace state.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell - sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/save/archive/restore actions - is now Angular code while
+child tab states continue rendering unchanged as AngularJS/ui-router.
+
+Key architecture (verified locally on the production Docker build via the
+webseal-simulator - the same environment as the CI Selenium UI tests - for
+VIEW/EDIT, CREATE and tab-switch flows, all settling per pageLoadWait):
+
+- The child <div ui-view> is a SIBLING of <workspace-container>, NOT projected
+through its <ng-content>. Projecting a ui-router ui-view through an Angular
+component's content slot relocates the view anchor and hangs the page in an
+infinite digest. CSS (.workspace-child-view in workspace.less) positions the
+sibling into the shell content region.
+- Component data flows via WorkspaceService.setComponent(), called in ALL
+branches of the workspace-state resolve (existing id, CSAR, and empty/create),
+not via @Input - downgradeComponent with propagateDigest:false does not
+deliver inputs.
+- ChangeDetectionStrategy.OnPush + propagateDigest:false + a single
+detectChanges() in ngOnInit render the shell without an infinite CD loop.
+- A thin AngularJS shim controller on the workspace state exposes the $scope
+properties (component, setValidState, etc.) that AngularJS child tabs still
+expect; removed in Phase 3/4.
+- AngularJS services resolved lazily via $injector.get() in ngOnInit (no eager
+constructor string-token injection). WorkspaceTopProgressComponent replaces
+the AngularJS top-progress directive. LayoutModule provides TopNavComponent.
+CUSTOM_ELEMENTS_SCHEMA for remaining AngularJS directives in the template.
+
+Also adds local UI dev/verification tooling: webpack-dev-server now defaults to
+a local backend with a built-in login page (catalog-ui/webpack.server.js,
+start:local script), a workspace-shell Playwright spec, and Docker-backend
+prerequisites in the playwright-tests README.
+
+Issue-ID: SDC-4829","Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace state.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell - sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/certify/check-in actions - is now Angular code while child
+tab states continue rendering unchanged as AngularJS/ui-router.
+
+Key architecture (verified locally on the production Docker build via the
+webseal-simulator - the same environment as the CI Selenium UI tests):
+
+- The child <div ui-view> is a SIBLING of <workspace-container>, NOT projected
+through its <ng-content>. Projecting a ui-router ui-view through an Angular
+component's content slot relocates the view anchor and hangs the page in an
+infinite digest. CSS (.workspace-child-view in workspace.less) positions the
+sibling into the shell content region.
+- Component data flows via WorkspaceService.setComponent(), called in ALL
+branches of the workspace-state resolve (existing id, CSAR, and empty/create),
+not via @Input - downgradeComponent with propagateDigest:false does not
+deliver inputs.
+- ChangeDetectionStrategy.OnPush + propagateDigest:false + detectChanges() in
+ngOnInit and after each action render the shell without an infinite CD loop.
+- The shell owns the action logic (create, changeLifecycleState,
+handleChangeLifecycleState, startProgress/stopProgress) ported from the old
+controller. ChangeLifecycleStateHandler is given the component as its scope so
+it drives the shell loader (isLoading / isCreateProgress). The create and
+lifecycle buttons are wired to these methods - previously they had no handler,
+which broke the Selenium create flow (the loader never appeared and
+waitForLoader timed out).
+- The <sdc-loader> create/lifecycle spinners use [active] binding (not *ngIf) so
+they render the loader DOM the Selenium LoaderHelper.waitForLoader() waits for.
+- A thin AngularJS shim controller on the workspace state exposes the $scope
+properties (component, setValidState, etc.) and delegates the action methods
+(create / changeLifecycleState / save) to the shell via
+WorkspaceService.containerActions, for AngularJS child tabs that still call
+them via $scope inheritance; removed in a later phase.
+- AngularJS services resolved lazily via $injector.get() in ngOnInit.
+WorkspaceTopProgressComponent replaces the AngularJS top-progress directive.
+LayoutModule provides TopNavComponent. CUSTOM_ELEMENTS_SCHEMA for remaining
+AngularJS directives in the template.
+
+Also adds local UI dev/verification tooling: webpack-dev-server now defaults to
+a local backend with a built-in login page (catalog-ui/webpack.server.js,
+start:local script), a workspace-shell Playwright spec covering VIEW/EDIT,
+CREATE, the create flow (loader parity) and tab navigation, and Docker-backend
+prerequisites in the playwright-tests README.
+
+Issue-ID: SDC-4829"
+onap,sdc~master~I5d7fcd889659d1907d179ecaf9ac5e139aa45c4b,8,7,8,"Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace state.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell - sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/certify/check-in actions - is now Angular code while child
+tab states continue rendering unchanged as AngularJS/ui-router.
+
+Key architecture (verified locally on the production Docker build via the
+webseal-simulator - the same environment as the CI Selenium UI tests):
+
+- The child <div ui-view> is a SIBLING of <workspace-container>, NOT projected
+through its <ng-content>. Projecting a ui-router ui-view through an Angular
+component's content slot relocates the view anchor and hangs the page in an
+infinite digest. CSS (.workspace-child-view in workspace.less) positions the
+sibling into the shell content region.
+- Component data flows via WorkspaceService.setComponent(), called in ALL
+branches of the workspace-state resolve (existing id, CSAR, and empty/create),
+not via @Input - downgradeComponent with propagateDigest:false does not
+deliver inputs.
+- ChangeDetectionStrategy.OnPush + propagateDigest:false + detectChanges() in
+ngOnInit and after each action render the shell without an infinite CD loop.
+- The shell owns the action logic (create, changeLifecycleState,
+handleChangeLifecycleState, startProgress/stopProgress) ported from the old
+controller. ChangeLifecycleStateHandler is given the component as its scope so
+it drives the shell loader (isLoading / isCreateProgress). The create and
+lifecycle buttons are wired to these methods - previously they had no handler,
+which broke the Selenium create flow (the loader never appeared and
+waitForLoader timed out).
+- The <sdc-loader> create/lifecycle spinners use [active] binding (not *ngIf) so
+they render the loader DOM the Selenium LoaderHelper.waitForLoader() waits for.
+- A thin AngularJS shim controller on the workspace state exposes the $scope
+properties (component, setValidState, etc.) and delegates the action methods
+(create / changeLifecycleState / save) to the shell via
+WorkspaceService.containerActions, for AngularJS child tabs that still call
+them via $scope inheritance; removed in a later phase.
+- AngularJS services resolved lazily via $injector.get() in ngOnInit.
+WorkspaceTopProgressComponent replaces the AngularJS top-progress directive.
+LayoutModule provides TopNavComponent. CUSTOM_ELEMENTS_SCHEMA for remaining
+AngularJS directives in the template.
+
+Also adds local UI dev/verification tooling: webpack-dev-server now defaults to
+a local backend with a built-in login page (catalog-ui/webpack.server.js,
+start:local script), a workspace-shell Playwright spec covering VIEW/EDIT,
+CREATE, the create flow (loader parity) and tab navigation, and Docker-backend
+prerequisites in the playwright-tests README.
+
+Issue-ID: SDC-4829","Replace WorkspaceViewModel controller with Angular WorkspaceContainerComponent
+
+Port the 1032-line AngularJS WorkspaceViewModel controller to a pure Angular
+component (WorkspaceContainerComponent). The component is downgraded via
+@angular/upgrade/static and used within the existing ui-router workspace state.
+
+This is Phase 2 of the AngularJS removal migration (SDC-4829). The workspace
+shell - sidebar menu, top bar with lifecycle buttons, version selector,
+breadcrumbs, create/certify/check-in actions - is now Angular code while child
+tab states continue rendering unchanged as AngularJS/ui-router.
+
+Key architecture (verified locally on the production Docker build via the
+webseal-simulator - the same environment as the CI Selenium UI tests - where
+the full ImportVfcUiTest.importVFC_createVF_addVFC2VF_test passes end-to-end):
+
+- The child <div ui-view> is a SIBLING of <workspace-container>, NOT projected
+through its <ng-content>. Projecting a ui-router ui-view through an Angular
+component's content slot relocates the view anchor and hangs the page in an
+infinite digest. CSS (.workspace-child-view in workspace.less) positions the
+sibling into the shell content region.
+- Component data flows via WorkspaceService.setComponent(), called in ALL
+branches of the workspace-state resolve (existing id, CSAR, and empty/create),
+not via @Input - downgradeComponent with propagateDigest:false does not
+deliver inputs.
+- ChangeDetectionStrategy.OnPush + propagateDigest:false + detectChanges() in
+ngOnInit and after each action render the shell without an infinite CD loop.
+- The shell owns the action logic (create, changeLifecycleState,
+handleChangeLifecycleState, startProgress/stopProgress) ported from the old
+controller. ChangeLifecycleStateHandler is given the component as its scope so
+it drives the shell loader (isLoading / isCreateProgress). The create and
+lifecycle buttons are wired to these methods - previously they had no handler,
+which broke the Selenium create flow (the loader never appeared and
+waitForLoader timed out).
+- A thin AngularJS shim controller on the workspace state exposes the $scope
+properties (component, setValidState, etc.) and delegates the action methods
+(create / changeLifecycleState / save) to the shell via
+WorkspaceService.containerActions, for AngularJS child tabs that still call
+them via $scope inheritance; removed in a later phase.
+- AngularJS services resolved lazily via $injector.get() in ngOnInit.
+WorkspaceTopProgressComponent replaces the AngularJS top-progress directive.
+LayoutModule provides TopNavComponent. CUSTOM_ELEMENTS_SCHEMA for remaining
+AngularJS directives in the template.
+
+Selenium UI-gate parity fixes (the migrated shell must keep the exact DOM the
+Selenium page objects assert on; each broke a different step of ImportVfcUiTest):
+
+- Loader markup: render an inline tlv-loader / data-tests-id=""loader"" element
+(mirroring the old AngularJS <loader> directive) instead of <sdc-loader>, whose
+service-driven activation rendered no element LoaderHelper.waitForLoader()
+could see. Keep isCreateProgress true through the create->navigate window so
+the loader does not vanish within a Selenium poll interval on a fast backend.
+- Debounced ng-model commit: the General-tab form fields use ng-model-options
+""{debounce:500}""; the ported Angular create() runs outside the AngularJS
+digest, so a Selenium-speed fill-then-Create read the component before the
+debounced writes committed (create POST without description -> backend 400 ->
+loader only flashed). create() now force-commits via ngModelController
+.$commitViewValue() before reading the component.
+- Lifecycle-button data-tests-id is run through the same testsId transform the
+old template used (e.g. 'Certify' -> 'certify'), so the Selenium locators match.
+- Certify refreshes the component in place (update lifecycleState + buttons +
+detectChanges) instead of $state.go(reload:true), which re-mounted the
+downgraded shell with a gap where the shell container was absent from the DOM.
+- The shell re-subscribes to $stateChangeSuccess (as the old controller did) to
+recompute the selected sidebar item / tab title and isComposition/isDeployment
+on each child-tab navigation.
+- The .w-sdc-main-right-container div is kept always-present with a STATIC class
+and the *ngIf=""component"" guard moved to an inner display:contents wrapper, so
+Angular's structural-directive marker class (ng-star-inserted) and the
+[class.composition]/[class.deployment] bindings no longer pollute its class
+attribute. The Selenium page objects wait on the EXACT-class xpath
+//div[@class='w-sdc-main-right-container'] (and the nested
+//div[@class='sdc-workspace-top-bar']); an extra class made findElement match
+zero nodes and time out even though the page rendered.
+
+Also adds local UI dev/verification tooling: webpack-dev-server now defaults to
+a local backend with a built-in login page (catalog-ui/webpack.server.js,
+start:local script), a workspace-shell Playwright spec covering VIEW/EDIT,
+CREATE, the create flow (loader parity) and tab navigation, and Docker-backend
+prerequisites in the playwright-tests README.
+
+Issue-ID: SDC-4829"
+onap,oom~master~I775fd0e7771b56549ba3c6cfe41cb55d82168a99,6,3,4,"[SO] 17.4.0 release
+
+- so main images (1.19.1 -> 1.20.0)
+
+Issue-ID: SO-4389","[SO] 17.4.0 release
+
+- so main images (1.19.1 -> 1.20.0)
+- increase sdc wfd-be readiness init container
+timeout from 10 to 15 minutes since it sometimes
+times out (because the sdc-cs job is taking too long)
+
+Issue-ID: SO-4389"
+onap,sdnc%2Foam~master~Ib597dd2fecbb56f7f370b5d3f600577f29a115fa,2,1,2,"Update parent version to 3.3.2
+
+Update parent pom version to 3.3.2
+
+Issue-ID: SDNC-1865","Update to parent version 3.3.2
+
+Update parent pom version to 3.3.2
+
+Issue-ID: SDNC-1865"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,2,3,"Issue for Sonar: Method has 8 parameters, which is greater than 7 authorized","Fix for Sonar: Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,4,5,"Fix for Sonar: Method has 8 parameters, which is greater than 7 authorized","Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated related logic.
+
+Issue-Id: CPS-3260"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,6,7,"Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated related logic.
+
+Issue-Id: CPS-3260","Fixs for Sonar: Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,8,9,"Fixs for Sonar: Method has 8 parameters, which is greater than 7 authorized","Fix for Sonar: Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,10,11,"Fix for Sonar: Method has 8 parameters, which is greater than 7 authorized","Sonar: Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,11,12,"Sonar: Method has 8 parameters, which is greater than 7 authorized","Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from delta API and updated test
+
+Issue-Id: CPS-3260"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,12,13,"Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from delta API and updated test
+
+Issue-Id: CPS-3260","Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated test
+
+Issue-Id: CPS-3260"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,13,14,"Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated test
+
+Issue-Id: CPS-3260","Fix for Sonar Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,14,15,"Fix for Sonar Method has 8 parameters, which is greater than 7 authorized","Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated test
+
+Issue-Id: CPS-3260"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,16,17,"Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated test
+
+Issue-Id: CPS-3260","Sonar Method has 8 parameters, which is greater than 7 authorized"
+onap,cps~master~I4527f28023fc3068b2a72c190a6e63c044ac56e3,19,17,18,"Sonar Method has 8 parameters, which is greater than 7 authorized","Sonar: Method has 8 parameters, which is greater than 7 authorized
+
+-Removed FetchDescendantsOption parameter from getDeltaByDataspaceAnchorAndPayload and updated test
+
+Issue-Id: CPS-3260"
+onap,cps~master~I4458abc115d98cc623f06ebc2cbd0d5dc5ee5b5f,8,2,3,"Uplift Spring Boot version 4.0.5
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+Issue-ID: CPS-3201","Uplift Spring Boot version 4.0.5
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+- Revert XML context classes and simplify XML parsing for CPS-3257
+
+Issue-ID: CPS-3201"
+onap,cps~master~I4458abc115d98cc623f06ebc2cbd0d5dc5ee5b5f,8,5,6,"Uplift Spring Boot version 4.0.5
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+- Revert XML context classes and simplify XML parsing for CPS-3257
+
+Issue-ID: CPS-3201","Uplift Spring Boot version 4.0.5
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+- Revert XML context classes and simplify XML parsing for CPS-3257
+- Simplify String v. Json Object Handling CPS-3255
+
+Issue-ID: CPS-3201"
+onap,cps~master~I4458abc115d98cc623f06ebc2cbd0d5dc5ee5b5f,8,6,7,"Uplift Spring Boot version 4.0.5
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+- Revert XML context classes and simplify XML parsing for CPS-3257
+- Simplify String v. Json Object Handling CPS-3255
+
+Issue-ID: CPS-3201","Uplift Spring Boot version 4.0.7
+
+- Spring Cloud: 2024.0.3 → 2025.0.2
+- Yangtools: 8.0.10 → 14.0.23
+- Java: 17 → 21
+- Mockwebserver: 4.12.0 → 5.3.2
+- Antlr4: 4.9.3 → 4.13.2
+
+- Revert XML context classes and simplify XML parsing for CPS-3257
+- Simplify String v. Json Object Handling CPS-3255
+
+Issue-ID: CPS-3201"
+onap,policy%2Fclamp~master~I99e3b7b07c86a1965f0e5187f25c7f7024026d32,12,3,4,"Expose new methods in intermediary for outProperties
+
+Expose new methods in intermediary for sending back
+element state and outProperties.
+
+Issue-ID: PFACM-668","Expose new methods in intermediary for outProperties
+
+Expose new methods in intermediary for sending back
+element state and outProperties.
+
+Issue-ID: POLICY-5601"
+onap,cps~master~Ia37204afdf2a3c91afe415f8ce7641016fe18259,20,7,8,[Test Patch] Delta Performance improvement in older implementation,"[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops"
+onap,cps~master~Ia37204afdf2a3c91afe415f8ce7641016fe18259,20,9,10,"[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops","[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops
+
+Issue-ID: CPS-3174"
+onap,cps~master~Ia37204afdf2a3c91afe415f8ce7641016fe18259,20,10,11,"[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops
+
+Issue-ID: CPS-3174","[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops"
+onap,cps~master~Ia37204afdf2a3c91afe415f8ce7641016fe18259,20,14,15,"[Internal Review] Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops","Delta API's Performance improvement
+
+- Removed useless object creation and manipulations
+- Reduced Cps path parsing.
+- Implemented Parallel Processing for independent ops"
+onap,so~master~I3112a2dd2c681b533bde239310a2844ef6013d6e,9,7,8,"Migrate SO to Spring Boot 3.0.13 and Jakarta EE
+
+Bump framework versions:
+- Spring Boot 2.7.18 -> 3.0.13
+- Spring Cloud 2021.0.9 -> 2022.0.5
+- Apache CXF 3.4.10 -> 4.0.5
+- Camunda 7.17.0 -> 7.20.0
+- Logback 1.2.11 -> 1.4.14
+- gRPC 1.29.0 -> 1.58.0
+- JUnit Jupiter 5.8.2 -> 5.9.3
+- aai-schema 1.12.10 -> 1.14.0
+- logging-analytics 1.6.9 -> 1.7.0-SNAPSHOT
+- WireMock 2.35.0 -> 3.3.1
+- MariaDB JDBC 2.7.7 -> 3.1.4
+- SnakeYAML 1.31 -> 2.0
+- Jersey 2.35 -> 3.1.5
+- Jackson JAXRS -> Jackson Jakarta RS
+- JAXB impl -> org.glassfish.jaxb:jaxb-runtime 4.0.5
+- HttpClient 4.x -> 5.x in clients-base
+
+Full javax -> jakarta namespace migration:
+- 2038 Java imports and 127 Groovy imports migrated
+- OpenRewrite JavaxMigrationToJakarta recipe + manual fixes
+- javax.ws.rs -> jakarta.ws.rs
+- javax.servlet -> jakarta.servlet
+- javax.persistence -> jakarta.persistence
+- javax.annotation -> jakarta.annotation
+- javax.inject -> jakarta.inject
+- javax.interceptor -> jakarta.interceptor
+- javax.xml.bind -> jakarta.xml.bind
+- javax.validation -> jakarta.validation
+
+Spring Security 6 migration:
+- Removed WebSecurityConfigurerAdapter (deleted BaseWebSecurityConfigurerAdapter)
+- Rewrote to SecurityFilterChain bean pattern
+- authorizeRequests() -> authorizeHttpRequests()
+- antMatchers() -> requestMatchers()
+- Lambda DSL for csrf/cors configuration
+
+Apache HttpClient 4 -> 5 migration:
+- HttpComponentsClientConfiguration rewritten for HC5 API
+- VnfmAdapterCreateVnfTaskConfiguration SSL setup migrated
+- Spring HttpComponentsClientHttpRequestFactory uses HC5
+
+Additional fixes:
+- WebMvcConfigurerAdapter -> WebMvcConfigurer
+- HttpStatusCode vs HttpStatus (Spring 6 return type change)
+- getRawStatusCode() -> getStatusCode().value()
+- swagger-jaxrs2 -> swagger-jaxrs2-jakarta
+- JacksonJaxbJsonProvider -> JacksonJsonProvider
+- LocalServerPort package moved to test.web.server
+- SocketUtils removed (replaced with ServerSocket)
+- fluent-builder-maven-plugin: fix SnakeYAML 2.0 code-points limit
+- Groovy modules: source/target level 15 for groovy-eclipse-batch compat
+
+Issue-ID: SO-4310","Migrate SO to Spring Boot 3.0.13 and Jakarta EE
+
+Bump framework versions:
+- Spring Boot 2.7.18 -> 3.0.13
+- Spring Cloud 2021.0.9 -> 2022.0.5
+- Apache CXF 3.4.10 -> 4.0.5
+- Camunda 7.17.0 -> 7.20.0
+- Logback 1.2.11 -> 1.4.14
+- SLF4J 1.7.36 -> 2.0.9
+- gRPC 1.29.0 -> 1.58.0
+- JUnit Jupiter 5.8.2 -> 5.9.3
+- aai-schema 1.12.10 -> 1.14.0
+- logging-analytics 1.6.9 -> 1.7.0-SNAPSHOT
+- WireMock 2.35.0 -> 3.3.1
+- MariaDB JDBC 2.7.7 -> 3.1.4
+- SnakeYAML 1.31 -> 2.0
+- Jersey 2.35 -> 3.1.5
+- Jackson JAXRS -> Jackson Jakarta RS
+- JAXB impl -> org.glassfish.jaxb:jaxb-runtime 4.0.5
+- HttpClient 4.x -> 5.x in clients-base
+
+Full javax -> jakarta namespace migration:
+- 2038 Java imports and 127 Groovy imports migrated
+- OpenRewrite JavaxMigrationToJakarta recipe + manual fixes
+- javax.ws.rs -> jakarta.ws.rs
+- javax.servlet -> jakarta.servlet
+- javax.persistence -> jakarta.persistence
+- javax.annotation -> jakarta.annotation
+- javax.inject -> jakarta.inject
+- javax.interceptor -> jakarta.interceptor
+- javax.xml.bind -> jakarta.xml.bind
+- javax.validation -> jakarta.validation
+
+Spring Security 6 migration:
+- Removed WebSecurityConfigurerAdapter (deleted BaseWebSecurityConfigurerAdapter)
+- Rewrote to SecurityFilterChain bean pattern
+- authorizeRequests() -> authorizeHttpRequests()
+- antMatchers() -> requestMatchers()
+- Lambda DSL for csrf/cors configuration
+
+Apache HttpClient 4 -> 5 migration:
+- HttpComponentsClientConfiguration rewritten for HC5 API
+- VnfmAdapterCreateVnfTaskConfiguration SSL setup migrated
+- Spring HttpComponentsClientHttpRequestFactory uses HC5
+
+Camunda 7.17 -> 7.20 migration:
+- Set enforce-history-time-to-live=false in test configs
+- Set jdbc-batch-processing=false for MariaDB4j in tests
+- Fix message correlation to use processInstanceId (7.20 stricter matching)
+- Fix jersey-hk2 version (was 2.26/javax, now managed/jakarta)
+
+Additional fixes:
+- WebMvcConfigurerAdapter -> WebMvcConfigurer
+- HttpStatusCode vs HttpStatus (Spring 6 return type change)
+- getRawStatusCode() -> getStatusCode().value()
+- swagger-jaxrs2 -> swagger-jaxrs2-jakarta
+- JacksonJaxbJsonProvider -> JacksonJsonProvider
+- LocalServerPort package moved to test.web.server
+- SocketUtils removed (replaced with ServerSocket)
+- fluent-builder-maven-plugin: fix SnakeYAML 2.0 code-points limit
+- Groovy modules: source/target level 15 for groovy-eclipse-batch compat
+- TracingTest: adapt for Micrometer Tracing (replaces Spring Cloud Sleuth)
+- so-simulator: pin SLF4J 1.7/Logback 1.2 (Citrus 2.x incompatible with SB3)
+
+Issue-ID: SO-4310"
+onap,cps~master~I57814d1230469be5782187c6a6f51e77078ec165,10,3,4,"[Internal Review] Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or not.
+
+Issue-ID: CPS-3236","[Internal Review] Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or not.
+
+Issue-ID: CPS-3251"
+onap,cps~master~I57814d1230469be5782187c6a6f51e77078ec165,10,5,6,"[Internal Review] Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or not.
+
+Issue-ID: CPS-3251","[Internal Review] Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or without filtration.
+
+Issue-ID: CPS-3251"
+onap,cps~master~I57814d1230469be5782187c6a6f51e77078ec165,10,8,9,"[Internal Review] Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or without filtration.
+
+Issue-ID: CPS-3251","Pagination in Get Anchors API
+
+- Added support to pagination feature in Get Anchor API
+- Pagination can be apply either on filtration or without filtration.
+
+Issue-ID: CPS-3251"
+onap,sdnc%2Fnorthbound~master~I6fcace54aefd94cfc5b303daaa11778eb2f1a39c,4,2,3,"Intermittend blueprint issues
+
+- remove declaration that is incompatible with the Scandium release
+
+Issue-ID: SDNC-1866","Fix SvcLogicService OSGi wiring race condition
+
+- add lazy SvcLogicService resolution in client (retry from OSGi
+registry on first use if null at construction time)
+- remove dead static getSvcLogicService/findSvcLogicService code
+from GenericResourceApiProvider
+- throw SvcLogicException instead of NPE when service unavailable
+
+Issue-ID: SDNC-1866"
+onap,policy%2Fparent~master~I3b0e64b314fe837fb160f1ab0fb6c01a9217a53e,5,1,2,"Remove unused OWASP plugin and CVE profile
+
+The plugin is extremely slow as it NVD is rate-limited without an
+account. It is recommended to use a local scanner like Trivy instead.
+Note this profile is NOT used in pipelines like CLM jobs.
+
+Issue-ID: POLICY-5592","Remove unused OWASP plugin and CVE profile
+
+The plugin is extremely slow as NVD is rate-limited without an
+account. It is recommended to use a local scanner like Trivy instead.
+Note this profile is NOT used in any pipelines like CLM jobs.
+
+Issue-ID: POLICY-5592"
+onap,policy%2Fparent~master~Ic3914e93ea4d75aa892491a644caa57a7e4a59dc,6,1,2,"Update dods for Refactor messages removing old backward compatibility
+
+Issue-ID: POLICY-5597","Update docs for Refactor messages removing old backward compatibility
+
+Issue-ID: POLICY-5597"
+onap,cps~master~I1cdf3cfc7ac19ef820633b21f97590029a0dc239,7,3,4,"Prevent NCMP batch requests from using async M2M topic as target topic
+
+Issue-ID: CPS-3263","Prevent NCMP batch requests from using the async intermediate Kafka topic as the final target topic.
+
+Issue-ID: CPS-3263"

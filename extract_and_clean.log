@@ -1,0 +1,718 @@
+2026-06-27 10:49:37  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:49:37  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-27 10:49:37  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:37  INFO        Run mode         : test
+2026-06-27 10:49:37  INFO        Test limit       : 100 changes/project
+2026-06-27 10:49:37  INFO        Progress every   : every 1 change(s)
+2026-06-27 10:49:37  INFO        Enabled projects : libreoffice
+2026-06-27 10:49:37  INFO        Output file      : output\verified_pairs.csv
+2026-06-27 10:49:37  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-27 10:49:37  INFO      
+2026-06-27 10:49:37  INFO      
+2026-06-27 10:49:37  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 10:49:37  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-27 10:49:37  INFO      │  Base URL           : https://gerrit.libreoffice.org/r           │
+2026-06-27 10:49:37  INFO      │  API prefix         : /a                                         │
+2026-06-27 10:49:37  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 10:49:37  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 10:49:38  ERROR       ✘ Failed to fetch change list at offset 0: Server returned HTML instead of JSON from https://gerrit.libreoffice.org/q/a/changes: '<!DOCTYPE html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="description" content="Gerrit Code Review">\n<meta nam'
+2026-06-27 10:49:38  INFO      
+2026-06-27 10:49:38  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-27 10:49:38  INFO        ║  Total changes fetched         : 0                             ║
+2026-06-27 10:49:38  INFO        ║  Skipped (single patchset)     : 0                             ║
+2026-06-27 10:49:38  INFO        ║  Changes processed             : 0                             ║
+2026-06-27 10:49:38  INFO        ║  Pairs extracted (potential)   : 0                             ║
+2026-06-27 10:49:38  INFO        ║  Dropped (identical after clean): 0                            ║
+2026-06-27 10:49:38  INFO        ║  Verified pairs written to CSV : 0                             ║
+2026-06-27 10:49:38  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:38  INFO      
+2026-06-27 10:49:38  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:49:38  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-27 10:49:38  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:38  INFO        LIBREOFFICE      ✔  changes=0         extracted=0         identical_dropped=0         verified=0       
+2026-06-27 10:49:38  INFO      
+2026-06-27 10:49:38  INFO        Total verified pairs written : 0
+2026-06-27 10:49:38  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-27 10:49:38  INFO      
+2026-06-27 10:49:38  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-27 10:49:45  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:49:45  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-27 10:49:45  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:45  INFO        Run mode         : test
+2026-06-27 10:49:45  INFO        Test limit       : 100 changes/project
+2026-06-27 10:49:45  INFO        Progress every   : every 1 change(s)
+2026-06-27 10:49:45  INFO        Enabled projects : libreoffice
+2026-06-27 10:49:45  INFO        Output file      : output\verified_pairs.csv
+2026-06-27 10:49:45  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-27 10:49:45  INFO      
+2026-06-27 10:49:45  INFO      
+2026-06-27 10:49:45  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 10:49:45  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-27 10:49:45  INFO      │  Base URL           : https://gerrit.libreoffice.org/r           │
+2026-06-27 10:49:45  INFO      │  API prefix         : /a                                         │
+2026-06-27 10:49:45  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 10:49:45  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 10:49:46  ERROR       ✘ Failed to fetch change list at offset 0: Server returned HTML instead of JSON from https://gerrit.libreoffice.org/q/a/changes: '<!DOCTYPE html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="description" content="Gerrit Code Review">\n<meta nam'
+2026-06-27 10:49:46  INFO      
+2026-06-27 10:49:46  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-27 10:49:46  INFO        ║  Total changes fetched         : 0                             ║
+2026-06-27 10:49:46  INFO        ║  Skipped (single patchset)     : 0                             ║
+2026-06-27 10:49:46  INFO        ║  Changes processed             : 0                             ║
+2026-06-27 10:49:46  INFO        ║  Pairs extracted (potential)   : 0                             ║
+2026-06-27 10:49:46  INFO        ║  Dropped (identical after clean): 0                            ║
+2026-06-27 10:49:46  INFO        ║  Verified pairs written to CSV : 0                             ║
+2026-06-27 10:49:46  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:46  INFO      
+2026-06-27 10:49:46  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:49:46  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-27 10:49:46  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:49:46  INFO        LIBREOFFICE      ✔  changes=0         extracted=0         identical_dropped=0         verified=0       
+2026-06-27 10:49:46  INFO      
+2026-06-27 10:49:46  INFO        Total verified pairs written : 0
+2026-06-27 10:49:46  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-27 10:49:46  INFO      
+2026-06-27 10:49:46  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-27 10:50:14  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:50:14  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-27 10:50:14  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:50:14  INFO        Run mode         : test
+2026-06-27 10:50:14  INFO        Test limit       : 100 changes/project
+2026-06-27 10:50:14  INFO        Progress every   : every 1 change(s)
+2026-06-27 10:50:14  INFO        Enabled projects : onap
+2026-06-27 10:50:14  INFO        Output file      : output\verified_pairs.csv
+2026-06-27 10:50:14  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-27 10:50:14  INFO      
+2026-06-27 10:50:14  INFO      
+2026-06-27 10:50:14  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 10:50:14  INFO      │  Processing project : ONAP                                       │
+2026-06-27 10:50:14  INFO      │  Base URL           : https://gerrit.onap.org/r                  │
+2026-06-27 10:50:14  INFO      │  API prefix         : (none)                                     │
+2026-06-27 10:50:14  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 10:50:14  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 10:50:15  INFO        [ONAP] #1       change=ccsdk%2Fsli~paris~Ifde03fec9fce640152c85  ps=1  → SKIP (single patchset)  │ total=1  verified=0
+2026-06-27 10:50:15  INFO        [ONAP] #2       change=sdc~master~I5d7fcd889659d1907d179ecaf9ac  ps=8    pairs=7    identical_dropped=3    │ cumul → extracted=7       verified=4     
+2026-06-27 10:50:16  INFO        [ONAP] #3       change=oom~master~I775fd0e7771b56549ba3c6cfe41c  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=12      verified=5     
+2026-06-27 10:50:17  INFO        [ONAP] #4       change=policy%2Fclamp~master~I0a09b473162e18ae6  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=21      verified=5     
+2026-06-27 10:50:18  INFO        [ONAP] #5       change=policy%2Fclamp~master~If55a08f8e993754d8  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=29      verified=5     
+2026-06-27 10:50:18  INFO        [ONAP] #6       change=sdnc%2Foam~master~Ib597dd2fecbb56f7f370b  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=30      verified=6     
+2026-06-27 10:50:20  INFO        [ONAP] #7       change=cps~master~I4527f28023fc3068b2a72c190a6e  ps=19   pairs=18   identical_dropped=7    │ cumul → extracted=48      verified=17    
+2026-06-27 10:50:20  INFO        [ONAP] #8       change=cps~master~I4458abc115d98cc623f06ebc2cbd  ps=8    pairs=7    identical_dropped=4    │ cumul → extracted=55      verified=20    
+2026-06-27 10:50:21  INFO        [ONAP] #9       change=policy%2Fclamp~master~I99e3b7b07c86a1965  ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=66      verified=21    
+2026-06-27 10:50:22  INFO        [ONAP] #10      change=policy%2Fclamp~master~I4ac747ff630bff4cb  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=72      verified=21    
+2026-06-27 10:50:24  INFO        [ONAP] #11      change=cps~master~Iff7fab66ddcc03703255123c6d5c  ps=24   pairs=23   identical_dropped=23   │ cumul → extracted=95      verified=21    
+2026-06-27 10:50:24  INFO        [ONAP] #12      change=cps~master~Ic38c211a783a945229cc296f527a  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=96      verified=21    
+2026-06-27 10:50:24  INFO        [ONAP] #13      change=cps~master~I40ec3c1f612beebc9694cc662970  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=97      verified=21    
+2026-06-27 10:50:24  INFO        [ONAP] #14      change=so~master~I48d944970f84b9c2d39bdcbd66905  ps=1  → SKIP (single patchset)  │ total=14  verified=21
+2026-06-27 10:50:25  INFO        [ONAP] #15      change=cps~master~Iec2226b7aaec1ade88b2eda10e96  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=98      verified=21    
+2026-06-27 10:50:25  INFO        [ONAP] #16      change=cps~master~Icc64696d513c28106d334e7a75b2  ps=1  → SKIP (single patchset)  │ total=16  verified=21
+2026-06-27 10:50:26  INFO        [ONAP] #17      change=cps~master~Ia37204afdf2a3c91afe415f8ce76  ps=20   pairs=19   identical_dropped=15   │ cumul → extracted=117     verified=25    
+2026-06-27 10:50:26  INFO        [ONAP] #18      change=so~master~I72057b9f9309f3bf75de528c783b1  ps=1  → SKIP (single patchset)  │ total=18  verified=25
+2026-06-27 10:50:27  INFO        [ONAP] #19      change=ccsdk%2Fcds~master~I9fb38d2ec687eb3ffb21  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=118     verified=25    
+2026-06-27 10:50:28  INFO        [ONAP] #20      change=so~master~I3112a2dd2c681b533bde239310a28  ps=9    pairs=8    identical_dropped=7    │ cumul → extracted=126     verified=26    
+2026-06-27 10:50:29  INFO        [ONAP] #21      change=cps~master~I57814d1230469be5782187c6a6f5  ps=10   pairs=9    identical_dropped=6    │ cumul → extracted=135     verified=29    
+2026-06-27 10:50:29  INFO        [ONAP] #22      change=sdc%2Fonap-ui-common~master~I5767dad769e  ps=1  → SKIP (single patchset)  │ total=22  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #23      change=sdc%2Fonap-ui-common~master~Ia5a165f50fe  ps=1  → SKIP (single patchset)  │ total=23  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #24      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=24  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #25      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=25  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #26      change=ci-management~master~I9c2bfd3647734ffcba  ps=1  → SKIP (single patchset)  │ total=26  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #27      change=ci-management~master~Ia94381f26874b0f2c2  ps=1  → SKIP (single patchset)  │ total=27  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #28      change=ccsdk%2Fdistribution~master~Id2b6b190bb3  ps=1  → SKIP (single patchset)  │ total=28  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #29      change=ccsdk%2Fdistribution~master~Ic3661ea70f3  ps=1  → SKIP (single patchset)  │ total=29  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #30      change=ccsdk%2Fapps~master~Ib891bacd4d9ca8faa22  ps=1  → SKIP (single patchset)  │ total=30  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #31      change=ccsdk%2Fdistribution~master~I7ce34c434b8  ps=1  → SKIP (single patchset)  │ total=31  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #32      change=ccsdk%2Fapps~master~I03433ce12aaa550b765  ps=1  → SKIP (single patchset)  │ total=32  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #33      change=ccsdk%2Ffeatures~master~Ia71dd20779efed6  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=136     verified=29    
+2026-06-27 10:50:29  INFO        [ONAP] #34      change=ccsdk%2Fcds~quebec~I984574bad32221c30b15  ps=1  → SKIP (single patchset)  │ total=34  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #35      change=ccsdk%2Fapps~master~I7a44e05469f62dcdd60  ps=1  → SKIP (single patchset)  │ total=35  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #36      change=ccsdk%2Fdistribution~master~Id25f044eec5  ps=1  → SKIP (single patchset)  │ total=36  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #37      change=ccsdk%2Ffeatures~quebec~Ia71dd20779efed6  ps=1  → SKIP (single patchset)  │ total=37  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #38      change=ccsdk%2Fcds~master~I984574bad32221c30b15  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=137     verified=29    
+2026-06-27 10:50:29  INFO        [ONAP] #39      change=ccsdk%2Fapps~master~I16664b08323df84cfe2  ps=1  → SKIP (single patchset)  │ total=39  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #40      change=ccsdk%2Fapps~master~I32be1f63e149061fd55  ps=1  → SKIP (single patchset)  │ total=40  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #41      change=ccsdk%2Fparent~master~I1480f60f98b1c4a9b  ps=1  → SKIP (single patchset)  │ total=41  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #42      change=ccsdk%2Fparent~master~I060a5a44768557bfe  ps=1  → SKIP (single patchset)  │ total=42  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #43      change=ccsdk%2Fparent~master~I5be0539cca4fa24f5  ps=1  → SKIP (single patchset)  │ total=43  verified=29
+2026-06-27 10:50:29  INFO        [ONAP] #44      change=ccsdk%2Fparent~master~I62333a2f597d8040d  ps=1  → SKIP (single patchset)  │ total=44  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #45      change=policy%2Fclamp~master~Idcabe1d5903cfe661  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=143     verified=29    
+2026-06-27 10:50:30  INFO        [ONAP] #46      change=sdc%2Fonap-ui-common~master~Ibdc1177e645  ps=1  → SKIP (single patchset)  │ total=46  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #47      change=sdc%2Fonap-ui-common~master~I82943ee27cb  ps=1  → SKIP (single patchset)  │ total=47  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #48      change=sdc%2Fonap-ui-common~master~Ib411bdba392  ps=1  → SKIP (single patchset)  │ total=48  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #49      change=sdc%2Fonap-ui-common~master~I894b45487c8  ps=1  → SKIP (single patchset)  │ total=49  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #50      change=sdc%2Fonap-ui-common~master~I79ad2666178  ps=1  → SKIP (single patchset)  │ total=50  verified=29
+2026-06-27 10:50:30  INFO        [ONAP] #51      change=sdc%2Fonap-ui-common~master~Ieb71f78e86d  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=144     verified=29    
+2026-06-27 10:50:31  INFO        [ONAP] #52      change=policy%2Fclamp~master~Ia91ff5f0d49ca6f3e  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=152     verified=29    
+2026-06-27 10:50:31  INFO        [ONAP] #53      change=sdc%2Fonap-ui-common~master~I8ca9ae40930  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=153     verified=29    
+2026-06-27 10:50:32  INFO        [ONAP] #54      change=policy%2Fclamp~master~I7df80bfd2d747dbbe  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=161     verified=29    
+2026-06-27 10:50:32  INFO        [ONAP] #55      change=policy%2Fparent~master~I88bd916b4e94f543  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=162     verified=29    
+2026-06-27 10:50:32  INFO        [ONAP] #56      change=ccsdk%2Fcds~master~I76947a27eea14cad9335  ps=1  → SKIP (single patchset)  │ total=56  verified=29
+2026-06-27 10:50:32  INFO        [ONAP] #57      change=cps~master~I24b60cda2fa5e8ff47768cef3532  ps=1  → SKIP (single patchset)  │ total=57  verified=29
+2026-06-27 10:50:32  INFO        [ONAP] #58      change=sdnc%2Fnorthbound~master~I6fcace54aefd94  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=165     verified=30    
+2026-06-27 10:50:32  INFO        [ONAP] #59      change=policy%2Fparent~master~If81b524950f51b31  ps=1  → SKIP (single patchset)  │ total=59  verified=30
+2026-06-27 10:50:32  INFO        [ONAP] #60      change=policy%2Fapex-pdp~master~Ie9b4996992c563  ps=1  → SKIP (single patchset)  │ total=60  verified=30
+2026-06-27 10:50:34  INFO        [ONAP] #61      change=policy%2Fclamp~master~Ie7c17d9da8837085d  ps=12   pairs=11   identical_dropped=11   │ cumul → extracted=176     verified=30    
+2026-06-27 10:50:34  INFO        [ONAP] #62      change=policy%2Fparent~master~I3b0e64b314fe837f  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=180     verified=31    
+2026-06-27 10:50:34  INFO        [ONAP] #63      change=policy%2Fparent~master~Icedefeb43298cc08  ps=1  → SKIP (single patchset)  │ total=63  verified=31
+2026-06-27 10:50:34  INFO        [ONAP] #64      change=policy%2Fclamp~master~Ifc45739e563761f6b  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=182     verified=31    
+2026-06-27 10:50:35  INFO        [ONAP] #65      change=policy%2Fparent~master~Ic3914e93ea4d75aa  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=187     verified=32    
+2026-06-27 10:50:35  INFO        [ONAP] #66      change=cps~master~Ia6f94c2727294bfc5fc071130ac3  ps=1  → SKIP (single patchset)  │ total=66  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #67      change=policy%2Fclamp~master~Idac96c87951c41255  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=196     verified=32    
+2026-06-27 10:50:36  INFO        [ONAP] #68      change=policy%2Fapex-pdp~master~I75ed13ae94a581  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=197     verified=32    
+2026-06-27 10:50:36  INFO        [ONAP] #69      change=policy%2Fcommon~master~If168f8a74efaacb1  ps=1  → SKIP (single patchset)  │ total=69  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #70      change=policy%2Fparent~master~Ie02ca2f6dbecccbe  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=198     verified=32    
+2026-06-27 10:50:36  INFO        [ONAP] #71      change=policy%2Fdrools-pdp~master~I9292328d04bc  ps=1  → SKIP (single patchset)  │ total=71  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #72      change=policy%2Fparent~master~I8c0507eaa6e3bd0e  ps=1  → SKIP (single patchset)  │ total=72  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #73      change=policy%2Fdrools-applications~master~I718  ps=1  → SKIP (single patchset)  │ total=73  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #74      change=policy%2Fxacml-pdp~master~Ia4cef5d7821ef  ps=1  → SKIP (single patchset)  │ total=74  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #75      change=policy%2Fpap~master~I246a6adb473959086b7  ps=1  → SKIP (single patchset)  │ total=75  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #76      change=policy%2Fapi~master~If4c9d14fb8cfaf0cce1  ps=1  → SKIP (single patchset)  │ total=76  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #77      change=policy%2Fmodels~master~If466a0584ef9642e  ps=1  → SKIP (single patchset)  │ total=77  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #78      change=policy%2Fcommon~master~I2c755be0accd1abe  ps=1  → SKIP (single patchset)  │ total=78  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #79      change=policy%2Fparent~master~Ib51a7737d660e7c5  ps=1  → SKIP (single patchset)  │ total=79  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #80      change=policy%2Fdistribution~master~Ie2ac5cb7ca  ps=1  → SKIP (single patchset)  │ total=80  verified=32
+2026-06-27 10:50:36  INFO        [ONAP] #81      change=sdc%2Fonap-ui-common~master~I2bc9d109fe2  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=199     verified=32    
+2026-06-27 10:50:36  INFO        [ONAP] #82      change=ci-management~master~I232436da6882e16f26  ps=1  → SKIP (single patchset)  │ total=82  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #83      change=policy%2Fclamp~master~I66eff70b93e6d03d4  ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=203     verified=32    
+2026-06-27 10:50:37  INFO        [ONAP] #84      change=policy%2Fdistribution~master~I3bf648a98a  ps=1  → SKIP (single patchset)  │ total=84  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #85      change=policy%2Fdistribution~master~I43971d215c  ps=1  → SKIP (single patchset)  │ total=85  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #86      change=policy%2Fparent~master~I45a11346fa30a73c  ps=1  → SKIP (single patchset)  │ total=86  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #87      change=policy%2Fdistribution~master~I644f4eaeb1  ps=1  → SKIP (single patchset)  │ total=87  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #88      change=policy%2Fparent~master~Ib6976d2e7bc182ba  ps=1  → SKIP (single patchset)  │ total=88  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #89      change=policy%2Fdistribution~master~Iaadea9c7c4  ps=1  → SKIP (single patchset)  │ total=89  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #90      change=ci-management~master~Iec3998248dd2c315ea  ps=1  → SKIP (single patchset)  │ total=90  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #91      change=policy%2Fparent~master~Ic0a04830b6ae2fd8  ps=1  → SKIP (single patchset)  │ total=91  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #92      change=sdc%2Fonap-ui-common~master~I48d76f55ada  ps=1  → SKIP (single patchset)  │ total=92  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #93      change=sdc%2Fonap-ui-common~master~I13a3aca129b  ps=1  → SKIP (single patchset)  │ total=93  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #94      change=policy%2Fdistribution~master~Ia1bcd49b24  ps=1  → SKIP (single patchset)  │ total=94  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #95      change=policy%2Fparent~master~Ib3a9bf59acc74965  ps=1  → SKIP (single patchset)  │ total=95  verified=32
+2026-06-27 10:50:37  INFO        [ONAP] #96      change=oom~master~I7dc2f5f7209b386f16ac037062e7  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=205     verified=32    
+2026-06-27 10:50:37  INFO        [ONAP] #97      change=sdc~master~Ifbfa20581064152dd5c4cae6baed  ps=1  → SKIP (single patchset)  │ total=97  verified=32
+2026-06-27 10:50:38  INFO        [ONAP] #98      change=cps~master~I1cdf3cfc7ac19ef820633b21f975  ps=7    pairs=6    identical_dropped=5    │ cumul → extracted=211     verified=33    
+2026-06-27 10:50:38  INFO        [ONAP] #99      change=portal-ng%2Fpreferences~master~Ie6f32ec5  ps=1  → SKIP (single patchset)  │ total=99  verified=33
+2026-06-27 10:50:38  INFO        [ONAP] #100     change=portal-ng%2Fhistory~master~I0235aeb2e4d3  ps=1  → SKIP (single patchset)  │ total=100  verified=33
+2026-06-27 10:50:38  INFO      
+2026-06-27 10:50:38  INFO        ╔══ ONAP — Results ══════════════════════════════════════════╗
+2026-06-27 10:50:38  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-27 10:50:38  INFO        ║  Skipped (single patchset)     : 63                            ║
+2026-06-27 10:50:38  INFO        ║  Changes processed             : 37                            ║
+2026-06-27 10:50:38  INFO        ║  Pairs extracted (potential)   : 211                           ║
+2026-06-27 10:50:38  INFO        ║  Dropped (identical after clean): 178                          ║
+2026-06-27 10:50:38  INFO        ║  Verified pairs written to CSV : 33                            ║
+2026-06-27 10:50:38  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 10:50:38  INFO      
+2026-06-27 10:50:38  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:50:38  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-27 10:50:38  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:50:38  INFO        ONAP             ✔  changes=100       extracted=211       identical_dropped=178       verified=33      
+2026-06-27 10:50:38  INFO      
+2026-06-27 10:50:38  INFO        Total verified pairs written : 33
+2026-06-27 10:50:38  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-27 10:50:38  INFO      
+2026-06-27 10:50:38  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-27 10:57:46  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:57:46  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-27 10:57:46  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:57:46  INFO        Run mode         : test
+2026-06-27 10:57:46  INFO        Test limit       : 100 changes/project
+2026-06-27 10:57:46  INFO        Progress every   : every 1 change(s)
+2026-06-27 10:57:46  INFO        Enabled projects : libreoffice
+2026-06-27 10:57:46  INFO        Output file      : output\verified_pairs.csv
+2026-06-27 10:57:46  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-27 10:57:46  INFO      
+2026-06-27 10:57:46  INFO      
+2026-06-27 10:57:46  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 10:57:46  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-27 10:57:46  INFO      │  Base URL           : https://gerrit.libreoffice.org             │
+2026-06-27 10:57:46  INFO      │  API prefix         : (none)                                     │
+2026-06-27 10:57:46  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 10:57:46  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 10:57:47  INFO        [LIBREOFFICE] #1       change=core~205754                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=1       verified=0     
+2026-06-27 10:57:49  INFO        [LIBREOFFICE] #2       change=core~196196                               ps=15   pairs=14   identical_dropped=10   │ cumul → extracted=15      verified=4     
+2026-06-27 10:57:50  INFO        [LIBREOFFICE] #3       change=core~200891                               ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=26      verified=5     
+2026-06-27 10:57:50  INFO        [LIBREOFFICE] #4       change=core~207381                               ps=1  → SKIP (single patchset)  │ total=4  verified=5
+2026-06-27 10:57:50  INFO        [LIBREOFFICE] #5       change=core~207380                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=27      verified=5     
+2026-06-27 10:57:52  INFO        [LIBREOFFICE] #6       change=core~205979                               ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=38      verified=6     
+2026-06-27 10:57:52  INFO        [LIBREOFFICE] #7       change=core~207375                               ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=42      verified=6     
+2026-06-27 10:57:52  INFO        [LIBREOFFICE] #8       change=core~207379                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=43      verified=6     
+2026-06-27 10:57:53  INFO        [LIBREOFFICE] #9       change=core~207373                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=44      verified=6     
+2026-06-27 10:57:53  INFO        [LIBREOFFICE] #10      change=core~207368                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=45      verified=6     
+2026-06-27 10:57:53  INFO        [LIBREOFFICE] #11      change=core~207367                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=46      verified=6     
+2026-06-27 10:57:54  INFO        [LIBREOFFICE] #12      change=core~206710                               ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=50      verified=6     
+2026-06-27 10:57:54  INFO        [LIBREOFFICE] #13      change=infra%2Fbookshelf~207378                  ps=1  → SKIP (single patchset)  │ total=13  verified=6
+2026-06-27 10:57:54  INFO        [LIBREOFFICE] #14      change=core~207374                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=51      verified=6     
+2026-06-27 10:57:54  INFO        [LIBREOFFICE] #15      change=core~207361                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=53      verified=6     
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #16      change=core~207353                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=54      verified=6     
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #17      change=core~188311                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=55      verified=7     
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #18      change=core~207354                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=57      verified=7     
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #19      change=core~207235                               ps=1  → SKIP (single patchset)  │ total=19  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #20      change=help~207225                               ps=1  → SKIP (single patchset)  │ total=20  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #21      change=help~207226                               ps=1  → SKIP (single patchset)  │ total=21  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #22      change=help~207227                               ps=1  → SKIP (single patchset)  │ total=22  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #23      change=help~207228                               ps=1  → SKIP (single patchset)  │ total=23  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #24      change=help~207230                               ps=1  → SKIP (single patchset)  │ total=24  verified=7
+2026-06-27 10:57:55  INFO        [LIBREOFFICE] #25      change=core~207365                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=58      verified=7     
+2026-06-27 10:57:56  INFO        [LIBREOFFICE] #26      change=core~207364                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=59      verified=7     
+2026-06-27 10:57:56  INFO        [LIBREOFFICE] #27      change=core~207363                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=60      verified=7     
+2026-06-27 10:57:56  INFO        [LIBREOFFICE] #28      change=core~207362                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=61      verified=7     
+2026-06-27 10:57:56  INFO        [LIBREOFFICE] #29      change=core~207360                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=62      verified=7     
+2026-06-27 10:57:57  INFO        [LIBREOFFICE] #30      change=core~207359                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=63      verified=7     
+2026-06-27 10:57:57  INFO        [LIBREOFFICE] #31      change=core~207358                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=64      verified=7     
+2026-06-27 10:57:57  INFO        [LIBREOFFICE] #32      change=core~207357                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=65      verified=7     
+2026-06-27 10:57:57  INFO        [LIBREOFFICE] #33      change=core~207356                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=66      verified=7     
+2026-06-27 10:57:57  INFO        [LIBREOFFICE] #34      change=core~207355                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=67      verified=7     
+2026-06-27 10:57:58  INFO        [LIBREOFFICE] #35      change=core~207229                               ps=6    pairs=5    identical_dropped=1    │ cumul → extracted=72      verified=11    
+2026-06-27 10:57:58  INFO        [LIBREOFFICE] #36      change=core~205242                               ps=1  → SKIP (single patchset)  │ total=36  verified=11
+2026-06-27 10:57:58  INFO        [LIBREOFFICE] #37      change=core~205036                               ps=3    pairs=2    identical_dropped=0    │ cumul → extracted=74      verified=13    
+2026-06-27 10:57:59  INFO        [LIBREOFFICE] #38      change=core~204662                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=75      verified=13    
+2026-06-27 10:57:59  INFO        [LIBREOFFICE] #39      change=core~203229                               ps=1  → SKIP (single patchset)  │ total=39  verified=13
+2026-06-27 10:57:59  INFO        [LIBREOFFICE] #40      change=core~186660                               ps=7    pairs=6    identical_dropped=5    │ cumul → extracted=81      verified=14    
+2026-06-27 10:58:01  INFO        [LIBREOFFICE] #41      change=core~203388                               ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=90      verified=14    
+2026-06-27 10:58:01  INFO        [LIBREOFFICE] #42      change=core~203273                               ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=95      verified=15    
+2026-06-27 10:58:02  INFO        [LIBREOFFICE] #43      change=core~205852                               ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=99      verified=16    
+2026-06-27 10:58:04  INFO        [LIBREOFFICE] #44      change=core~205316                               ps=16   pairs=15   identical_dropped=9    │ cumul → extracted=114     verified=22    
+2026-06-27 10:58:05  INFO        [LIBREOFFICE] #45      change=core~205815                               ps=11   pairs=10   identical_dropped=7    │ cumul → extracted=124     verified=25    
+2026-06-27 10:58:06  INFO        [LIBREOFFICE] #46      change=core~205838                               ps=10   pairs=9    identical_dropped=6    │ cumul → extracted=133     verified=28    
+2026-06-27 10:58:07  INFO        [LIBREOFFICE] #47      change=core~205599                               ps=11   pairs=10   identical_dropped=5    │ cumul → extracted=143     verified=33    
+2026-06-27 10:58:09  INFO        [LIBREOFFICE] #48      change=core~205568                               ps=13   pairs=12   identical_dropped=9    │ cumul → extracted=155     verified=36    
+2026-06-27 10:58:11  INFO        [LIBREOFFICE] #49      change=core~205457                               ps=16   pairs=15   identical_dropped=9    │ cumul → extracted=170     verified=42    
+2026-06-27 10:58:12  INFO        [LIBREOFFICE] #50      change=core~205456                               ps=15   pairs=14   identical_dropped=5    │ cumul → extracted=184     verified=51    
+2026-06-27 10:58:13  INFO        [LIBREOFFICE] #51      change=core~205814                               ps=8    pairs=7    identical_dropped=3    │ cumul → extracted=191     verified=55    
+2026-06-27 10:58:14  INFO        [LIBREOFFICE] #52      change=core~205670                               ps=7    pairs=6    identical_dropped=3    │ cumul → extracted=197     verified=58    
+2026-06-27 10:58:16  INFO        [LIBREOFFICE] #53      change=core~205234                               ps=12   pairs=11   identical_dropped=6    │ cumul → extracted=208     verified=63    
+2026-06-27 10:58:16  INFO        [LIBREOFFICE] #54      change=core~207377                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=209     verified=63    
+2026-06-27 10:58:16  INFO        [LIBREOFFICE] #55      change=core~207349                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=211     verified=63    
+2026-06-27 10:58:17  INFO        [LIBREOFFICE] #56      change=core~206947                               ps=9    pairs=8    identical_dropped=4    │ cumul → extracted=219     verified=67    
+2026-06-27 10:58:17  INFO        [LIBREOFFICE] #57      change=core~207376                               ps=1  → SKIP (single patchset)  │ total=57  verified=67
+2026-06-27 10:58:18  INFO        [LIBREOFFICE] #58      change=core~207157                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=220     verified=68    
+2026-06-27 10:58:18  INFO        [LIBREOFFICE] #59      change=core~207017                               ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=223     verified=69    
+2026-06-27 10:58:18  INFO        [LIBREOFFICE] #60      change=core~207342                               ps=1  → SKIP (single patchset)  │ total=60  verified=69
+2026-06-27 10:58:19  INFO        [LIBREOFFICE] #61      change=core~206264                               ps=7    pairs=6    identical_dropped=4    │ cumul → extracted=229     verified=71    
+2026-06-27 10:58:19  INFO        [LIBREOFFICE] #62      change=core~207345                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=230     verified=71    
+2026-06-27 10:58:19  INFO        [LIBREOFFICE] #63      change=core~207370                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=231     verified=72    
+2026-06-27 10:58:20  INFO        [LIBREOFFICE] #64      change=core~206265                               ps=9    pairs=8    identical_dropped=6    │ cumul → extracted=239     verified=74    
+2026-06-27 10:58:21  INFO        [LIBREOFFICE] #65      change=infra%2FWhatCanIDoForLibreOffice~207372   ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=240     verified=74    
+2026-06-27 10:58:21  INFO        [LIBREOFFICE] #66      change=core~207366                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=241     verified=74    
+2026-06-27 10:58:21  INFO        [LIBREOFFICE] #67      change=core~207198                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=243     verified=74    
+2026-06-27 10:58:21  INFO        [LIBREOFFICE] #68      change=core~207371                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=244     verified=74    
+2026-06-27 10:58:22  INFO        [LIBREOFFICE] #69      change=core~207351                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=245     verified=74    
+2026-06-27 10:58:22  INFO        [LIBREOFFICE] #70      change=core~207369                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=246     verified=74    
+2026-06-27 10:58:22  INFO        [LIBREOFFICE] #71      change=core~207344                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=247     verified=74    
+2026-06-27 10:58:22  INFO        [LIBREOFFICE] #72      change=core~207347                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=248     verified=74    
+2026-06-27 10:58:22  INFO        [LIBREOFFICE] #73      change=core~207346                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=249     verified=74    
+2026-06-27 10:58:23  INFO        [LIBREOFFICE] #74      change=core~207343                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=250     verified=74    
+2026-06-27 10:58:23  INFO        [LIBREOFFICE] #75      change=core~207348                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=251     verified=74    
+2026-06-27 10:58:23  INFO        [LIBREOFFICE] #76      change=core~207336                               ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=253     verified=75    
+2026-06-27 10:58:23  INFO        [LIBREOFFICE] #77      change=core~207352                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=254     verified=75    
+2026-06-27 10:58:24  INFO        [LIBREOFFICE] #78      change=core~207340                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=255     verified=75    
+2026-06-27 10:58:24  INFO        [LIBREOFFICE] #79      change=core~207350                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=256     verified=75    
+2026-06-27 10:58:24  INFO        [LIBREOFFICE] #80      change=core~207341                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=257     verified=75    
+2026-06-27 10:58:25  INFO        [LIBREOFFICE] #81      change=core~204381                               ps=8    pairs=7    identical_dropped=2    │ cumul → extracted=264     verified=80    
+2026-06-27 10:58:25  INFO        [LIBREOFFICE] #82      change=core~206508                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=266     verified=80    
+2026-06-27 10:58:26  INFO        [LIBREOFFICE] #83      change=core~206507                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=268     verified=80    
+2026-06-27 10:58:26  INFO        [LIBREOFFICE] #84      change=core~206506                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=270     verified=80    
+2026-06-27 10:58:26  INFO        [LIBREOFFICE] #85      change=core~206505                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=272     verified=80    
+2026-06-27 10:58:27  INFO        [LIBREOFFICE] #86      change=core~206504                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=274     verified=80    
+2026-06-27 10:58:27  INFO        [LIBREOFFICE] #87      change=core~206503                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=276     verified=80    
+2026-06-27 10:58:27  INFO        [LIBREOFFICE] #88      change=core~206502                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=278     verified=80    
+2026-06-27 10:58:28  INFO        [LIBREOFFICE] #89      change=core~206501                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=280     verified=80    
+2026-06-27 10:58:28  INFO        [LIBREOFFICE] #90      change=core~206500                               ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=283     verified=80    
+2026-06-27 10:58:29  INFO        [LIBREOFFICE] #91      change=core~206499                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=285     verified=80    
+2026-06-27 10:58:29  INFO        [LIBREOFFICE] #92      change=core~206498                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=287     verified=80    
+2026-06-27 10:58:29  INFO        [LIBREOFFICE] #93      change=core~206497                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=289     verified=80    
+2026-06-27 10:58:30  INFO        [LIBREOFFICE] #94      change=core~206496                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=290     verified=80    
+2026-06-27 10:58:30  INFO        [LIBREOFFICE] #95      change=core~206495                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=291     verified=80    
+2026-06-27 10:58:30  INFO        [LIBREOFFICE] #96      change=core~206494                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=292     verified=80    
+2026-06-27 10:58:30  INFO        [LIBREOFFICE] #97      change=core~206493                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=293     verified=80    
+2026-06-27 10:58:30  INFO        [LIBREOFFICE] #98      change=core~206492                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=294     verified=80    
+2026-06-27 10:58:31  INFO        [LIBREOFFICE] #99      change=core~206491                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=295     verified=80    
+2026-06-27 10:58:31  INFO        [LIBREOFFICE] #100     change=core~206489                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=296     verified=80    
+2026-06-27 10:58:31  INFO      
+2026-06-27 10:58:31  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-27 10:58:31  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-27 10:58:31  INFO        ║  Skipped (single patchset)     : 12                            ║
+2026-06-27 10:58:31  INFO        ║  Changes processed             : 88                            ║
+2026-06-27 10:58:31  INFO        ║  Pairs extracted (potential)   : 296                           ║
+2026-06-27 10:58:31  INFO        ║  Dropped (identical after clean): 216                          ║
+2026-06-27 10:58:31  INFO        ║  Verified pairs written to CSV : 80                            ║
+2026-06-27 10:58:31  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 10:58:31  INFO      
+2026-06-27 10:58:31  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:58:31  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-27 10:58:31  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:58:31  INFO        LIBREOFFICE      ✔  changes=100       extracted=296       identical_dropped=216       verified=80      
+2026-06-27 10:58:31  INFO      
+2026-06-27 10:58:31  INFO        Total verified pairs written : 80
+2026-06-27 10:58:31  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-27 10:58:31  INFO      
+2026-06-27 10:58:31  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)
+2026-06-27 10:59:44  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 10:59:44  INFO      ║   Gerrit Semantic Change Description Evolution — Module 1        ║
+2026-06-27 10:59:44  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 10:59:44  INFO        Run mode         : test
+2026-06-27 10:59:44  INFO        Test limit       : 100 changes/project
+2026-06-27 10:59:44  INFO        Progress every   : every 1 change(s)
+2026-06-27 10:59:44  INFO        Enabled projects : wikimedia, libreoffice, onap
+2026-06-27 10:59:44  INFO        Output file      : output\verified_pairs.csv
+2026-06-27 10:59:44  INFO        Active cleaning  : remove_metadata, remove_keywords, remove_bug_references, normalize_whitespace
+2026-06-27 10:59:44  INFO      
+2026-06-27 10:59:44  INFO      
+2026-06-27 10:59:44  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 10:59:44  INFO      │  Processing project : WIKIMEDIA                                  │
+2026-06-27 10:59:44  INFO      │  Base URL           : https://gerrit.wikimedia.org/r             │
+2026-06-27 10:59:44  INFO      │  API prefix         : (none)                                     │
+2026-06-27 10:59:44  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 10:59:44  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #1       change=mediawiki%2Fextensions%2FCite~1306044     ps=1  → SKIP (single patchset)  │ total=1  verified=0
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #2       change=mediawiki%2Fcore~1305996                  ps=1  → SKIP (single patchset)  │ total=2  verified=0
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #3       change=mediawiki%2Fservices%2Fparsoid~1304892    ps=5    pairs=4    identical_dropped=1    │ cumul → extracted=4       verified=3     
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #4       change=wikipedia%2Fwikiwidgets%2FFormicarium~13  ps=1  → SKIP (single patchset)  │ total=4  verified=3
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #5       change=mediawiki%2Fgadgets%2FProveIt~1306043     ps=1  → SKIP (single patchset)  │ total=5  verified=3
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #6       change=mediawiki%2Fcore~1306035                  ps=1  → SKIP (single patchset)  │ total=6  verified=3
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #7       change=wikipedia%2Fwikiwidgets%2FVivarium~13060  ps=1  → SKIP (single patchset)  │ total=7  verified=3
+2026-06-27 10:59:46  INFO        [WIKIMEDIA] #8       change=mediawiki%2Fcore~1306039                  ps=1  → SKIP (single patchset)  │ total=8  verified=3
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #9       change=pywikibot%2Fcore~1306028                  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=6       verified=3     
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #10      change=mediawiki%2Fskins%2FVector~1306038        ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=7       verified=3     
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #11      change=pywikibot%2Fcore~1306040                  ps=1  → SKIP (single patchset)  │ total=11  verified=3
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #12      change=mediawiki%2Fgadgets%2FMiniEdit~1306037    ps=1  → SKIP (single patchset)  │ total=12  verified=3
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #13      change=mediawiki%2Fgadgets%2FProveIt~1306036     ps=1  → SKIP (single patchset)  │ total=13  verified=3
+2026-06-27 10:59:47  INFO        [WIKIMEDIA] #14      change=mediawiki%2Fgadgets%2FMiniEdit~1306034    ps=1  → SKIP (single patchset)  │ total=14  verified=3
+2026-06-27 10:59:50  INFO        [WIKIMEDIA] #15      change=mediawiki%2Fextensions%2FProdunto~129754  ps=18   pairs=17   identical_dropped=17   │ cumul → extracted=24      verified=3     
+2026-06-27 10:59:51  INFO        [WIKIMEDIA] #16      change=mediawiki%2Fcore~1302938                  ps=6    pairs=5    identical_dropped=3    │ cumul → extracted=29      verified=5     
+2026-06-27 10:59:51  INFO        [WIKIMEDIA] #17      change=mediawiki%2Fextensions%2FChart~1306033    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=30      verified=5     
+2026-06-27 10:59:51  INFO        [WIKIMEDIA] #18      change=mediawiki%2Fextensions%2FChart~1305940    ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=31      verified=5     
+2026-06-27 10:59:52  INFO        [WIKIMEDIA] #19      change=mediawiki%2Fextensions%2FChart~1305917    ps=3    pairs=2    identical_dropped=0    │ cumul → extracted=33      verified=7     
+2026-06-27 10:59:52  INFO        [WIKIMEDIA] #20      change=utfnormal~1304670                         ps=1  → SKIP (single patchset)  │ total=20  verified=7
+2026-06-27 10:59:52  INFO        [WIKIMEDIA] #21      change=mediawiki%2Fcore~1305739                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=34      verified=7     
+2026-06-27 10:59:52  INFO        [WIKIMEDIA] #22      change=mediawiki%2Fextensions%2FWanda~1306032    ps=1  → SKIP (single patchset)  │ total=22  verified=7
+2026-06-27 10:59:53  INFO        [WIKIMEDIA] #23      change=mediawiki%2Fcore~1304143                  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=37      verified=8     
+2026-06-27 10:59:55  INFO        [WIKIMEDIA] #24      change=mediawiki%2Fextensions%2FUniversalLangua  ps=15   pairs=14   identical_dropped=12   │ cumul → extracted=51      verified=10    
+2026-06-27 10:59:57  INFO        [WIKIMEDIA] #25      change=mediawiki%2Fextensions%2FUniversalLangua  ps=15   pairs=14   identical_dropped=13   │ cumul → extracted=65      verified=11    
+2026-06-27 10:59:58  INFO        [WIKIMEDIA] #26      change=mediawiki%2Fextensions%2FUniversalLangua  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=66      verified=11    
+2026-06-27 10:59:58  INFO        [WIKIMEDIA] #27      change=mediawiki%2Fextensions%2FUniversalLangua  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=68      verified=11    
+2026-06-27 10:59:59  INFO        [WIKIMEDIA] #28      change=mediawiki%2Fextensions%2FUniversalLangua  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=70      verified=11    
+2026-06-27 10:59:59  INFO        [WIKIMEDIA] #29      change=mediawiki%2Fextensions%2FUniversalLangua  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=71      verified=11    
+2026-06-27 10:59:59  INFO        [WIKIMEDIA] #30      change=mediawiki%2Fextensions%2FUniversalLangua  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=72      verified=11    
+2026-06-27 11:00:00  INFO        [WIKIMEDIA] #31      change=mediawiki%2Fextensions%2FUniversalLangua  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=73      verified=12    
+2026-06-27 11:00:00  INFO        [WIKIMEDIA] #32      change=mediawiki%2Fextensions%2FUniversalLangua  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=74      verified=12    
+2026-06-27 11:00:00  INFO        [WIKIMEDIA] #33      change=mediawiki%2Fextensions%2FUniversalLangua  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=76      verified=12    
+2026-06-27 11:00:01  INFO        [WIKIMEDIA] #34      change=mediawiki%2Fextensions%2FBlueSpiceWikiFa  ps=3    pairs=2    identical_dropped=0    │ cumul → extracted=78      verified=14    
+2026-06-27 11:00:01  INFO        [WIKIMEDIA] #35      change=mediawiki%2Fextensions~1305904            ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=79      verified=15    
+2026-06-27 11:00:02  INFO        [WIKIMEDIA] #36      change=mediawiki%2Fextensions%2FWanda~1305709    ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=81      verified=15    
+2026-06-27 11:00:03  INFO        [WIKIMEDIA] #37      change=mediawiki%2Fextensions%2FWanda~1306023    ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=89      verified=15    
+2026-06-27 11:00:04  INFO        [WIKIMEDIA] #38      change=mediawiki%2Fextensions%2FWanda~1306027    ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=92      verified=15    
+2026-06-27 11:00:04  INFO        [WIKIMEDIA] #39      change=mediawiki%2Fextensions%2Fcldr~1306015     ps=1  → SKIP (single patchset)  │ total=39  verified=15
+2026-06-27 11:00:04  INFO        [WIKIMEDIA] #40      change=design%2Fcodex~1305858                    ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=95      verified=15    
+2026-06-27 11:00:04  INFO        [WIKIMEDIA] #41      change=mediawiki%2Fextensions%2FPageForms~98423  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=96      verified=15    
+2026-06-27 11:00:05  INFO        [WIKIMEDIA] #42      change=mediawiki%2Fextensions%2FWanda~1301318    ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=98      verified=15    
+2026-06-27 11:00:05  INFO        [WIKIMEDIA] #43      change=mediawiki%2Fextensions%2FWanda~1306026    ps=1  → SKIP (single patchset)  │ total=43  verified=15
+2026-06-27 11:00:06  INFO        [WIKIMEDIA] #44      change=mediawiki%2Fextensions%2FWanda~1306025    ps=5    pairs=4    identical_dropped=1    │ cumul → extracted=102     verified=18    
+2026-06-27 11:00:06  INFO        [WIKIMEDIA] #45      change=mediawiki%2Fextensions%2FWanda~1301885    ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=105     verified=18    
+2026-06-27 11:00:07  INFO        [WIKIMEDIA] #46      change=phabricator%2Ftranslations~1300846        ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=110     verified=18    
+2026-06-27 11:00:07  INFO        [WIKIMEDIA] #47      change=mediawiki%2Fextensions%2FWanda~1306024    ps=1  → SKIP (single patchset)  │ total=47  verified=18
+2026-06-27 11:00:07  INFO        [WIKIMEDIA] #48      change=mediawiki%2Fservices%2Fcitoid~1305958     ps=1  → SKIP (single patchset)  │ total=48  verified=18
+2026-06-27 11:00:08  INFO        [WIKIMEDIA] #49      change=operations%2Fpuppet~1305937               ps=6    pairs=5    identical_dropped=3    │ cumul → extracted=115     verified=20    
+2026-06-27 11:00:08  INFO        [WIKIMEDIA] #50      change=pywikibot%2Fcore~1305948                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=116     verified=20    
+2026-06-27 11:00:08  INFO        [WIKIMEDIA] #51      change=mediawiki%2Fextensions%2FWanda~1306022    ps=1  → SKIP (single patchset)  │ total=51  verified=20
+2026-06-27 11:00:09  INFO        [WIKIMEDIA] #52      change=mediawiki%2Fextensions%2FCitoid~1304648   ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=117     verified=21    
+2026-06-27 11:00:09  INFO        [WIKIMEDIA] #53      change=mediawiki%2Fservices%2Fparsoid~1305971    ps=1  → SKIP (single patchset)  │ total=53  verified=21
+2026-06-27 11:00:11  INFO        [WIKIMEDIA] #54      change=mediawiki%2Fextensions%2FWanda~1305853    ps=13   pairs=12   identical_dropped=1    │ cumul → extracted=129     verified=32    
+2026-06-27 11:00:12  INFO        [WIKIMEDIA] #55      change=mediawiki%2Flibs%2FMinify~1281734         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=134     verified=32    
+2026-06-27 11:00:12  INFO        [WIKIMEDIA] #56      change=mediawiki%2Fcore~1306011                  ps=1  → SKIP (single patchset)  │ total=56  verified=32
+2026-06-27 11:00:12  INFO        [WIKIMEDIA] #57      change=mediawiki%2Fcore~1306021                  ps=1  → SKIP (single patchset)  │ total=57  verified=32
+2026-06-27 11:00:12  INFO        [WIKIMEDIA] #58      change=mediawiki%2Fextensions%2FEcho~1306020     ps=1  → SKIP (single patchset)  │ total=58  verified=32
+2026-06-27 11:00:13  INFO        [WIKIMEDIA] #59      change=mediawiki%2Flibs%2FMinify~1300583         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=139     verified=32    
+2026-06-27 11:00:13  INFO        [WIKIMEDIA] #60      change=mediawiki%2Flibs%2FMinify~1300582         ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=143     verified=32    
+2026-06-27 11:00:14  INFO        [WIKIMEDIA] #61      change=mediawiki%2Flibs%2FMinify~1300581         ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=147     verified=32    
+2026-06-27 11:00:15  INFO        [WIKIMEDIA] #62      change=mediawiki%2Flibs%2FMinify~1281860         ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=153     verified=32    
+2026-06-27 11:00:16  INFO        [WIKIMEDIA] #63      change=mediawiki%2Flibs%2FMinify~1281855         ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=159     verified=32    
+2026-06-27 11:00:17  INFO        [WIKIMEDIA] #64      change=mediawiki%2Flibs%2FMinify~1281854         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=164     verified=32    
+2026-06-27 11:00:18  INFO        [WIKIMEDIA] #65      change=mediawiki%2Flibs%2FMinify~1281730         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=169     verified=32    
+2026-06-27 11:00:19  INFO        [WIKIMEDIA] #66      change=mediawiki%2Flibs%2FMinify~1281630         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=174     verified=32    
+2026-06-27 11:00:20  INFO        [WIKIMEDIA] #67      change=mediawiki%2Flibs%2FMinify~1281728         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=179     verified=32    
+2026-06-27 11:00:20  INFO        [WIKIMEDIA] #68      change=mediawiki%2Fcore~1305529                  ps=1  → SKIP (single patchset)  │ total=68  verified=32
+2026-06-27 11:00:21  INFO        [WIKIMEDIA] #69      change=mediawiki%2Flibs%2FMinify~1281859         ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=185     verified=32    
+2026-06-27 11:00:22  INFO        [WIKIMEDIA] #70      change=mediawiki%2Flibs%2FMinify~1281733         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=190     verified=32    
+2026-06-27 11:00:23  INFO        [WIKIMEDIA] #71      change=mediawiki%2Flibs%2FMinify~1281732         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=195     verified=32    
+2026-06-27 11:00:24  INFO        [WIKIMEDIA] #72      change=mediawiki%2Flibs%2FMinify~1281731         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=200     verified=32    
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #73      change=mediawiki%2Flibs%2FMinify~1281729         ps=6    pairs=5    identical_dropped=5    │ cumul → extracted=205     verified=32    
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #74      change=mediawiki%2Fextensions%2FEcho~1306017     ps=1  → SKIP (single patchset)  │ total=74  verified=32
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #75      change=mediawiki%2Fextensions%2FEcho~1306016     ps=1  → SKIP (single patchset)  │ total=75  verified=32
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #76      change=mediawiki%2Fextensions%2FEcho~1306019     ps=1  → SKIP (single patchset)  │ total=76  verified=32
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #77      change=mediawiki%2Fextensions%2FEcho~1306018     ps=1  → SKIP (single patchset)  │ total=77  verified=32
+2026-06-27 11:00:25  INFO        [WIKIMEDIA] #78      change=mediawiki%2Fextensions%2FEcho~1303992     ps=1  → SKIP (single patchset)  │ total=78  verified=32
+2026-06-27 11:00:32  INFO        [WIKIMEDIA] #79      change=mediawiki%2Fextensions%2FEcho~608884      ps=47   pairs=46   identical_dropped=39   │ cumul → extracted=251     verified=39    
+2026-06-27 11:00:34  INFO        [WIKIMEDIA] #80      change=mediawiki%2Fextensions%2FEcho~330587      ps=11   pairs=10   identical_dropped=7    │ cumul → extracted=261     verified=42    
+2026-06-27 11:00:34  INFO        [WIKIMEDIA] #81      change=mediawiki%2Fextensions%2FEcho~336627      ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=262     verified=42    
+2026-06-27 11:00:34  INFO        [WIKIMEDIA] #82      change=mediawiki%2Fextensions%2FEcho~700238      ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=264     verified=43    
+2026-06-27 11:00:35  INFO        [WIKIMEDIA] #83      change=mediawiki%2Fcore~1305757                  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=265     verified=43    
+2026-06-27 11:00:35  INFO        [WIKIMEDIA] #84      change=mediawiki%2Fservices%2Fparsoid~1306014    ps=1  → SKIP (single patchset)  │ total=84  verified=43
+2026-06-27 11:00:35  INFO        [WIKIMEDIA] #85      change=mediawiki%2Fextensions%2FDiscussionTools  ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=268     verified=43    
+2026-06-27 11:00:41  INFO        [WIKIMEDIA] #86      change=mediawiki%2Fcore~1301450                  ps=36   pairs=35   identical_dropped=33   │ cumul → extracted=303     verified=45    
+2026-06-27 11:00:41  INFO        [WIKIMEDIA] #87      change=mediawiki%2Fcore~1306013                  ps=1  → SKIP (single patchset)  │ total=87  verified=45
+2026-06-27 11:00:41  INFO        [WIKIMEDIA] #88      change=operations%2Fpuppet~1305989               ps=1  → SKIP (single patchset)  │ total=88  verified=45
+2026-06-27 11:00:42  INFO        [WIKIMEDIA] #89      change=mediawiki%2Fextensions%2FOATHAuth~130527  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=308     verified=46    
+2026-06-27 11:00:45  INFO        [WIKIMEDIA] #90      change=mediawiki%2Fcore~1301465                  ps=20   pairs=19   identical_dropped=17   │ cumul → extracted=327     verified=48    
+2026-06-27 11:00:45  INFO        [WIKIMEDIA] #91      change=design%2Fcodex~1306010                    ps=1  → SKIP (single patchset)  │ total=91  verified=48
+2026-06-27 11:00:45  INFO        [WIKIMEDIA] #92      change=mediawiki%2Fextensions%2FCentralAuth~130  ps=1  → SKIP (single patchset)  │ total=92  verified=48
+2026-06-27 11:00:46  INFO        [WIKIMEDIA] #93      change=mediawiki%2Fcore~1305689                  ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=330     verified=48    
+2026-06-27 11:00:47  INFO        [WIKIMEDIA] #94      change=mediawiki%2Fcore~1305723                  ps=9    pairs=8    identical_dropped=7    │ cumul → extracted=338     verified=49    
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #95      change=mediawiki%2Fcore~1305217                  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=340     verified=49    
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #96      change=oojs%2Fui~1305955                         ps=1  → SKIP (single patchset)  │ total=96  verified=49
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #97      change=mediawiki%2Fcore~1306008                  ps=1  → SKIP (single patchset)  │ total=97  verified=49
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #98      change=mediawiki%2Fextensions%2FWikimediaCustom  ps=1  → SKIP (single patchset)  │ total=98  verified=49
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #99      change=mediawiki%2Fextensions%2FWikimediaCustom  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=341     verified=49    
+2026-06-27 11:00:48  INFO        [WIKIMEDIA] #100     change=mediawiki%2Fcore~1305979                  ps=1  → SKIP (single patchset)  │ total=100  verified=49
+2026-06-27 11:00:48  INFO      
+2026-06-27 11:00:48  INFO        ╔══ WIKIMEDIA — Results ══════════════════════════════════════════╗
+2026-06-27 11:00:48  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-27 11:00:48  INFO        ║  Skipped (single patchset)     : 37                            ║
+2026-06-27 11:00:48  INFO        ║  Changes processed             : 63                            ║
+2026-06-27 11:00:48  INFO        ║  Pairs extracted (potential)   : 341                           ║
+2026-06-27 11:00:48  INFO        ║  Dropped (identical after clean): 292                          ║
+2026-06-27 11:00:48  INFO        ║  Verified pairs written to CSV : 49                            ║
+2026-06-27 11:00:48  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 11:00:48  INFO      
+2026-06-27 11:00:48  INFO      
+2026-06-27 11:00:48  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 11:00:48  INFO      │  Processing project : LIBREOFFICE                                │
+2026-06-27 11:00:48  INFO      │  Base URL           : https://gerrit.libreoffice.org             │
+2026-06-27 11:00:48  INFO      │  API prefix         : (none)                                     │
+2026-06-27 11:00:48  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 11:00:48  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 11:00:49  INFO        [LIBREOFFICE] #1       change=core~205754                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=1       verified=0     
+2026-06-27 11:00:51  INFO        [LIBREOFFICE] #2       change=core~196196                               ps=15   pairs=14   identical_dropped=10   │ cumul → extracted=15      verified=4     
+2026-06-27 11:00:52  INFO        [LIBREOFFICE] #3       change=core~200891                               ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=26      verified=5     
+2026-06-27 11:00:52  INFO        [LIBREOFFICE] #4       change=core~207381                               ps=1  → SKIP (single patchset)  │ total=4  verified=5
+2026-06-27 11:00:52  INFO        [LIBREOFFICE] #5       change=core~207380                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=27      verified=5     
+2026-06-27 11:00:54  INFO        [LIBREOFFICE] #6       change=core~205979                               ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=38      verified=6     
+2026-06-27 11:00:54  INFO        [LIBREOFFICE] #7       change=core~207375                               ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=42      verified=6     
+2026-06-27 11:00:55  INFO        [LIBREOFFICE] #8       change=core~207379                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=43      verified=6     
+2026-06-27 11:00:55  INFO        [LIBREOFFICE] #9       change=core~207373                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=44      verified=6     
+2026-06-27 11:00:55  INFO        [LIBREOFFICE] #10      change=core~207368                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=45      verified=6     
+2026-06-27 11:00:55  INFO        [LIBREOFFICE] #11      change=core~207367                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=46      verified=6     
+2026-06-27 11:00:56  INFO        [LIBREOFFICE] #12      change=core~206710                               ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=50      verified=6     
+2026-06-27 11:00:56  INFO        [LIBREOFFICE] #13      change=infra%2Fbookshelf~207378                  ps=1  → SKIP (single patchset)  │ total=13  verified=6
+2026-06-27 11:00:56  INFO        [LIBREOFFICE] #14      change=core~207374                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=51      verified=6     
+2026-06-27 11:00:56  INFO        [LIBREOFFICE] #15      change=core~207361                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=53      verified=6     
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #16      change=core~207353                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=54      verified=6     
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #17      change=core~188311                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=55      verified=7     
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #18      change=core~207354                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=57      verified=7     
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #19      change=core~207235                               ps=1  → SKIP (single patchset)  │ total=19  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #20      change=help~207225                               ps=1  → SKIP (single patchset)  │ total=20  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #21      change=help~207226                               ps=1  → SKIP (single patchset)  │ total=21  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #22      change=help~207227                               ps=1  → SKIP (single patchset)  │ total=22  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #23      change=help~207228                               ps=1  → SKIP (single patchset)  │ total=23  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #24      change=help~207230                               ps=1  → SKIP (single patchset)  │ total=24  verified=7
+2026-06-27 11:00:57  INFO        [LIBREOFFICE] #25      change=core~207365                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=58      verified=7     
+2026-06-27 11:00:58  INFO        [LIBREOFFICE] #26      change=core~207364                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=59      verified=7     
+2026-06-27 11:00:58  INFO        [LIBREOFFICE] #27      change=core~207363                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=60      verified=7     
+2026-06-27 11:00:58  INFO        [LIBREOFFICE] #28      change=core~207362                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=61      verified=7     
+2026-06-27 11:00:58  INFO        [LIBREOFFICE] #29      change=core~207360                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=62      verified=7     
+2026-06-27 11:00:59  INFO        [LIBREOFFICE] #30      change=core~207359                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=63      verified=7     
+2026-06-27 11:00:59  INFO        [LIBREOFFICE] #31      change=core~207358                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=64      verified=7     
+2026-06-27 11:00:59  INFO        [LIBREOFFICE] #32      change=core~207357                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=65      verified=7     
+2026-06-27 11:00:59  INFO        [LIBREOFFICE] #33      change=core~207356                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=66      verified=7     
+2026-06-27 11:00:59  INFO        [LIBREOFFICE] #34      change=core~207355                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=67      verified=7     
+2026-06-27 11:01:00  INFO        [LIBREOFFICE] #35      change=core~207229                               ps=6    pairs=5    identical_dropped=1    │ cumul → extracted=72      verified=11    
+2026-06-27 11:01:00  INFO        [LIBREOFFICE] #36      change=core~205242                               ps=1  → SKIP (single patchset)  │ total=36  verified=11
+2026-06-27 11:01:01  INFO        [LIBREOFFICE] #37      change=core~205036                               ps=3    pairs=2    identical_dropped=0    │ cumul → extracted=74      verified=13    
+2026-06-27 11:01:01  INFO        [LIBREOFFICE] #38      change=core~204662                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=75      verified=13    
+2026-06-27 11:01:01  INFO        [LIBREOFFICE] #39      change=core~203229                               ps=1  → SKIP (single patchset)  │ total=39  verified=13
+2026-06-27 11:01:02  INFO        [LIBREOFFICE] #40      change=core~186660                               ps=7    pairs=6    identical_dropped=5    │ cumul → extracted=81      verified=14    
+2026-06-27 11:01:03  INFO        [LIBREOFFICE] #41      change=core~203388                               ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=90      verified=14    
+2026-06-27 11:01:03  INFO        [LIBREOFFICE] #42      change=core~203273                               ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=95      verified=15    
+2026-06-27 11:01:04  INFO        [LIBREOFFICE] #43      change=core~205852                               ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=99      verified=16    
+2026-06-27 11:01:06  INFO        [LIBREOFFICE] #44      change=core~205316                               ps=16   pairs=15   identical_dropped=9    │ cumul → extracted=114     verified=22    
+2026-06-27 11:01:07  INFO        [LIBREOFFICE] #45      change=core~205815                               ps=11   pairs=10   identical_dropped=7    │ cumul → extracted=124     verified=25    
+2026-06-27 11:01:08  INFO        [LIBREOFFICE] #46      change=core~205838                               ps=10   pairs=9    identical_dropped=6    │ cumul → extracted=133     verified=28    
+2026-06-27 11:01:10  INFO        [LIBREOFFICE] #47      change=core~205599                               ps=11   pairs=10   identical_dropped=5    │ cumul → extracted=143     verified=33    
+2026-06-27 11:01:11  INFO        [LIBREOFFICE] #48      change=core~205568                               ps=13   pairs=12   identical_dropped=9    │ cumul → extracted=155     verified=36    
+2026-06-27 11:01:13  INFO        [LIBREOFFICE] #49      change=core~205457                               ps=16   pairs=15   identical_dropped=9    │ cumul → extracted=170     verified=42    
+2026-06-27 11:01:15  INFO        [LIBREOFFICE] #50      change=core~205456                               ps=15   pairs=14   identical_dropped=5    │ cumul → extracted=184     verified=51    
+2026-06-27 11:01:16  INFO        [LIBREOFFICE] #51      change=core~205814                               ps=8    pairs=7    identical_dropped=3    │ cumul → extracted=191     verified=55    
+2026-06-27 11:01:17  INFO        [LIBREOFFICE] #52      change=core~205670                               ps=7    pairs=6    identical_dropped=3    │ cumul → extracted=197     verified=58    
+2026-06-27 11:01:18  INFO        [LIBREOFFICE] #53      change=core~205234                               ps=12   pairs=11   identical_dropped=6    │ cumul → extracted=208     verified=63    
+2026-06-27 11:01:18  INFO        [LIBREOFFICE] #54      change=core~207377                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=209     verified=63    
+2026-06-27 11:01:19  INFO        [LIBREOFFICE] #55      change=core~207349                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=211     verified=63    
+2026-06-27 11:01:20  INFO        [LIBREOFFICE] #56      change=core~206947                               ps=9    pairs=8    identical_dropped=4    │ cumul → extracted=219     verified=67    
+2026-06-27 11:01:20  INFO        [LIBREOFFICE] #57      change=core~207376                               ps=1  → SKIP (single patchset)  │ total=57  verified=67
+2026-06-27 11:01:20  INFO        [LIBREOFFICE] #58      change=core~207157                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=220     verified=68    
+2026-06-27 11:01:20  INFO        [LIBREOFFICE] #59      change=core~207017                               ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=223     verified=69    
+2026-06-27 11:01:20  INFO        [LIBREOFFICE] #60      change=core~207342                               ps=1  → SKIP (single patchset)  │ total=60  verified=69
+2026-06-27 11:01:21  INFO        [LIBREOFFICE] #61      change=core~206264                               ps=7    pairs=6    identical_dropped=4    │ cumul → extracted=229     verified=71    
+2026-06-27 11:01:21  INFO        [LIBREOFFICE] #62      change=core~207345                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=230     verified=71    
+2026-06-27 11:01:22  INFO        [LIBREOFFICE] #63      change=core~207370                               ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=231     verified=72    
+2026-06-27 11:01:23  INFO        [LIBREOFFICE] #64      change=core~206265                               ps=9    pairs=8    identical_dropped=6    │ cumul → extracted=239     verified=74    
+2026-06-27 11:01:23  INFO        [LIBREOFFICE] #65      change=infra%2FWhatCanIDoForLibreOffice~207372   ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=240     verified=74    
+2026-06-27 11:01:23  INFO        [LIBREOFFICE] #66      change=core~207366                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=241     verified=74    
+2026-06-27 11:01:24  INFO        [LIBREOFFICE] #67      change=core~207198                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=243     verified=74    
+2026-06-27 11:01:24  INFO        [LIBREOFFICE] #68      change=core~207371                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=244     verified=74    
+2026-06-27 11:01:24  INFO        [LIBREOFFICE] #69      change=core~207351                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=245     verified=74    
+2026-06-27 11:01:24  INFO        [LIBREOFFICE] #70      change=core~207369                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=246     verified=74    
+2026-06-27 11:01:25  INFO        [LIBREOFFICE] #71      change=core~207344                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=247     verified=74    
+2026-06-27 11:01:25  INFO        [LIBREOFFICE] #72      change=core~207347                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=248     verified=74    
+2026-06-27 11:01:25  INFO        [LIBREOFFICE] #73      change=core~207346                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=249     verified=74    
+2026-06-27 11:01:25  INFO        [LIBREOFFICE] #74      change=core~207343                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=250     verified=74    
+2026-06-27 11:01:26  INFO        [LIBREOFFICE] #75      change=core~207348                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=251     verified=74    
+2026-06-27 11:01:26  INFO        [LIBREOFFICE] #76      change=core~207336                               ps=3    pairs=2    identical_dropped=1    │ cumul → extracted=253     verified=75    
+2026-06-27 11:01:26  INFO        [LIBREOFFICE] #77      change=core~207352                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=254     verified=75    
+2026-06-27 11:01:26  INFO        [LIBREOFFICE] #78      change=core~207340                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=255     verified=75    
+2026-06-27 11:01:27  INFO        [LIBREOFFICE] #79      change=core~207350                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=256     verified=75    
+2026-06-27 11:01:27  INFO        [LIBREOFFICE] #80      change=core~207341                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=257     verified=75    
+2026-06-27 11:01:28  INFO        [LIBREOFFICE] #81      change=core~204381                               ps=8    pairs=7    identical_dropped=2    │ cumul → extracted=264     verified=80    
+2026-06-27 11:01:28  INFO        [LIBREOFFICE] #82      change=core~206508                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=266     verified=80    
+2026-06-27 11:01:28  INFO        [LIBREOFFICE] #83      change=core~206507                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=268     verified=80    
+2026-06-27 11:01:29  INFO        [LIBREOFFICE] #84      change=core~206506                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=270     verified=80    
+2026-06-27 11:01:29  INFO        [LIBREOFFICE] #85      change=core~206505                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=272     verified=80    
+2026-06-27 11:01:29  INFO        [LIBREOFFICE] #86      change=core~206504                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=274     verified=80    
+2026-06-27 11:01:30  INFO        [LIBREOFFICE] #87      change=core~206503                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=276     verified=80    
+2026-06-27 11:01:30  INFO        [LIBREOFFICE] #88      change=core~206502                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=278     verified=80    
+2026-06-27 11:01:30  INFO        [LIBREOFFICE] #89      change=core~206501                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=280     verified=80    
+2026-06-27 11:01:31  INFO        [LIBREOFFICE] #90      change=core~206500                               ps=4    pairs=3    identical_dropped=3    │ cumul → extracted=283     verified=80    
+2026-06-27 11:01:31  INFO        [LIBREOFFICE] #91      change=core~206499                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=285     verified=80    
+2026-06-27 11:01:32  INFO        [LIBREOFFICE] #92      change=core~206498                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=287     verified=80    
+2026-06-27 11:01:32  INFO        [LIBREOFFICE] #93      change=core~206497                               ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=289     verified=80    
+2026-06-27 11:01:32  INFO        [LIBREOFFICE] #94      change=core~206496                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=290     verified=80    
+2026-06-27 11:01:32  INFO        [LIBREOFFICE] #95      change=core~206495                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=291     verified=80    
+2026-06-27 11:01:33  INFO        [LIBREOFFICE] #96      change=core~206494                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=292     verified=80    
+2026-06-27 11:01:33  INFO        [LIBREOFFICE] #97      change=core~206493                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=293     verified=80    
+2026-06-27 11:01:33  INFO        [LIBREOFFICE] #98      change=core~206492                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=294     verified=80    
+2026-06-27 11:01:33  INFO        [LIBREOFFICE] #99      change=core~206491                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=295     verified=80    
+2026-06-27 11:01:34  INFO        [LIBREOFFICE] #100     change=core~206489                               ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=296     verified=80    
+2026-06-27 11:01:34  INFO      
+2026-06-27 11:01:34  INFO        ╔══ LIBREOFFICE — Results ══════════════════════════════════════════╗
+2026-06-27 11:01:34  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-27 11:01:34  INFO        ║  Skipped (single patchset)     : 12                            ║
+2026-06-27 11:01:34  INFO        ║  Changes processed             : 88                            ║
+2026-06-27 11:01:34  INFO        ║  Pairs extracted (potential)   : 296                           ║
+2026-06-27 11:01:34  INFO        ║  Dropped (identical after clean): 216                          ║
+2026-06-27 11:01:34  INFO        ║  Verified pairs written to CSV : 80                            ║
+2026-06-27 11:01:34  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 11:01:34  INFO      
+2026-06-27 11:01:34  INFO      
+2026-06-27 11:01:34  INFO      ┌─────────────────────────────────────────────────────────────────┐
+2026-06-27 11:01:34  INFO      │  Processing project : ONAP                                       │
+2026-06-27 11:01:34  INFO      │  Base URL           : https://gerrit.onap.org/r                  │
+2026-06-27 11:01:34  INFO      │  API prefix         : (none)                                     │
+2026-06-27 11:01:34  INFO      │  Run mode           : test      Limit : 100                         │
+2026-06-27 11:01:34  INFO      └─────────────────────────────────────────────────────────────────┘
+2026-06-27 11:01:34  INFO        [ONAP] #1       change=ccsdk%2Fsli~paris~Ifde03fec9fce640152c85  ps=1  → SKIP (single patchset)  │ total=1  verified=0
+2026-06-27 11:01:35  INFO        [ONAP] #2       change=sdc~master~I5d7fcd889659d1907d179ecaf9ac  ps=8    pairs=7    identical_dropped=3    │ cumul → extracted=7       verified=4     
+2026-06-27 11:01:36  INFO        [ONAP] #3       change=oom~master~I775fd0e7771b56549ba3c6cfe41c  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=12      verified=5     
+2026-06-27 11:01:37  INFO        [ONAP] #4       change=policy%2Fclamp~master~I0a09b473162e18ae6  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=21      verified=5     
+2026-06-27 11:01:37  INFO        [ONAP] #5       change=policy%2Fclamp~master~If55a08f8e993754d8  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=29      verified=5     
+2026-06-27 11:01:38  INFO        [ONAP] #6       change=sdnc%2Foam~master~Ib597dd2fecbb56f7f370b  ps=2    pairs=1    identical_dropped=0    │ cumul → extracted=30      verified=6     
+2026-06-27 11:01:39  INFO        [ONAP] #7       change=cps~master~I4527f28023fc3068b2a72c190a6e  ps=19   pairs=18   identical_dropped=7    │ cumul → extracted=48      verified=17    
+2026-06-27 11:01:40  INFO        [ONAP] #8       change=cps~master~I4458abc115d98cc623f06ebc2cbd  ps=8    pairs=7    identical_dropped=4    │ cumul → extracted=55      verified=20    
+2026-06-27 11:01:41  INFO        [ONAP] #9       change=policy%2Fclamp~master~I99e3b7b07c86a1965  ps=12   pairs=11   identical_dropped=10   │ cumul → extracted=66      verified=21    
+2026-06-27 11:01:42  INFO        [ONAP] #10      change=policy%2Fclamp~master~I4ac747ff630bff4cb  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=72      verified=21    
+2026-06-27 11:01:44  INFO        [ONAP] #11      change=cps~master~Iff7fab66ddcc03703255123c6d5c  ps=24   pairs=23   identical_dropped=23   │ cumul → extracted=95      verified=21    
+2026-06-27 11:01:44  INFO        [ONAP] #12      change=cps~master~Ic38c211a783a945229cc296f527a  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=96      verified=21    
+2026-06-27 11:01:44  INFO        [ONAP] #13      change=cps~master~I40ec3c1f612beebc9694cc662970  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=97      verified=21    
+2026-06-27 11:01:44  INFO        [ONAP] #14      change=so~master~I48d944970f84b9c2d39bdcbd66905  ps=1  → SKIP (single patchset)  │ total=14  verified=21
+2026-06-27 11:01:44  INFO        [ONAP] #15      change=cps~master~Iec2226b7aaec1ade88b2eda10e96  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=98      verified=21    
+2026-06-27 11:01:44  INFO        [ONAP] #16      change=cps~master~Icc64696d513c28106d334e7a75b2  ps=1  → SKIP (single patchset)  │ total=16  verified=21
+2026-06-27 11:01:47  INFO        [ONAP] #17      change=cps~master~Ia37204afdf2a3c91afe415f8ce76  ps=20   pairs=19   identical_dropped=15   │ cumul → extracted=117     verified=25    
+2026-06-27 11:01:47  INFO        [ONAP] #18      change=so~master~I72057b9f9309f3bf75de528c783b1  ps=1  → SKIP (single patchset)  │ total=18  verified=25
+2026-06-27 11:01:47  INFO        [ONAP] #19      change=ccsdk%2Fcds~master~I9fb38d2ec687eb3ffb21  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=118     verified=25    
+2026-06-27 11:01:48  INFO        [ONAP] #20      change=so~master~I3112a2dd2c681b533bde239310a28  ps=9    pairs=8    identical_dropped=7    │ cumul → extracted=126     verified=26    
+2026-06-27 11:01:49  INFO        [ONAP] #21      change=cps~master~I57814d1230469be5782187c6a6f5  ps=10   pairs=9    identical_dropped=6    │ cumul → extracted=135     verified=29    
+2026-06-27 11:01:49  INFO        [ONAP] #22      change=sdc%2Fonap-ui-common~master~I5767dad769e  ps=1  → SKIP (single patchset)  │ total=22  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #23      change=sdc%2Fonap-ui-common~master~Ia5a165f50fe  ps=1  → SKIP (single patchset)  │ total=23  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #24      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=24  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #25      change=dcaegen2%2Fcollectors%2Fsnmptrap~master~  ps=1  → SKIP (single patchset)  │ total=25  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #26      change=ci-management~master~I9c2bfd3647734ffcba  ps=1  → SKIP (single patchset)  │ total=26  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #27      change=ci-management~master~Ia94381f26874b0f2c2  ps=1  → SKIP (single patchset)  │ total=27  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #28      change=ccsdk%2Fdistribution~master~Id2b6b190bb3  ps=1  → SKIP (single patchset)  │ total=28  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #29      change=ccsdk%2Fdistribution~master~Ic3661ea70f3  ps=1  → SKIP (single patchset)  │ total=29  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #30      change=ccsdk%2Fapps~master~Ib891bacd4d9ca8faa22  ps=1  → SKIP (single patchset)  │ total=30  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #31      change=ccsdk%2Fdistribution~master~I7ce34c434b8  ps=1  → SKIP (single patchset)  │ total=31  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #32      change=ccsdk%2Fapps~master~I03433ce12aaa550b765  ps=1  → SKIP (single patchset)  │ total=32  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #33      change=ccsdk%2Ffeatures~master~Ia71dd20779efed6  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=136     verified=29    
+2026-06-27 11:01:49  INFO        [ONAP] #34      change=ccsdk%2Fcds~quebec~I984574bad32221c30b15  ps=1  → SKIP (single patchset)  │ total=34  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #35      change=ccsdk%2Fapps~master~I7a44e05469f62dcdd60  ps=1  → SKIP (single patchset)  │ total=35  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #36      change=ccsdk%2Fdistribution~master~Id25f044eec5  ps=1  → SKIP (single patchset)  │ total=36  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #37      change=ccsdk%2Ffeatures~quebec~Ia71dd20779efed6  ps=1  → SKIP (single patchset)  │ total=37  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #38      change=ccsdk%2Fcds~master~I984574bad32221c30b15  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=137     verified=29    
+2026-06-27 11:01:49  INFO        [ONAP] #39      change=ccsdk%2Fapps~master~I16664b08323df84cfe2  ps=1  → SKIP (single patchset)  │ total=39  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #40      change=ccsdk%2Fapps~master~I32be1f63e149061fd55  ps=1  → SKIP (single patchset)  │ total=40  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #41      change=ccsdk%2Fparent~master~I1480f60f98b1c4a9b  ps=1  → SKIP (single patchset)  │ total=41  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #42      change=ccsdk%2Fparent~master~I060a5a44768557bfe  ps=1  → SKIP (single patchset)  │ total=42  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #43      change=ccsdk%2Fparent~master~I5be0539cca4fa24f5  ps=1  → SKIP (single patchset)  │ total=43  verified=29
+2026-06-27 11:01:49  INFO        [ONAP] #44      change=ccsdk%2Fparent~master~I62333a2f597d8040d  ps=1  → SKIP (single patchset)  │ total=44  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #45      change=policy%2Fclamp~master~Idcabe1d5903cfe661  ps=7    pairs=6    identical_dropped=6    │ cumul → extracted=143     verified=29    
+2026-06-27 11:01:50  INFO        [ONAP] #46      change=sdc%2Fonap-ui-common~master~Ibdc1177e645  ps=1  → SKIP (single patchset)  │ total=46  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #47      change=sdc%2Fonap-ui-common~master~I82943ee27cb  ps=1  → SKIP (single patchset)  │ total=47  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #48      change=sdc%2Fonap-ui-common~master~Ib411bdba392  ps=1  → SKIP (single patchset)  │ total=48  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #49      change=sdc%2Fonap-ui-common~master~I894b45487c8  ps=1  → SKIP (single patchset)  │ total=49  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #50      change=sdc%2Fonap-ui-common~master~I79ad2666178  ps=1  → SKIP (single patchset)  │ total=50  verified=29
+2026-06-27 11:01:50  INFO        [ONAP] #51      change=sdc%2Fonap-ui-common~master~Ieb71f78e86d  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=144     verified=29    
+2026-06-27 11:01:51  INFO        [ONAP] #52      change=policy%2Fclamp~master~Ia91ff5f0d49ca6f3e  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=152     verified=29    
+2026-06-27 11:01:51  INFO        [ONAP] #53      change=sdc%2Fonap-ui-common~master~I8ca9ae40930  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=153     verified=29    
+2026-06-27 11:01:52  INFO        [ONAP] #54      change=policy%2Fclamp~master~I7df80bfd2d747dbbe  ps=9    pairs=8    identical_dropped=8    │ cumul → extracted=161     verified=29    
+2026-06-27 11:01:52  INFO        [ONAP] #55      change=policy%2Fparent~master~I88bd916b4e94f543  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=162     verified=29    
+2026-06-27 11:01:52  INFO        [ONAP] #56      change=ccsdk%2Fcds~master~I76947a27eea14cad9335  ps=1  → SKIP (single patchset)  │ total=56  verified=29
+2026-06-27 11:01:52  INFO        [ONAP] #57      change=cps~master~I24b60cda2fa5e8ff47768cef3532  ps=1  → SKIP (single patchset)  │ total=57  verified=29
+2026-06-27 11:01:53  INFO        [ONAP] #58      change=sdnc%2Fnorthbound~master~I6fcace54aefd94  ps=4    pairs=3    identical_dropped=2    │ cumul → extracted=165     verified=30    
+2026-06-27 11:01:53  INFO        [ONAP] #59      change=policy%2Fparent~master~If81b524950f51b31  ps=1  → SKIP (single patchset)  │ total=59  verified=30
+2026-06-27 11:01:53  INFO        [ONAP] #60      change=policy%2Fapex-pdp~master~Ie9b4996992c563  ps=1  → SKIP (single patchset)  │ total=60  verified=30
+2026-06-27 11:01:54  INFO        [ONAP] #61      change=policy%2Fclamp~master~Ie7c17d9da8837085d  ps=12   pairs=11   identical_dropped=11   │ cumul → extracted=176     verified=30    
+2026-06-27 11:01:54  INFO        [ONAP] #62      change=policy%2Fparent~master~I3b0e64b314fe837f  ps=5    pairs=4    identical_dropped=3    │ cumul → extracted=180     verified=31    
+2026-06-27 11:01:54  INFO        [ONAP] #63      change=policy%2Fparent~master~Icedefeb43298cc08  ps=1  → SKIP (single patchset)  │ total=63  verified=31
+2026-06-27 11:01:54  INFO        [ONAP] #64      change=policy%2Fclamp~master~Ifc45739e563761f6b  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=182     verified=31    
+2026-06-27 11:01:55  INFO        [ONAP] #65      change=policy%2Fparent~master~Ic3914e93ea4d75aa  ps=6    pairs=5    identical_dropped=4    │ cumul → extracted=187     verified=32    
+2026-06-27 11:01:55  INFO        [ONAP] #66      change=cps~master~Ia6f94c2727294bfc5fc071130ac3  ps=1  → SKIP (single patchset)  │ total=66  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #67      change=policy%2Fclamp~master~Idac96c87951c41255  ps=10   pairs=9    identical_dropped=9    │ cumul → extracted=196     verified=32    
+2026-06-27 11:01:56  INFO        [ONAP] #68      change=policy%2Fapex-pdp~master~I75ed13ae94a581  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=197     verified=32    
+2026-06-27 11:01:56  INFO        [ONAP] #69      change=policy%2Fcommon~master~If168f8a74efaacb1  ps=1  → SKIP (single patchset)  │ total=69  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #70      change=policy%2Fparent~master~Ie02ca2f6dbecccbe  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=198     verified=32    
+2026-06-27 11:01:56  INFO        [ONAP] #71      change=policy%2Fdrools-pdp~master~I9292328d04bc  ps=1  → SKIP (single patchset)  │ total=71  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #72      change=policy%2Fparent~master~I8c0507eaa6e3bd0e  ps=1  → SKIP (single patchset)  │ total=72  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #73      change=policy%2Fdrools-applications~master~I718  ps=1  → SKIP (single patchset)  │ total=73  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #74      change=policy%2Fxacml-pdp~master~Ia4cef5d7821ef  ps=1  → SKIP (single patchset)  │ total=74  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #75      change=policy%2Fpap~master~I246a6adb473959086b7  ps=1  → SKIP (single patchset)  │ total=75  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #76      change=policy%2Fapi~master~If4c9d14fb8cfaf0cce1  ps=1  → SKIP (single patchset)  │ total=76  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #77      change=policy%2Fmodels~master~If466a0584ef9642e  ps=1  → SKIP (single patchset)  │ total=77  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #78      change=policy%2Fcommon~master~I2c755be0accd1abe  ps=1  → SKIP (single patchset)  │ total=78  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #79      change=policy%2Fparent~master~Ib51a7737d660e7c5  ps=1  → SKIP (single patchset)  │ total=79  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #80      change=policy%2Fdistribution~master~Ie2ac5cb7ca  ps=1  → SKIP (single patchset)  │ total=80  verified=32
+2026-06-27 11:01:56  INFO        [ONAP] #81      change=sdc%2Fonap-ui-common~master~I2bc9d109fe2  ps=2    pairs=1    identical_dropped=1    │ cumul → extracted=199     verified=32    
+2026-06-27 11:01:56  INFO        [ONAP] #82      change=ci-management~master~I232436da6882e16f26  ps=1  → SKIP (single patchset)  │ total=82  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #83      change=policy%2Fclamp~master~I66eff70b93e6d03d4  ps=5    pairs=4    identical_dropped=4    │ cumul → extracted=203     verified=32    
+2026-06-27 11:01:57  INFO        [ONAP] #84      change=policy%2Fdistribution~master~I3bf648a98a  ps=1  → SKIP (single patchset)  │ total=84  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #85      change=policy%2Fdistribution~master~I43971d215c  ps=1  → SKIP (single patchset)  │ total=85  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #86      change=policy%2Fparent~master~I45a11346fa30a73c  ps=1  → SKIP (single patchset)  │ total=86  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #87      change=policy%2Fdistribution~master~I644f4eaeb1  ps=1  → SKIP (single patchset)  │ total=87  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #88      change=policy%2Fparent~master~Ib6976d2e7bc182ba  ps=1  → SKIP (single patchset)  │ total=88  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #89      change=policy%2Fdistribution~master~Iaadea9c7c4  ps=1  → SKIP (single patchset)  │ total=89  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #90      change=ci-management~master~Iec3998248dd2c315ea  ps=1  → SKIP (single patchset)  │ total=90  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #91      change=policy%2Fparent~master~Ic0a04830b6ae2fd8  ps=1  → SKIP (single patchset)  │ total=91  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #92      change=sdc%2Fonap-ui-common~master~I48d76f55ada  ps=1  → SKIP (single patchset)  │ total=92  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #93      change=sdc%2Fonap-ui-common~master~I13a3aca129b  ps=1  → SKIP (single patchset)  │ total=93  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #94      change=policy%2Fdistribution~master~Ia1bcd49b24  ps=1  → SKIP (single patchset)  │ total=94  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #95      change=policy%2Fparent~master~Ib3a9bf59acc74965  ps=1  → SKIP (single patchset)  │ total=95  verified=32
+2026-06-27 11:01:57  INFO        [ONAP] #96      change=oom~master~I7dc2f5f7209b386f16ac037062e7  ps=3    pairs=2    identical_dropped=2    │ cumul → extracted=205     verified=32    
+2026-06-27 11:01:57  INFO        [ONAP] #97      change=sdc~master~Ifbfa20581064152dd5c4cae6baed  ps=1  → SKIP (single patchset)  │ total=97  verified=32
+2026-06-27 11:01:58  INFO        [ONAP] #98      change=cps~master~I1cdf3cfc7ac19ef820633b21f975  ps=7    pairs=6    identical_dropped=5    │ cumul → extracted=211     verified=33    
+2026-06-27 11:01:58  INFO        [ONAP] #99      change=portal-ng%2Fpreferences~master~Ie6f32ec5  ps=1  → SKIP (single patchset)  │ total=99  verified=33
+2026-06-27 11:01:58  INFO        [ONAP] #100     change=portal-ng%2Fhistory~master~I0235aeb2e4d3  ps=1  → SKIP (single patchset)  │ total=100  verified=33
+2026-06-27 11:01:58  INFO      
+2026-06-27 11:01:58  INFO        ╔══ ONAP — Results ══════════════════════════════════════════╗
+2026-06-27 11:01:58  INFO        ║  Total changes fetched         : 100                           ║
+2026-06-27 11:01:58  INFO        ║  Skipped (single patchset)     : 63                            ║
+2026-06-27 11:01:58  INFO        ║  Changes processed             : 37                            ║
+2026-06-27 11:01:58  INFO        ║  Pairs extracted (potential)   : 211                           ║
+2026-06-27 11:01:58  INFO        ║  Dropped (identical after clean): 178                          ║
+2026-06-27 11:01:58  INFO        ║  Verified pairs written to CSV : 33                            ║
+2026-06-27 11:01:58  INFO        ╚══════════════════════════════════════════════════════════════╝
+2026-06-27 11:01:58  INFO      
+2026-06-27 11:01:58  INFO      ╔══════════════════════════════════════════════════════════════════╗
+2026-06-27 11:01:58  INFO      ║                    GLOBAL PIPELINE SUMMARY                       ║
+2026-06-27 11:01:58  INFO      ╚══════════════════════════════════════════════════════════════════╝
+2026-06-27 11:01:58  INFO        WIKIMEDIA        ✔  changes=100       extracted=341       identical_dropped=292       verified=49      
+2026-06-27 11:01:58  INFO        LIBREOFFICE      ✔  changes=100       extracted=296       identical_dropped=216       verified=80      
+2026-06-27 11:01:58  INFO        ONAP             ✔  changes=100       extracted=211       identical_dropped=178       verified=33      
+2026-06-27 11:01:58  INFO      
+2026-06-27 11:01:58  INFO        Total verified pairs written : 162
+2026-06-27 11:01:58  INFO        Output file                  : C:\Users\21694\OneDrive\Bureau\concordia\task_5\Semantic-Change-Description-Evolution\output\verified_pairs.csv
+2026-06-27 11:01:58  INFO      
+2026-06-27 11:01:58  INFO        Next pipeline stage → Edit Distance Module (pairs_with_distance.csv)

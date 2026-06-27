@@ -66,18 +66,52 @@ TEST_LIMIT: int = 100
 #
 PROJECTS: dict[str, dict] = {
     "wikimedia": {
-        "enabled": False,
+        "enabled": True,
         "base_url": "https://gerrit.wikimedia.org/r",
+        # api_prefix — extra path segment inserted between base_url and every
+        # REST endpoint.  Empty string = standard Gerrit layout (no extra prefix).
+        # ONAP and Wikimedia expose the REST API directly under /r/, so no
+        # prefix is needed: all paths resolve as  /r/changes/…
+        "api_prefix": "",
         "sample_limit": None,
     },
     "libreoffice": {
         "enabled": True,
-        "base_url": "https://gerrit.libreoffice.org/r",
+        #
+        # ── LibreOffice Gerrit URL topology (confirmed from error logs) ──────
+        #
+        # LibreOffice Gerrit serves the PolyGerrit SPA (Single Page App) at
+        # ALL paths under /r/, including /r/a/.  The SPA is a JavaScript shell
+        # that returns:
+        #       <!DOCTYPE html><html lang="en"><meta charset="utf-8">
+        #       <meta name="description" content="Gerrit Code Review">…
+        # regardless of what sub-path is requested under /r/.
+        #
+        # The REST API is mounted at the DOMAIN ROOT, not under /r/:
+        #
+        #   ✘  https://gerrit.libreoffice.org/r/changes/    → SPA HTML
+        #   ✘  https://gerrit.libreoffice.org/r/a/changes/  → SPA HTML
+        #   ✔  https://gerrit.libreoffice.org/changes/      → JSON  ← CORRECT
+        #
+        # Deployment layout (LibreOffice / TDF infrastructure):
+        #   /r/        →  nginx serves PolyGerrit SPA (web UI, HTML)
+        #   /          →  nginx reverse-proxies to Gerrit REST dispatcher (JSON)
+        #
+        # This is the OPPOSITE of ONAP/Wikimedia, where /r/ IS the REST root.
+        #
+        # Fix: strip the /r suffix from base_url entirely.
+        # api_prefix = "" because anonymous REST at the domain root needs no
+        # extra path segment — /changes/ resolves correctly on its own.
+        #
+        "base_url": "https://gerrit.libreoffice.org",
+        "api_prefix": "",
         "sample_limit": None,
     },
     "onap": {
-        "enabled": False,
+        "enabled": True,
         "base_url": "https://gerrit.onap.org/r",
+        # Same as Wikimedia — standard layout, no prefix needed.
+        "api_prefix": "",
         "sample_limit": None,
     },
 }
@@ -367,12 +401,42 @@ class GerritClient:
     Gerrit REST API client with automatic retry / exponential backoff.
 
     Attributes:
-        base_url : Root URL of the Gerrit instance (no trailing slash).
-        session  : Persistent requests.Session for connection pooling.
+        base_url   : Root URL of the Gerrit instance (no trailing slash).
+                     e.g. "https://gerrit.wikimedia.org/r"
+        api_prefix : Extra path segment inserted between base_url and every
+                     REST endpoint path.
+                       ""   → standard layout  (ONAP, Wikimedia)
+                       "/a" → authenticated REST prefix  (LibreOffice)
+                     With api_prefix="/a" a path like "/changes/?q=…" becomes
+                     "/a/changes/?q=…", resolving to the Gerrit /a/ sub-tree
+                     that is guaranteed to return JSON and never HTML.
+        session    : Persistent requests.Session (connection pooling + headers).
     """
 
-    base_url: str
+    base_url:   str
+    api_prefix: str = ""          # set to "/a" for LibreOffice
     session: requests.Session = field(default_factory=requests.Session, repr=False)
+
+    def __post_init__(self) -> None:
+        """
+        Configure the session so every request carries the headers that
+        force Gerrit (and any reverse-proxy in front of it) to serve JSON.
+
+        Accept: application/json
+            Tells content-negotiating proxies (nginx, Cloudflare Workers,
+            Varnish) to route the request to the REST handler rather than the
+            HTML web-UI handler.  This is the second line of defence after
+            the /a/ prefix for LibreOffice; it is also harmless for ONAP and
+            Wikimedia which ignore it.
+
+        X-Gerrit-Auth: 1
+            Some Gerrit deployments check for this header to distinguish REST
+            clients from browsers.  Adding it never hurts on standard instances.
+        """
+        self.session.headers.update({
+            "Accept":        "application/json",
+            "X-Gerrit-Auth": "1",
+        })
 
     # ── Internal HTTP layer ──────────────────────────────────────────────────
 
@@ -380,14 +444,23 @@ class GerritClient:
         """
         GET request with exponential-backoff retry.
 
-        Handles: timeouts, transient HTTP errors (429/5xx), and
-        the full range of malformed Gerrit responses via _parse_gerrit_response.
+        Constructs the full URL as:
+            base_url + api_prefix + path
+        Examples:
+            ONAP/Wikimedia  → "https://gerrit.onap.org/r"      + ""   + "/changes/…"
+                            = "https://gerrit.onap.org/r/changes/…"
+            LibreOffice     → "https://gerrit.libreoffice.org/r" + "/a" + "/changes/…"
+                            = "https://gerrit.libreoffice.org/r/a/changes/…"
+
+        The /a/ sub-path is Gerrit's documented authenticated REST namespace.
+        It is handled exclusively by the REST dispatcher and never intercepted
+        by the web-UI router, so it always returns JSON.
 
         Raises:
             FileNotFoundError — genuine 404 (resource does not exist).
             RuntimeError      — all retries exhausted.
         """
-        url = f"{self.base_url}{path}"
+        url = f"{self.base_url}{self.api_prefix}{path}"
         attempt = 0
         last_exc: Exception | None = None
 
@@ -650,6 +723,7 @@ def process_project(
     extracted_pairs, skipped_single_ps, skipped_identical, verified_pairs.
     """
     base_url: str       = project_cfg["base_url"]
+    api_prefix: str     = project_cfg.get("api_prefix", "")
     limit: Optional[int] = _resolve_limit(project_name, project_cfg)
     label: str          = project_name.upper()
 
@@ -658,11 +732,12 @@ def process_project(
     log.info("┌─────────────────────────────────────────────────────────────────┐")
     log.info("│  Processing project : %-43s│", label)
     log.info("│  Base URL           : %-43s│", base_url)
+    log.info("│  API prefix         : %-43s│", api_prefix if api_prefix else "(none)")
     log.info("│  Run mode           : %-8s  Limit : %-28s│",
              RUN_MODE, _fmt(limit) if limit is not None else "unlimited")
     log.info("└─────────────────────────────────────────────────────────────────┘")
 
-    client = GerritClient(base_url=base_url)
+    client = GerritClient(base_url=base_url, api_prefix=api_prefix)
 
     stats: dict[str, int] = {
         "total_changes":    0,
