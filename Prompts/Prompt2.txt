@@ -1,0 +1,25 @@
+You are assisting a software engineering research project.
+
+The goal is to identify meaningful semantic evolution between consecutive versions of commit descriptions.
+
+Ignore:
+- punctuation
+- formatting
+- metadata
+- issue identifiers
+- whitespace changes
+
+Only consider whether the new description adds, removes, or modifies meaningful technical information.
+
+Old description:
+{old_description}
+
+New description:
+{new_description}
+
+Return ONLY valid JSON in the following format:
+
+{
+  ""decision"": ""KEEP"" or ""REMOVE"",
+  ""reason"": ""Short explanation.""
+}

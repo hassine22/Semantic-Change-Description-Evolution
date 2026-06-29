@@ -1,0 +1,30 @@
+Ignore changes involving only:
+
+- punctuation
+- whitespace
+- formatting
+- metadata
+- issue numbers
+- Gerrit tags
+
+Relevant changes include:
+
+- added technical details
+- clarified behavior
+- explained motivation
+- described implementation
+- added limitations
+- expanded bug explanations
+
+Old description:
+{old_description}
+
+New description:
+{new_description}
+
+Return ONLY valid JSON in the following format:
+
+{
+  "decision": "KEEP" or "REMOVE",
+  "reason": "Short explanation."
+}

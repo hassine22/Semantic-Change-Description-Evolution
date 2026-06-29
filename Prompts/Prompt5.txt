@@ -1,0 +1,29 @@
+Classify the evolution between the following two commit descriptions.
+
+Old description:
+{old_description}
+
+New description:
+{new_description}
+
+Possible categories:
+
+- Formatting
+- Metadata
+- Clarification
+- Technical Detail Added
+- Behavior Description
+- Implementation Detail
+- Bug Explanation
+- Feature Description
+- Other
+
+After classifying the evolution, determine whether it is relevant for studying semantic change.
+
+Return ONLY valid JSON in the following format:
+
+{
+  "category": "...",
+  "decision": "KEEP" or "REMOVE",
+  "reason": "Short explanation."
+}

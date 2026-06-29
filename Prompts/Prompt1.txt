@@ -1,0 +1,16 @@
+"You are given two versions of the same commit description.
+
+Old description:
+{old_description}
+
+New description:
+{new_description}
+
+Determine whether the evolution between the two descriptions is relevant or irrelevant for studying semantic change.
+
+Return ONLY valid JSON in the following format:
+
+{
+  ""decision"": ""KEEP"" or ""REMOVE"",
+  ""reason"": ""Short explanation.""
+}"

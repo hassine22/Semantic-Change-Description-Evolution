@@ -1,0 +1,1043 @@
+"change_id";"old_description";"new_description";"human_label";"llm_decision";"llm_reason"
+"core~205764";"tdf#163309 sw: fix boundary mark/label visibility
+
+Editing the line, using fixed line height or using
+metadata fields resulted broken or completely
+invisible bookmark boundary marks and metadata labels.
+Fix these, and improve not only visualization, but
+readability of the metadata labels using auto
+color label text and improved design.
+
+Details:
+
+tdf#163309 introduced bookmark boundary mark
+labels, visualizing boundaries and metadata labels
+of arbitrary text parts (not only text portions
+inside the paragraph, like metadata fields)
+using custom metadata colors, keeping also the
+WYSIWYG text layout (metadata fields has custom
+prefix/suffix support, but that breaks the
+text layout).
+
+Focusing on the metadata visualization, this
+patch fixes the appearance and readability of
+the metadata annotations and their custom labels
+both stored in RDF, but some of the changes added
+improved visibility for the plain bookmark boundary
+marks, too (they weren't visible in line starting
+and ending positions at fixed line height
+paragraph settings).
+
+= Fields and bookmarks on the same position =
+
+Bookmark boundary marks with metadata visualization
+are visible again without enabled field shading, to
+avoid of the case, when shading of the RDF metadata
+fields hid the bookmark boundary marks in the same
+position.
+
+= Fix bad clipping at fixed line height =
+
+If bookmark boundary marks are enabled,
+disable extra clipping of the text lines
+at fixed line height:
+
+– to show bookmark boundary marks in line
+starting and ending positions (don't clip them);
+
+– to show the upper part of the brackets
+(don't clip it).
+
+= Fix editing and overlapping boundary marks =
+
+Use text-size brackets at bookmarks with RDF
+metadata, not higher ones, also move the labels
+nearer to the text as much as possible to avoid
+of the different artifacts: editing didn't update
+the line completely, overlapping neighborous
+boundary marks, etc.
+
+= New label design with improved readability =
+
+Use thin ""auto color"" letters on a background colored
+after the custom color of the RDF metadata. This way
+no need to use thick letters, as before for the
+colored text: the black (or only on very dark
+background, white) text is uniformly readable.
+
+Join the labels with the brackets, creating a big
+labelled bracket.
+
+Add narrow spaces before and after the label text
+to get better visibility in the case of the short
+labels.
+
+Change to start-bottom labelling, i.e. replace the
+positions of the labels: put the fist label under
+the text at the opening bracket, and the second
+label over the text at the closing bracket, because
+the annotated headings and proper names always start
+with uppercase letters, but mostly end with lowercase
+ones, so it is possible to fix editing etc. artifacts
+with much less overlapping of the labels and the text.
+
+Enlarge the font size limit for the annotations (12 pt).
+
+Follow-up to commit 412e0ab26618c38f548c340f85ef63bbe73ef6b2
+""tdf#150717 sw RDF metadata: add custom color bookmark boundary marks"",
+commit a4af3948e9212ef46149f906e5880f77693cca4b
+""tdf#163309 sw: clean-up bookmark boundary mark labels"",
+and commit 3393e52be0900ad63ceee0a43cd44d473ec8248a
+""tdf#163309 sw: show rdf:type as labels on bookmark boundary marks"".";"tdf#172263 tdf#163309 sw: fix bookmark boundary mark/label visibility
+
+Editing the line, using fixed line height or using metadata
+fields resulted broken or completely invisible bookmark boundary
+marks and metadata labels. Fix these, and improve not only
+visualization, but readability of the metadata labels using auto
+color label text and improved design.
+
+Details:
+
+tdf#163309 introduced bookmark boundary mark labels, visualizing
+boundaries and metadata labels of arbitrary text parts (not only
+text portions inside the paragraph, like metadata fields) using
+custom metadata colors, keeping also the WYSIWYG text layout
+(metadata fields has custom prefix/suffix support, but that
+breaks the text layout).
+
+Focusing on the metadata visualization, this patch fixes the
+appearance and readability of the metadata annotations and their
+custom labels both stored in RDF, but some of the changes added
+improved visibility for the plain bookmark boundary marks, too
+(they weren't visible in line starting and ending positions at
+fixed line height paragraph settings).
+
+= Fields and bookmarks on the same position =
+
+Bookmark boundary marks with metadata visualization are visible
+again without enabled field shading, to avoid of the case, when
+shading of the RDF metadata fields hid the bookmark boundary
+marks in the same position.
+
+= Fix bad clipping at fixed line height =
+
+If bookmark boundary marks are enabled, disable extra clipping of
+the text lines at fixed line height:
+
+– to show bookmark boundary marks in line starting and ending
+positions (don't clip them);
+
+– to show the upper part of the brackets (don't clip it).
+
+= Fix editing and overlapping boundary marks =
+
+Use text-size brackets at bookmarks with RDF metadata, not higher
+ones, also move the labels nearer to the text as much as possible
+to avoid of the different artifacts: editing didn't update the
+line completely, overlapping boundary marks, etc.
+
+= New label design with improved readability =
+
+Use thin black letters on gray background, or custom color
+background defined in the RDF metadata. This way no need to use
+thick letters, as before for the colored text: the black text is
+uniformly readable (except on very dark background color – a
+future fix to do. Note: simply replacing COL_BLACK with COL_AUTO
+doesn't work, because it uses the text background, not the label
+background).
+
+Join the labels with the brackets, creating a big labelled
+bracket.
+
+Add narrow spaces before and after the label text to get better
+visibility in the case of the short labels.
+
+Change to start-bottom labeling, i.e. replace the positions of
+the labels: put the fist label under the text at the opening
+bracket, and the second label over the text at the closing
+bracket, because the annotated headings and proper names always
+start with uppercase letters, but mostly end with lowercase ones,
+so it is possible to fix editing etc. artifacts with much less
+overlapping of the labels and the text.
+
+Enlarge the font size limit for the annotations (12 pt).
+
+Follow-up to commit 412e0ab26618c38f548c340f85ef63bbe73ef6b2
+""tdf#150717 sw RDF metadata: add custom color bookmark boundary
+marks"", commit a4af3948e9212ef46149f906e5880f77693cca4b
+""tdf#163309 sw: clean-up bookmark boundary mark labels"", and
+commit 3393e52be0900ad63ceee0a43cd44d473ec8248a ""tdf#163309 sw:
+show rdf:type as labels on bookmark boundary marks"".";"KEEP";"KEEP";"The changes made to improve the visibility and readability of bookmark boundary marks and metadata labels are relevant and beneficial. They address issues related to appearance, editing, and overlapping, as well as introducing a new label design with improved readability."
+"core~203398";"tdf#59121 sw: add regression test for bookmark undo/redo
+
+The bug was reported in 2013 where a sequence of Cut, Undo, Cut,
+Undo, Redo, and Undo would restore the text but lose the bookmark.
+This bug has been fixed in the meantime, but lacked a regression
+test to prevent it from resurfacing.
+
+This test uses the exact reproduction steps by inserting a bookmark,
+selecting all text, cutting, and performing the Undo/Redo sequence,
+and then asserting the bookmark is properly preserved.";"tdf#59121 sw: add regression test for bookmark undo/redo
+
+The bug was reported in 2013 where a sequence of Cut, Undo, Cut,
+Undo, Redo, and Undo would restore the text but lose the bookmark.
+
+The bug was fixed as a side effect of commit 83edee300924
+(""tdf#128739 sw: don't delete bookmarks prematurely in SwUndoDelete"",
+2019-11-18) by Michael Stahl. tdf#128739 was primarily a crash bug
+when working with fields; the fix replaced RemoveIdxFromRange() with
+PaMCorrAbs() in SwUndoDelete::RedoImpl() and SwUndoInserts::UndoImpl(),
+which also resolved the bookmark loss in tdf#59121 without explicitly
+referencing it.
+
+This test uses the exact reproduction steps by inserting a bookmark,
+selecting all text, cutting, and performing the Undo/Redo sequence,
+and then asserting the bookmark is properly preserved.";"KEEP";"KEEP";"The new description provides additional technical details about the fix and its history, which improves understanding of the issue and its resolution. It also explains the motivation behind the change and describes the implementation without explicitly referencing it."
+"core~204766";"configure, win: Use Win/mixed path for JAVA_HOME
+
+commit 08f3f447fb3209e58a3fe0adcfc13e860c224fdb
+Date: Wed Apr 22 12:43:32 2026 +0200
+
+remove additional PathFormatUnix wrapper
+
+adjusted the PathFormat function to set
+$formatted_path_unix to Unix-style/Cygwin paths
+when building in Cygwin.
+
+However, for JAVA_HOME (used e.g. for the Java
+Java include paths and linker flags/paths),
+Windows/mixed style paths are needed.
+Use $formatted_path instead of $formatted_path_unix
+for these.
+
+This addresses the following build error seen in
+a clean Cygwin build on Windows:
+
+D:/src/lo/master/bean/native/win32/com_sun_star_comp_beans_LocalOfficeWindow.c(29): fatal error C1083: Cannot open include file: 'jawt_md.h': No such file or directory";"configure, win: Use Win/mixed path for JAVA_HOME
+
+commit 08f3f447fb3209e58a3fe0adcfc13e860c224fdb
+Date: Wed Apr 22 12:43:32 2026 +0200
+
+remove additional PathFormatUnix wrapper
+
+adjusted the PathFormat function to set
+$formatted_path_unix to Unix-style/Cygwin paths
+when building in Cygwin.
+
+However, for JAVA_HOME (used e.g. for the Java
+Java include paths and linker flags/paths),
+Windows/mixed style paths are needed.
+Use $formatted_path instead of $formatted_path_unix
+for these.
+
+However, keep using a Unix path for directory
+checks, as these wouldn't work with Windows
+paths for the WSL-as-helper build.
+Once Java 8 is no longer supported, these checks
+can be dropped altogether as those directories
+don't exist with Java >= 9 any more anyway,
+see discussion in [1].
+
+This addresses the following build error seen in
+a clean Cygwin build on Windows:
+
+D:/src/lo/master/bean/native/win32/com_sun_star_comp_beans_LocalOfficeWindow.c(29): fatal error C1083: Cannot open include file: 'jawt_md.h': No such file or directory
+
+[1] https://gerrit.libreoffice.org/c/core/+/204766/comments/ff0973b2_f15fdaf3";"KEEP";"KEEP";"The change addresses a build error by using Win/mixed path for JAVA_HOME, which is necessary for certain paths like Java include paths and linker flags. The original description could be expanded to clarify that Unix paths are still used for directory checks due to WSL-as-helper build requirements."
+"core~205153";"Module-specific colored NB background";"Resolves tdf#121174 - Module-specific theme colors
+
+Shades the background of Notebookbars with module-specific
+colors if theming is enabled. The patch adds four *NOTEBOOKBARCOLOR
+colors in the UI theming section.
+
+To deal with light/dark system themes, the color is merged with the
+background at a transparency of 150 by default, which can be changed
+via the expert setting common::Misc::NotebookbarColorTransparency.
+
+MacOS is excluded since it draws the whole Notebookbar and has
+no extra colors for the background.";"KEEP";"KEEP";"The change provides technical details, clarifies behavior, explains motivation, describes implementation, and adds limitations. It improves the readability and functionality of the code."
+"core~204762";"configure, win: Use Win/mixed paths for tarball and Java paths (again)
+
+commit 08f3f447fb3209e58a3fe0adcfc13e860c224fdb
+Date: Wed Apr 22 12:43:32 2026 +0200
+
+remove additional PathFormatUnix wrapper
+
+adjusted the PathFormat function to set
+$formatted_path_unix to Unix-style/Cygwin paths
+when building in Cygwin.
+
+However, for TARFILE_LOCATION and JAVA_HOME (incl.
+Java include paths and linker flags), Windows/mixed style
+paths are needed.
+Use $formatted_path instead of $formatted_path_unix
+for these.
+
+This addresses the following build errors seen
+in (2 different) clean Cygwin builds on Windows:
+
+make[1]: *** No rule to make target '/cygdrive/c/sources/lo-external/boost_1_90_0.tar.xz', needed by 'C:/Users/mwegh/development/git/libreoffice-WORKTREE/workdir/UnpackedTarget/boost_1_90_0.tar.xz'. Stop.
+make: *** [Makefile:137: boost] Error 2
+
+and (once the first issue was fixed)
+
+D:/src/lo/master/bean/native/win32/com_sun_star_comp_beans_LocalOfficeWindow.c(29): fatal error C1083: Cannot open include file: 'jawt_md.h': No such file or directory";"configure, win: Use Win/mixed path for external tarball path
+
+commit 08f3f447fb3209e58a3fe0adcfc13e860c224fdb
+Date: Wed Apr 22 12:43:32 2026 +0200
+
+remove additional PathFormatUnix wrapper
+
+adjusted the PathFormat function to set
+$formatted_path_unix to Unix-style/Cygwin paths
+when building in Cygwin.
+
+However, for TARFILE_LOCATION, Windows/mixed style
+paths are needed.
+Use $formatted_path instead of $formatted_path_unix
+for these.
+
+Drop the now redundant/obsolete logic using
+$formatted_path for the WSL_ONL_AS_HELPER case
+further down because with this commit in place, this
+is already set accordingly now for both,
+Cygwin and WSL.
+
+This fixes the following build error seen
+in a clean Cygwin build on Windows:
+
+make[1]: *** No rule to make target '/cygdrive/c/sources/lo-external/boost_1_90_0.tar.xz', needed by 'C:/Users/mwegh/development/git/libreoffice-WORKTREE/workdir/UnpackedTarget/boost_1_90_0.tar.xz'. Stop.
+make: *** [Makefile:137: boost] Error 2";"KEEP";"KEEP";"The change addresses build errors by using Win/mixed paths for external tarball path and Java include paths, which are necessary when building in Cygwin. This fixes the issues with opening files in Windows environment."
+"core~199180";"sc: syncing for SetNormalString operation";"sc: Syncing for SetNormalString operation
+
+This reverts sorting in EnterData as we can do the sync in the
+lower level with the current approach of overwriting.
+
+We need to store the sc:ReorderParam and merge its order on change,
+which can be used to reverse the sorting done to the default view
+to the point when the sheet view was created. Then we can reapply
+the sorting to the sheet view to restore it to the last state.
+
+As SortOrderReverser and ReorderParam are partially storing the
+same data, we might consider to combine them in the future.";"KEEP";"KEEP";"The change clarifies the behavior of syncing for SetNormalString operation and provides additional details about the implementation. This information is useful for understanding the code changes."
+"core~183724";"box2d: upgrade to 3.0.0
+
+TODO: adapt code in slideshow
+
+Downloaded from https://github.com/erincatto/box2d/archive/refs/tags/v3.0.0.tar.gz";"box2d: upgrade to 3.0.0
+
+Add android.patch to fix
+
+In file included from /home/tdf/jenkins/workspace/android_arm/workdir/UnpackedTarball/box2d/src/allocate.c:6:
+/home/tdf/jenkins/workspace/android_arm/workdir/UnpackedTarball/box2d/src/core.h:50:3: error: Unsupported CPU
+50 | #error Unsupported CPU
+| ^
+/home/tdf/jenkins/workspace/android_arm/workdir/UnpackedTarball/box2d/src/allocate.c:71:14: error: call to undeclared library function 'aligned_alloc' with type 'void *(unsigned int, unsigned int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+71 | void* ptr = aligned_alloc( B2_ALIGNMENT, size32 );
+|
+
+Downloaded from https://github.com/erincatto/box2d/archive/refs/tags/v3.0.0.tar.gz";"KEEP";"KEEP";"The change involves an upgrade to box2d version 3.0.0 and the addition of a patch for Android to fix an error related to unsupported CPU and undeclared library function 'aligned_alloc'. This change adds technical details, clarifies behavior (by fixing errors), and expands bug explanations."
+"core~204894";"tdf#147021 Replace SAL_N_ELEMENTS() macro with C++17 std::size() across several files";"tdf#147021 Replace SAL_N_ELEMENTS() macro with std::size()";"REMOVE";"KEEP";"The change is relevant as it updates the codebase to use a modern C++17 function, which may improve readability and maintainability. However, the lack of additional details such as affected files, motivation, implementation, limitations, or expanded bug explanations makes it difficult to fully assess the impact."
+"core~205900";"weld: Move weld::WaitObject to own header
+
+Move the class out of weld.hxx into its own header, in
+order to make it easier to keep an overview and to avoid
+having to recompile ~all UI code when the class is
+modified.";"weld: Move weld::WaitObject to own header/source
+
+Move the class out of weld.hxx into its own header and
+source file, in order to make it easier to keep an overview
+and to avoid having to recompile ~all UI code when the class
+is modified.";"REMOVE";"KEEP";"The change clarifies that the class will also move to its own source file, providing more detail about the implementation."
+"core~205846";"tdf#146023 Unify Formula Bar context menu with Cell Edit menu";"tdf#146023 Align Select All placement in Calc edit popups";"KEEP";"REMOVE";"The new description does not align with the original task of unifying Formula Bar context menu with Cell Edit menu. The new description suggests a change related to the placement of Select All in Calc edit popups, which is different from the original."
+"core~204946";"check for hb_shape_full failure
+
+
+
+
+(cherry picked from commit c9c80a13a68a04e0df870d687ec7c467b245ff9a)";"check for hb_shape_full failure
+
+
+
+
+(cherry picked from commit 22c19be8fae977a90f83a82d8acccd0b46c7cf20)";"REMOVE";"KEEP";"Both descriptions are identical, with no added or removed relevant content. The only differences are the commit hashes and the lack of formatting changes."
+"core~205827";"drop isLOKTablet
+
+follow-up of
+commit ac6deb33e770c45f43973f9d8f99d0b80359b007
+Author: Xisco Fauli <xiscofauli@libreoffice.org>
+Date: Fri May 29 10:07:20 2026 +0200
+
+drop isLOKMobilePhone";"drop isLOKTablet
+
+follow-up of
+commit f436c1cd89001ab8ce995f08a3f878b04cd5f963
+Author: Xisco Fauli <xiscofauli@libreoffice.org>
+Date: Fri May 29 10:07:20 2026 +0200
+
+drop isLOKMobilePhone";"REMOVE";"REMOVE";"Both changes drop 'isLOKTablet' and 'isLOKMobilePhone'. The commit references have been updated to reflect the correct commit id."
+"core~203685";"fix unworking button";"tdf#148417 Return Find&Replace unworking button to menu";"REMOVE";"KEEP";"The new description provides more context and specifics about the issue, which is beneficial for understanding the change. It includes the issue number (tdf#148417), a clear title ('Return Find&Replace unworking button to menu'), and potentially useful information such as the motivation and implementation details."
+"core~205332";"sc: report what value differs when the sheet view test fails
+
+So it's easier and faster to analyze the problem if a sheet view
+test fails.
+
+
+
+
+(cherry picked from commit baf7abde077b2377ae0562b9e55b0fd1b283930a)";"sc: report what value differs when the sheet view test fails
+
+So it's easier and faster to analyze the problem if a sheet view
+test fails.
+
+
+
+
+
+
+(cherry picked from commit 0e79aca535c753ffd083e5987b99ca54cf2e9ce5)";"REMOVE";"KEEP";"The description remains unchanged, with no significant additions or modifications that would affect its purpose or clarity."
+"core~205287";"sc: add elements and parsing of namedSheetView*.xml files
+
+This adds parsing of elements (namedSheetView) and sub-elements
+contained in namedSheetView*.xml files. The data is contained in
+NamedSheetViewData, but for now we don't do anything with this
+data yet.
+
+
+
+
+(cherry picked from commit a3c94c2699b73a7d5bf2900b69043098109fa9fb)";"sc: add elements and parsing of namedSheetView*.xml files
+
+This adds parsing of elements (namedSheetView) and sub-elements
+contained in namedSheetView*.xml files. The data is contained in
+NamedSheetViewData, but for now we don't do anything with this
+data yet.
+
+
+
+
+
+
+(cherry picked from commit 7135df7768579bef1655923a125de2f440caf463)";"REMOVE";"KEEP";"The change adds parsing capabilities for namedSheetView*.xml files, although no immediate action is taken with the parsed data. This could be useful in future developments."
+"core~205853";"Related tdf#115376: generate ol and li tags for lists
+
+TODO: in this commit we always use ordered list (since it's the example of the bugtracker)
+but we should find the way to know if we must use ordered or unordered list.";"Related tdf#115376: generate ol and li tags for lists
+
++ change testList QA test accordingly
+
+TODO: in this commit we always use ordered list (since it's the example of the bugtracker)
+but we should find the way to know if we must use ordered or unordered list.";"REMOVE";"KEEP";"The change clarifies that the current implementation uses an ordered list due to it being the example in the bug tracker, but further work is needed to determine whether an ordered or unordered list should be used based on certain conditions."
+"core~203150";"(WIP)tdf#167949 Stylist: Turn filters into a checkbox list";"tdf#167949 Allow for independently toggling style filters";"KEEP";"KEEP";"The new description is more descriptive and user-friendly, explaining the functionality more clearly than the old one. It also aligns better with the format of other issue titles."
+"core~205466";"Located instance of SAL_N_ELEMENTS() and updated to std::size()";"tdf#147021 Update SAL_N_ELEMENTS to std::size() in hbox.cxx";"REMOVE";"KEEP";"The change clarifies the use of std::size() instead of SAL_N_ELEMENTS(), which is a more standard approach in C++. It also provides context by referencing issue #147021."
+"core~204921";"toolkit: Switch broadcast_type to enum class
+
+Also use more usual camel-case for the names.";"toolkit: Switch broadcast_type to enum class
+
+Also use more usual camel case for the names.";"REMOVE";"KEEP";"The change does not significantly alter the intent or functionality of the code, focusing on naming conventions and case usage. These changes are cosmetic and do not affect the technical details, behavior, motivation, implementation, limitations, or bug explanations."
+"core~204776";"sw: Add include for SwXTextRange
+
+Fixes this build error seein in an --enable-pch=no
+Windows build:
+
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(126): error C2027: use of undefined type 'SwXTextRange'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(51): note: see declaration of 'SwXTextRange'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(126): note: the template instantiation context (the oldest one first) is
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(215): note: see reference to class template instantiation 'rtl::Reference<SwXTextRange>' being compiled
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(123): note: while compiling class template member function 'rtl::Reference<SwXTextRange>::~Reference(void)'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(220): note: see the first reference to 'rtl::Reference<SwXTextRange>::~Reference' in 'SwPasteInfo::~SwPasteInfo'";"sw: Add include for SwXTextRange
+
+Fixes this build error seen in an --enable-pch=no
+Windows build:
+
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(126): error C2027: use of undefined type 'SwXTextRange'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(51): note: see declaration of 'SwXTextRange'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(126): note: the template instantiation context (the oldest one first) is
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(215): note: see reference to class template instantiation 'rtl::Reference<SwXTextRange>' being compiled
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\include\rtl/ref.hxx(123): note: while compiling class template member function 'rtl::Reference<SwXTextRange>::~Reference(void)'
+C:\Users\mwegh\development\git\libreoffice-WORKTREE\sw\inc\shellio.hxx(220): note: see the first reference to 'rtl::Reference<SwXTextRange>::~Reference' in 'SwPasteInfo::~SwPasteInfo'";"REMOVE";"KEEP";"The changes do not involve relevant content, only formatting and whitespace adjustments. The error message remains the same, indicating that the inclusion of SwXTextRange is still necessary to resolve the build error on Windows with --enable-pch=no."
+"mediawiki%2Fcore~1279494";"Deprecate Title::canUseNoindex() with warnings
+
+This is unused outside of mediawiki-core:
+https://codesearch.wmcloud.org/search/?q=canUseNoindex&files=&excludeFiles=&repos=
+
+We deprecate this method and move it to NamespaceInfo, where
+it more logically belongs and where the required services and
+configuration variables are already available.
+
+In the process, update a comment in Parser about INDEX/NOINDEX
+precedence which doesn't match the logic implemented in
+ParserOutput::getIndexPolicy(). This may have changed in
+MW 1.39 with I683e5ae054a0425b03c60a4af8c845b576414c1d, but
+reflects ""noindex"" being given precedence in
+ParserOutput::mergeHtmlMetaDataFrom() in MW 1.32
+(I871978bf79f67c9e7954fb3fc8528d6e365f2cc1). In any case,
+there haven't been any complains about the current behavior
+in the past 8 years, so make the comment match the current
+reality.";"Deprecate Title::canUseNoindex() with warnings
+
+This is unused outside of mediawiki-core:
+https://codesearch.wmcloud.org/search/?q=canUseNoindex&files=&excludeFiles=&repos=
+
+We deprecate this method and move it to NamespaceInfo, where
+it more logically belongs and where the required services and
+configuration variables are already available.
+
+In the process, update a comment in Parser about INDEX/NOINDEX
+precedence which doesn't match the logic implemented in
+ParserOutput::getIndexPolicy(). This may have changed in
+MW 1.39 with I683e5ae054a0425b03c60a4af8c845b576414c1d, but
+reflects ""noindex"" being given precedence in
+ParserOutput::mergeHtmlMetaDataFrom() in MW 1.32
+(I871978bf79f67c9e7954fb3fc8528d6e365f2cc1). In any case,
+there haven't been any complaints about the current behavior
+in the past 8 years, so make the comment match the current
+reality.";"REMOVE";"KEEP";"The method Title::canUseNoindex() is deprecated and moved to NamespaceInfo, where it logically belongs. The required services and configuration variables are already available there. Additionally, a comment in Parser about INDEX/NOINDEX precedence has been updated to match the current implementation logic. No complaints about the current behavior have been reported for the past 8 years."
+"mediawiki%2Fcore~1290022";"composer.json: Updated symfony/yaml from 5.4.45 to 6.4.52";"composer.json: Updated symfony/yaml from 5.4.45 to 5.4.52";"REMOVE";"REMOVE";"The change does not involve any relevant updates, additions, or improvements. It only downgrades the version of symfony/yaml which may not be beneficial."
+"mediawiki%2Fcore~1287832";"HtmlformCheckerV2: emove unnecessary param";"HtmlformCheckerV2: remove unnecessary param";"REMOVE";"KEEP";"The change is semantically equivalent and improves readability by using the more common verb 'remove' instead of 'emove'. However, it does not significantly alter the meaning or functionality of the description."
+"mediawiki%2Fcore~824548";"Upgrade CLDRPluralRuleParser to v1.4.0";"Upgrade CLDRPluralRuleParser to v1.6.5";"REMOVE";"REMOVE";"The change only involves a version number update, which does not require any technical details, clarification, or expansion. It is not relevant to the changes we are looking for."
+"mediawiki%2Fcore~1250617";"Soft depcerate and document Base/QuickTemplate::msg() better
+
+This method is almost entirely unused, as far as I can tell. And
+for good reasons. It doesn't behave like anything else: Doesn't
+return a Message object. Doesn't return a string. It's not even
+equivalent to the JS method mw.msg(). In JS we get the ""text""
+representation. This here returns the ""escaped"" form which means it
+actually returns HTML, not text, and is wrongly or at least very
+confusingly named.
+
+Soft-deprecation doesn't do much but makes the problems more
+visible both in this class as well as in old skins that still use
+this.
+
+This got motivated by Ie028cbb.";"Soft deprecate and document Base/QuickTemplate::msg() better
+
+This method is almost entirely unused, as far as I can tell. And
+for good reasons. It doesn't behave like anything else: Doesn't
+return a Message object. Doesn't return a string. It's not even
+equivalent to the JS method mw.msg(). In JS we get the ""text""
+representation. This here returns the ""escaped"" form which means it
+actually returns HTML, not text, and is wrongly or at least very
+confusingly named.
+
+Soft-deprecation doesn't do much but makes the problems more
+visible both in this class as well as in old skins that still use
+this.
+
+This got motivated by Ie028cbb.";"REMOVE";"KEEP";"The method Base/QuickTemplate::msg() is not widely used, but it serves a purpose by returning the 'escaped' form which is HTML, not text. This is different from the JS method mw.msg(), but it is not wrongly named as it returns what it is intended to. Soft-deprecation of this method makes its issues more visible in the class and in old skins that still use it. The motivation for this change comes from Ie028cbb."
+"mediawiki%2Fcore~1281717";"WIP: Preferences: Add an Account Security section";"Preferences: Add an Account Security section";"REMOVE";"KEEP";"The change does not involve any relevant content modifications."
+"mediawiki%2Fcore~1035358";"[DNM] objectcache: Remove WinCache support
+
+WinCache is an APCu equivalent for use with Microsoft IIS, but in recent
+years has been unmaintained and lacks support for PHP 8 and newer.[1]
+So, remove support for it as MediaWiki will be raising the minimum
+supported PHP version to 8.1.
+
+[1] https://www.php.net/manual/en/install.windows.recommended.php";"objectcache: Remove WinCache support
+
+WinCache is an APCu equivalent for use with Microsoft IIS, but in recent
+years has been unmaintained and lacks support for PHP 8 and newer.[1]
+So, remove support for it as MediaWiki will be raising the minimum
+supported PHP version to 8.1.
+
+[1] https://www.php.net/manual/en/install.windows.recommended.php";"REMOVE";"REMOVE";"WinCache is outdated and lacks support for PHP 8 and newer. MediaWiki will be raising the minimum supported PHP version to 8.1."
+"mediawiki%2Fcore~1271867";"[POC] Make HTMLFormField parent mandatory";"Make HTMLFormField parent mandatory";"REMOVE";"KEEP";"The change is straightforward and doesn't require additional technical details, clarification, or motivation. However, if there are specific reasons for making HTMLFormField parent mandatory, it would be beneficial to include them in the description."
+"mediawiki%2Fcore~1281975";"improve moveusersubpage-warning message
+
+- punctuation
+- grammar (""on"" to ""in"")";"i18n: Improve moveusersubpage-warning message
+
+- punctuation
+- grammar (""on"" to ""in"")";"REMOVE";"KEEP";"The change involves improving the i18n of a warning message, which aligns with the relevant changes you specified. It adds technical details and clarifies behavior by improving the grammar."
+"mediawiki%2Fcore~673802";"Move most Restriction tests to unit tests
+
+Need to split up PageRestrictionTest into integration
+tests and unit tests";"Block: Move most Restriction tests to unit tests
+
+Need to split up PageRestrictionTest into integration
+tests and unit tests";"REMOVE";"KEEP";"The change clarifies that the move of most Restriction tests is intended for unit tests, providing a clearer distinction between integration and unit tests."
+"mediawiki%2Fcore~1277217";"Remove unused 'mediawiki.ui.checkbox' module
+
+Deprecated in v1.41, now removed.
+Instead, use Codex modules.";"Remove unused 'mediawiki.ui.input' module
+
+Deprecated in v1.41, now removed.
+Instead, use Codex modules.";"REMOVE";"REMOVE";"The 'mediawiki.ui.input' module is unused and deprecated in v1.41, now removed. Instead, use Codex modules."
+"mediawiki%2Fcore~1281823";"WIP: Normalize thumbnail sizing in media responses
+
+Add a MediaFileTrait function to normalize image sizes based on
+the approved thumbnail steps, and use it in handlers that need
+to output thumbnail-oriented links. This separates the
+display-oriented sizing we have for the rest of the code that
+relies on sizing from the user preferences, and is meant for
+visual sizing on the screen.";"Normalize thumbnail sizing in media responses
+
+Add a MediaFileTrait function to normalize image sizes based on
+the approved thumbnail steps, and use it in handlers that need
+to output thumbnail-oriented links.
+
+This commit also separates the sizing calculations to two concepts:
+- Visual size of images: based on $wgImageLimits and user options.
+- Physical size of thumbnails: based on $wgThumbnailSteps and follows
+the strict cached sizes of the thumbnails and their urls.
+
+Documentation was added to emphasize the difference between the two
+methods. Now that the thumbnail sizing and visual sizing are actually
+different, we should continue to utilize the two methods where they
+are actually relevant.";"KEEP";"KEEP";"The new description provides additional technical details and clarifies the behavior of normalizing thumbnail sizing in media responses. It explains the motivation behind separating the sizing calculations into two concepts: visual size of images and physical size of thumbnails. The documentation added also emphasizes the difference between the two methods, which is important for understanding the implementation."
+"mediawiki%2Fcore~1289374";"Special:EditWatchlist: Fix incorrect selected page count
+
+The updateSelectedPagesListHtml() function used Array.splice() to
+truncate selectedPages for display purposes. splice() mutates the
+original array, causing selectedPages.value.length to always equal
+namedLimit + 1 (6) regardless of the actual number of checked items.
+
+This caused the 'Remove pages' button and dialog title to show an
+incorrect count in languages where the translation displays the
+number (e.g. Hungarian: '$1 lap eltávolítása' shows '6 lap' instead
+of the real count).
+
+Fix: Use Array.slice() with a separate displayPages variable so the
+truncation is only for the HTML list display, preserving the true
+count in selectedPages.";"Special:EditWatchlist: Fix incorrect selected page count
+
+Array.splice() was used instead of Array.slice() to truncate the
+page list for display. splice() mutates the original array, causing
+selectedPages to lose its true count. This was visible in languages
+that display the count in the button label (e.g. Hungarian).
+
+Use a separate displayPages variable for the truncated list so that
+selectedPages retains the actual number of checked items.";"KEEP";"KEEP";"The new description provides a clearer and more concise explanation of the issue and its solution, making it easier to understand for developers. It also eliminates unnecessary details and focuses on the relevant changes."
+"mediawiki%2Fcore~1256553";"Special:Preferences: Display three options for thumbsizes
+
+Thumbnail sizes are collapsed into three options.";"Special:Preferences: Display three options for thumbsizes
+
+Thumbnail sizes are collapsed into three options.
+The thumbnail sizes that have been removed will be rewritten
+when the user nexts saves preferences or a maintenance script
+is run.
+
+The class skin-theme-clientpref-thumb-(size) added in
+OutputPage will round up to the closest thumbnail size until that
+happens so there should only be disruption to users who modify
+preferences between this patch being deployed and the
+maintenance script being run. The preferences page mirrors this logic
+and can be removed once the relevant user preferences maintenance
+scripts have been run.";"KEEP";"KEEP";"The updated description provides additional information about the behavior and implementation of the change, which can be useful for understanding the context. It also explains potential limitations and workarounds, making it more informative than the original description."
+"mediawiki%2Fcore~1287963";"PHPUnit 10 compatibility for parser tests via non-suite runner";"PHPUnit 10 compatibility for parser tests via non-suite runner
+
+Instead of using the deprecated TestSuite mechanism, use the
+`composer phpunit:config` target to generate simple 7-line
+tests/phpunit/gen/ParserTest_*_Test.php files corresponding to
+each tests/parser/*.txt parser test file. These test classes
+use the `ParserTestFileTrait` and enumerate all the tests in
+the parser test file via a standard data provider.
+
+The `setupBeforeClass` and `tearDownAfterClass` methods are
+used to create a TestFileReader and ParserTestRunner which
+are shared for all the tests in a given parser test file.";"KEEP";"KEEP";"The updated description provides more technical details about the implementation of PHPUnit 10 compatibility for parser tests via non-suite runner. It explains how to generate test files, the use of Trait and data provider, and the shared TestFileReader and ParserTestRunner. This information is useful for understanding the changes made."
+"mediawiki%2Fcore~967242";"[WIP] parser: Reduce complexity of MagicWordArray processing
+
+Notably:
+* Instead of wrapping every synonym in an individual named group
+where all groups need to have the same name, wrap synonyms that
+belong together in a single group.
+* This also makes the group name unique.
+* But it doesn't need to be unique anyway. PHP doesn't require that,
+at least not in the versions we currently use.
+
+Unfortunately there is an external caller that uses getBaseRegex().
+Luckily it doesn't do anything with the group names. It uses the
+regex only for a boolean match/doesn't match check.";"parser: Reduce complexity of MagicWordArray processing
+
+Most notably:
+* Instead of wrapping every single synonym individual in a named
+group that need to have identical and therefor conflicting names,
+wrap synonyms that belong together in a single group.
+* This also makes the group name unique. No need for the ""a_"", ""b_"",
+and so on prefixes any more.
+* We still need to use a single ""_"" prefix to work around the
+limitation in PCRE 8.34+.
+* Note that group names don't need to be unique anyway. See the
+previous patch I5f113ab for an explanation.
+* Also use the (?|…) syntax to make sure multiple (.*?) subpatterns
+end in the expected numeric spot in the result array. The additional
+test case is specifically added to prove this works. There are two
+synonyms with a parameter and ""upright $1"" with a space is the
+second.
+
+There is one known external caller that uses getBaseRegex(). Luckily
+it doesn't do anything with the group names. It uses the regex only
+for a boolean match/doesn't match check. This still works as before.";"KEEP";"KEEP";"The changes reduce complexity of MagicWordArray processing by wrapping synonyms that belong together in a single group, making the group name unique and using the (?|...) syntax to ensure multiple subpatterns end in the expected numeric spot in the result array. This does not affect the external caller's functionality as it only uses the regex for a boolean match/doesn't match check."
+"mediawiki%2Fcore~1287013";"Implement a DOM version of the ExpandToAbsoluteUrls pass
+
+* For now, this is a non-exclusive pass and can be run in both
+text and DOM form for both legacy and Parsoid output.";"Implement a DOM version of the ExpandToAbsoluteUrls pass
+
+* For now, this is a non-exclusive pass and can be run in both
+text and DOM form for both legacy and Parsoid output.
+
+* Extracted text/DOM tests into a base class for reuse.
+
+* Error return from UrlUtils::expand() wasn't being handled
+properly in the existing ExpandToAbsoluteUrls pass; previous
+patch I98e8e3a8fd135a554a85f6399033756c88ea415f had introduced
+a bogus `?? false` in the conversion away from the global
+`wfExpandUrl` but setting the attribute to `false` would have
+crashed (or converted it to the string 'false', depending on
+whether `strict_types` was active). The correct thing to do
+on an invalid URL is either to delete the `href` attribute or
+leave the value alone; we've chosen to do the latter.";"KEEP";"KEEP";"The change clarifies an issue with error handling in the existing ExpandToAbsoluteUrls pass. It corrects a problem introduced by a previous patch, and ensures that invalid URLs are either deleted or left unchanged."
+"mediawiki%2Fcore~1249476";"[WIP]";"Move page saving logic out of EditPage into a separate class
+
+Move most of the logic from EditPage::internalAttemptSave into a
+separate PageEdit class, which uses dependency injection and takes
+an inputs object from EditPage.
+This class will be refactored in follow-up changes to split the logic
+up into smaller methods and make it easier to test it.
+
+Most of the parameters of the PageEditInputs class will be made
+optional in the future, so it's easier for extensions to use the
+interface without having to provide too much data.
+
+Based on change Ief07d2f374c3770240747e6b599840e867bcac68 by
+DannyS712.";"KEEP";"KEEP";"The change moves page saving logic out of EditPage into a separate class, which is a good practice for better organization and testability. The future optional parameters for PageEditInputs class make it easier for extensions to use the interface."
+"mediawiki%2Fcore~1276429";"Media: Change wgThumbnailStepsRatio default from 0 to 1
+
+This feature remains disabled by default, because it is gated by
+$wgThumbnailSteps, which remains null by default.
+
+However, when people enable the feature, for example to locally test
+something in a way that represents WMF prod, it should be as easy as
+setting `$wgThumbnailStepsRatio = [ ... ];` and not require
+`$wgThumbnailStepsRatio = 1` as well.
+
+Any third party who might be using $wgThumbnailStepsRatio by
+definition will have set that already. It doesn't make sense to have
+$wgThumbnailStepsRatio=0 with a non-null $wgThumbnailStepsRatio,
+and this patch removes that confusing/footgun state as something we
+cause by default in the process of setting $wgThumbnailSteps.
+
+Also:
+* Improve docs
+* Add some pointers
+* Connect case for T424114 to that task";"Media: Improve $wgThumbnailSteps docs
+
+* Improve docs
+* Add some pointers
+* Link test case for T424114 to that task";"KEEP";"KEEP";"The change improves documentation and clarifies behavior of $wgThumbnailStepsRatio, making it easier for users to understand and use. The additional changes such as improving docs, adding pointers, and linking the test case for T424114 are also beneficial."
+"mediawiki%2Fcore~1287016";"ParserOptions: absoluteURLs should default to false
+
+This was a regression introduced in
+I4184dc74fdd107031b821039e113126c5f1beb03.
+
+The default value for absoluteURLs (from ParserOutput::getText()
+historically) has always been false. When the text options
+were turned into ParserOptions this was inadvertently flipped.
+
+Follows-Up: I4184dc74fdd107031b821039e113126c5f1beb03";"ParserOptions: absoluteURLs should default to false
+
+The default value for absoluteURLs (from ParserOutput::getText()
+historically) has always been false. When the text options
+were turned into ParserOptions this was inadvertently flipped.
+
+This was a regression introduced in
+I4184dc74fdd107031b821039e113126c5f1beb03, but latent until
+Icf7172be6d718362192ca8b7288ef8ce4d4af6b9 added
+ParserOutputAccess::postprocess() which created the
+""getText options"" $textOptions from the ParserOptions,
+picking up the (incorrect) default value. Further, the
+postprocessing cache was only enabled in production in
+a staggered fashion through early 2026.
+
+Due to the way ParserOptions defaults work, changing the default
+value here won't invalidate any parser cache entries. Previously
+cached contents with the old default (absoluteURLs=true) will
+continue to match requests made with the new default
+(absoluteURLs=false). It will take a parser cache expiration
+time for all cache contents to be updated. That should be
+okay since the absolute URLs are still valid for production
+wikis, just not strictly necessary (and there was a small
+performance penalty for doing the url conversion).
+
+Follows-Up: I4184dc74fdd107031b821039e113126c5f1beb03";"KEEP";"KEEP";"The original description adequately explains the issue and the regression it introduced. The new description provides additional technical details about the implementation, including the introduction of ParserOutputAccess::postprocess() and the staggered enabling of the postprocessing cache in production. However, these details are not necessary for understanding the core issue and its resolution."
+"mediawiki%2Fcore~1290772";"Add a postproc parseroption for edit link behaviour
+
+VisualEditor uses the onSkinEditSectionLinks hook to provide the correct
+link(s) to edit the page. The behaviour is as follows, depending on wiki
+setup and user preferences:
+- if both links should be displayed, both links are displayed
+- if a single link should be displayed, it is displayed as ""edit"" if VE
+should be used, or as ""edit source"" otherwise.
+
+This behaviour is handled during the HandleSectionEditLink
+post-processing passes; but it's not splitting the cache depending on
+what gets rendered. In this patch, we introduce ""visibleLinks"" as a
+cache-varying ParserOption to handle this variation.
+
+The behaviour depends on particular on wgVisualEditorUseSingleEditTab,
+which enables the re-use of the editor and section link for some wikis.
+This setting is not set to true everywhere, and is marked in our config
+as ""Deploying slowly with community advanced notice"". To avoid
+accidentally bypassing this setting, the the default value for the new
+ParserOption is ""both"", which displays both links as needed.
+
+Ideally, this should go on the same train as
+Ife470688200d19f343aba7d2826855078eef2f68 to fix the issue as
+soon as possible. Otherwise, the cache key won't be updated - this
+should not be an issue with regards to cache misses, but the default
+cache entry may not be the right one depending on the current wiki
+configuration.";"Make ParserOptions available to Skin
+
+VisualEditor uses the onSkinEditSectionLinks hook to provide the correct
+link(s) to the page. This is called during the HandleSectionEditLink
+post-processing passes, but it's not splitting the cache depending on
+what gets rendered.
+
+To be able to split the cache during this step, we make the
+ParserOptions available to the skin before we start the post-processing
+pass.";"KEEP";"PARSE_ERROR";" Title: Making ParserOptions Available to Skin for Cache Splitting  Description: This change introduces a new feature that allows ParserOptions to be accessible by the skin during the HandleSectionEdi"
+"aai%2Faai-common~master~I05a35e0cee80b27123f28bb8eeb8ed885c83a173";"Update spring boot to 2.4
+
+Issue-ID: AAI-3725";"Update spring boot to 2.4
+
+- update spring boot from 2.3 to 2.4
+- remove compile-time dependency on powermock introduced by eelf-core
+- remove dependencyManagement declarations for powermock since it's not used anymore
+
+Issue-ID: AAI-3725";"KEEP";"KEEP";"The updated description provides additional technical details about the changes being made, making it more informative. It explains that Spring Boot is being updated from version 2.3 to 2.4 and also mentions the removal of a compile-time dependency on powermock and the related dependencyManagement declarations."
+"aai%2Faai-common~master~Ia2aa31a9f3550af853583e65bc1f84583c9fc22f";"Update eclipse.persistence and eelf.core in aai-common
+
+- update eclipse persistence to version 2.7.11
+- update eelf core to 2.0.0-oss
+
+Issue-ID: AAI-3550";"Update eclipse.persistence and eelf.core in aai-common
+
+- update eclipse persistence to version 2.7.11
+- update eelf core to 2.0.0-oss
+- pin eelf core version in aai-utils and aai-schema-abstraction to 1.0.1 since there would be IncompatibleClassChange errors
+- add the jaxb-api dependency to aai-utils to make it compilable with jdk 11
+
+Issue-ID: AAI-3550";"KEEP";"KEEP";"The changes involve added technical details (pinning eelf core version in aai-utils and aai-schema-abstraction, adding jaxb-api dependency to aai-utils) and expanded bug explanations (IncompatibleClassChange errors)."
+"aai%2Faai-common~master~Ia2aa31a9f3550af853583e65bc1f84583c9fc22f";"Update eclipse.persistence and eelf.core in aai-common
+
+- update eclipse persistence to version 2.7.11
+- update eelf core to 2.0.0-oss
+
+Issue-ID: AAI-3550";"Update eclipse.persistence and eelf.core in aai-common
+
+- update eclipse persistence to version 2.7.11
+- update eelf core to 2.0.0-oss
+- pin eelf core version in aai-utils and aai-schema-abstraction to 1.0.1 since there would be IncompatibleClassChange errors
+- add the jaxb-api dependency to aai-utils to make it compilable with jdk 11
+
+Issue-ID: AAI-3550";"KEEP";"KEEP";"The changes involve added technical details (pinning eelf core version in aai-utils and aai-schema-abstraction, adding jaxb-api dependency to aai-utils) which provide important information for the update."
+"aai%2Faai-common~master~I8ec11660db7887c5aebcdbe2899c95c457f74e14";"AAI-1492 Add ext-aai-network schema for CCVPN uc
+
+Issue-ID: AAI-1492
+Add ext-aai-network element to network namespace.
+Add components from network namespace.
+Add esr-system-info component.";"AAI-1492 Add ext-aai-network schema for CCVPN uc
+
+Issue-ID: AAI-1492
+Add ext-aai-network element to network namespace.
+Add components from network namespace.
+Add esr-system-info component.
+Add EdgeRules from ext-aai-network to esr-system-info, connectivity and
+all the other schema elements.
+Make esr-system-info dependentOn ext-aai-network.
+Change sub-components of ext-aai-network to COUSIN edge as workaround.
+Add relationship-list as workaround.";"KEEP";"KEEP";"The changes provide additional details about the implementation and dependencies, which can be useful for understanding the code. The added EdgeRules, dependency on ext-aai-network for esr-system-info, and workarounds are relevant modifications."
+"aai%2Faai-common~master~I30b75262d3e01cfae2cf77d9be9da26a56a049ed";"AAI-1461 Update vpn-binding schema for CCVPN
+
+Issue-ID: AAI-1461
+Add properties to vpn-binding:
+access-provider-id, access-client-id, access-topology-id, src-access-node-id,
+src-access-ltp-id, dst-access-node-id, dst-access-ltp-id, operational-status,
+model-customization-id, model-version-id, model-invariant-id
+Make operational-status indexed and searchable as well.";"AAI-1461 -1464 Update vpn-binding/pnf for CCVPN
+
+Issue-ID: AAI-1461
+Add properties to vpn-binding:
+access-provider-id, access-client-id, access-topology-id, src-access-node-id,
+src-access-ltp-id, dst-access-node-id, dst-access-ltp-id, operational-status,
+model-customization-id, model-version-id, model-invariant-id
+Make ids and operational-status indexed.
+Add CCVPN EdgeRules for vpn-binding to p-interface.
+
+Accidentally squashed in second commit for:
+Issue-ID: AAI-1464
+Add properties to pnf schema:
+admin-status, operational-status, model-customization-id, model-version-id,
+model-invariant-id
+
+Make these properties indexed as well:
+admin-status, operational-status";"KEEP";"KEEP";"The changes involve adding technical details, clarifying behavior, and expanding bug explanations. The new description includes the addition of properties to vpn-binding and pnf schema, making certain properties indexed, and adding CCVPN EdgeRules for vpn-binding to p-interface."
+"aai%2Faai-common~master~I1e82bf4f0706704679d14aac98969fa00beed758";"Refactor ErrorLogHelper
+
+- introduce functions to encapsulate functionality and reduce duplication
+- separate creation of error response and marshalling them
+
+Issue-ID: AAI-3695";"Refactor ErrorLogHelper
+
+- change is designed to not make any changes to the serialised objects [1]
+- introduce common error response object that is used for both service and policy, xml + json format
+- separate creation of error response and the marshalling of it
+- increase test coverage
+- use jackson object mappers for marshalling json and xml objects instead of custom MapperUtil
+- make code more functional
+- use more descriptive variable names
+
+[1] only the internal representation changes to account for both
+Service- and PolicyException
+
+Issue-ID: AAI-3695";"KEEP";"PARSE_ERROR";" The new description provides more detailed information about the changes made to the ErrorLogHelper. Here's a summary of the relevant changes:  - The refactoring is designed not to change the seriali"
+"aai%2Faai-common~master~I1e82bf4f0706704679d14aac98969fa00beed758";"Refactor ErrorLogHelper
+
+- introduce functions to encapsulate functionality and reduce duplication
+- separate creation of error response and marshalling them
+
+Issue-ID: AAI-3695";"Refactor ErrorLogHelper
+
+- change is designed to not make any changes to the serialised objects [1]
+- introduce common error response object that is used for both service and policy, xml + json format
+- separate creation of error response and the marshalling of it
+- increase test coverage
+- use jackson object mappers for marshalling json and xml objects instead of custom MapperUtil
+- make code more functional
+- use more descriptive variable names
+
+[1] only the internal representation changes to account for both
+Service- and PolicyException
+
+Issue-ID: AAI-3695";"KEEP";"PARSE_ERROR";" The new description provides more detailed information about the changes made to the ErrorLogHelper. Here's a summary of the relevant changes:  - The refactoring is designed not to change the seriali"
+"aai%2Faai-common~master~I6bc0c9b9f398556cc41a0a8f82e24e50c85e5690";"Add gremlin-based pagination to aai-common
+
+- paginate in the db
+
+Issue-ID: AAI-3893";"Add gremlin-based pagination to aai-common
+
+- enhance query building to support gremlin-based pagination
+- pagination is supported in two variants: with and without the total count of elements [1]
+- enhance query building to support gremlin-based sorting
+- add query logging that is currently disabled
+
+[1] due to the design of gremlin, including the total count results in a full graph scan.
+As such there is the option to not include it, which should make it (much) faster for the first pages that are returned.
+Issue-ID: AAI-3893";"KEEP";"KEEP";"The changes provide additional technical details, clarify behavior, explain motivation, describe implementation, and expand bug explanations. The updated description now includes the enhancement of query building to support gremlin-based pagination, sorting, and logging."
+"aai%2Faai-common~master~I6bc0c9b9f398556cc41a0a8f82e24e50c85e5690";"Add gremlin-based pagination to aai-common
+
+- paginate in the db
+
+Issue-ID: AAI-3893";"Add gremlin-based pagination to aai-common
+
+- enhance query building to support gremlin-based pagination
+- pagination is supported in two variants: with and without the total count of elements [1]
+- enhance query building to support gremlin-based sorting
+- add query logging that is currently disabled
+
+[1] due to the design of gremlin, including the total count results in a full graph scan.
+As such there is the option to not include it, which should make it (much) faster for the first pages that are returned.
+Issue-ID: AAI-3893";"KEEP";"KEEP";"The changes provide additional technical details, clarify behavior, explain motivation, describe implementation, and expand bug explanations. The updated description now includes information about the variants of pagination support, sorting support, query logging, and trade-offs related to including total count."
+"aai%2Faai-common~master~I78f4cdc906e43750bb319ba4f3bdb6483ed7ea24";"AAI-1480 Add lan-port-config for CCVPN usecase
+
+Issue-ID: AAI-1480
+Add lan-port-config schema element to network namespace
+Add dhcp-service schema element
+Add EdgeRules for lan-port-config";"AAI-1468 -1480 Add Conn /lan-port-config for CCVPN
+
+Issue-ID: AAI-1480
+Add lan-port-config schema element to network namespace
+Add dhcp-service schema element
+Add CCVPN EdgeRules for lan-port-config to service-instance and
+dhcp-service
+Update lan-port-config with ipv4-address and ipv6-address.
+Update dhcp-service with server-ipv4-address and server-ipv6-address.
+
+Accidentally squashed another two commits together:
+Issue-ID: AAI-1468
+Add connectivities sub-component to ""network"" namespace.
+Add connectivities element, which is sequence of ""connectivity"".
+Add connectivity element, which has numerous properties.
+Add CCVPN EdgeRules for connectivity to service-instance and vpn-binding";"KEEP";"KEEP";"The changes provide additional technical details, clarify behavior, and expand on the implementation for AAI-1480. The merged commit AAI-1468 adds a sub-component to 'network' namespace and defines properties for connectivity, which aligns with the overall purpose of the initial change."
+"aai%2Faai-common~master~I6988f36c00a0e8a9e9e32006b86ff286479ba685";"Spring-boot 3.1 update
+
+- update spring-boot (3.0.13 -> 3.1.12)
+- upgrade eclipse persistence (3.0.1 -> 4.0.6)
+- bump snapshot version to 1.16.2-SNAPSHOT
+
+Issue-ID: AAI-4162";"Spring-boot 3.1 update
+
+- update spring-boot (3.0.13 -> 3.1.12)
+- upgrade eclipse persistence (3.0.1 -> 4.0.6)
+- bump snapshot version to 1.16.1-SNAPSHOT
+
+Issue-ID: AAI-4162";"REMOVE";"KEEP";"The changes do not involve relevant updates such as added technical details, clarified behavior, explained motivation, described implementation, added limitations, expanded bug explanations."
+"aai%2Faai-common~master~I6988f36c00a0e8a9e9e32006b86ff286479ba685";"Spring-boot 3.1 update
+
+- update spring-boot (3.0.13 -> 3.1.12)
+- upgrade eclipse persistence (3.0.1 -> 4.0.6)
+- bump snapshot version to 1.16.2-SNAPSHOT
+
+Issue-ID: AAI-4162";"Spring-boot 3.1 update
+
+- update spring-boot (3.0.13 -> 3.1.12)
+- upgrade eclipse persistence (3.0.1 -> 4.0.6)
+- bump snapshot version to 1.16.1-SNAPSHOT
+
+Issue-ID: AAI-4162";"REMOVE";"KEEP";"The changes do not involve relevant updates such as added technical details, clarified behavior, explained motivation, described implementation, added limitations, expanded bug explanations. Only version numbers have been changed."
+"aai%2Faai-common~master~I429665b7d5b217ad0bd0739ab24d92b3965bc86d";"[AAI] Upgarding Log4J to 2.17.1
+
+Issue-ID: AAI-3431";"[AAI] Upgrading Log4J to 2.17.1
+
+Issue-ID: AAI-3431";"REMOVE";"KEEP";"The change does not involve any relevant content additions or modifications."
+"aai%2Faai-common~master~Ib560aa45a4a2e9b2059f6de1446057d234a1f9be";"CI: Remove duplciate G2G workflow
+
+Issue-ID: CIMAN-33";"CI: Remove duplicate G2G workflow
+
+Issue-ID: CIMAN-33";"REMOVE";"NOT_APPLICABLE";"No relevant changes detected in the description."
+"aai%2Faai-common~kohn~Ie72604431852ce8b28f511da321691b7cac7bf1c";"[AAI] Up-version aai-common to 1.9.7 for Kohn
+
+Issue-ID: AAI-3587";"[AAI] Up-version aai-common to 1.11.0 for Kohn
+
+Issue-ID: AAI-3587";"REMOVE";"KEEP";"The change involves updating the version of aai-common, which is relevant as it could potentially introduce new features, fixes, or improvements. The motivation for this update remains unchanged."
+"aai%2Faai-common~master~I68b474a6397b477b77055dd580321fa684d5d9b4";"[AAI] Update of aai component diagram and description
+
+Component diagram were updated, deprecated applications were removed, description in rst file was also updated.
+
+Issue-ID: AAI-3451";"[AAI] Update of aai component diagram and description
+
+Component diagram was updated, deprecated applications were removed, description in rst file was also updated.
+
+Issue-ID: AAI-3451";"REMOVE";"KEEP";"The changes do not involve any relevant content modifications such as added technical details, clarified behavior, explained motivation, described implementation, added limitations, expanded bug explanations."
+"aai%2Faai-common~kohn~Ie72604431852ce8b28f511da321691b7cac7bf1c";"[AAI] Up-version aai-common to 1.9.7 for Kohn
+
+Issue-ID: AAI-3587";"[AAI] Up-version aai-common to 1.11.0 for Kohn
+
+Issue-ID: AAI-3587";"REMOVE";"KEEP";"The change involves updating the version of aai-common, which is relevant as it could potentially introduce new features, fixes, or improvements. The motivation for this update remains unchanged."
+"aai%2Faai-common~master~I68600c2a586faa5537ac58ca21b06e984413a8bc";"Remove the client load balancer use event client
+
+Issue-ID: AAI-965";"Remove the client load balancer use http client
+
+Issue-ID: AAI-965";"REMOVE";"KEEP";"The change involves replacing 'event client' with 'http client', which is a technical detail and does not significantly alter the functionality or behavior of the code. Therefore, it should be kept."
+"aai%2Faai-common~master~I28de8cb09513d7f08e9d608bed25f0bee1ecec85";"Add the remaining tests from internal
+
+Issue-ID: AAI-215";"Add the remaining tests from internal code
+
+Issue-ID: AAI-215";"REMOVE";"KEEP";"The change involves adding a description to an existing issue, which does not affect the functionality or structure of the code. The additional details may help in understanding the purpose and context of the change."
+"aai%2Faai-common~master~Ifab3416bf98f716ee69f2355c65a11ef1642d1e3";"AAI-1483 Update EdgeRules for sdwan-vpn
+
+Issue-ID: AAI-1483
+Update EdgeRules for sdwan-vpn to tenant and to vpn-binding";"AAI-1637 Update EdgeRules for sdwan-vpn
+
+Issue-ID: AAI-1637
+Update EdgeRules for sdwan-vpn to tenant and to vpn-binding";"REMOVE";"KEEP";"No relevant changes were made to the description, it still describes the issue of updating EdgeRules for sdwan-vpn to tenant and to vpn-binding."
+"aai%2Faai-common~master~Iad4033dc5bba72cf0773cccbe19429cf965df0c5";"AAI-1484 Add device schema for CCVPN usecase
+
+Issue-ID: AAI-1484
+Add device element to network namespace.
+Add EdgeRules for device to service-instance and generic-vnf.";"AAI-1484 Add device schema for CCVPN usecase
+
+Issue-ID: AAI-1484
+Add device element to network namespace.
+Add CCVPN EdgeRules for device to service-instance and generic-vnf.";"REMOVE";"KEEP";"The change only adds specificity to the EdgeRules, providing more context and clarity without altering the technical details or structure of the description."

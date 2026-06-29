@@ -1,0 +1,23 @@
+Compare the following two commit descriptions.
+
+Old description:
+{old_description}
+
+New description:
+{new_description}
+
+Perform the following steps:
+
+Step 1:
+Identify the meaningful differences between the two descriptions.
+
+Step 2:
+Determine whether these differences change the semantic content.
+
+Return ONLY valid JSON in the following format:
+
+{
+  "differences": "...",
+  "decision": "KEEP" or "REMOVE",
+  "reason": "Short explanation."
+}
